@@ -1,0 +1,509 @@
+<!-- Q3 2026 quarterly report of an online retailer. Style: dashboards. Canvas 960x540 pt. -->
+<deck lang="en-US">
+  <theme font="Manrope" heading="Manrope ExtraBold"
+         dk1="#141A2A" lt1="#FFFFFF" dk2="#1F2739" lt2="#F3F5F9"
+         accent1="#7C5CFF" accent2="#FF4D8D" accent3="#FF9F43" accent4="#20C997"
+         accent5="#3B82F6" accent6="#22B8CF"/>
+
+  <!-- ============ 1. Dark full dashboard ============ -->
+  <slide id="dark" bg="#111727" transition="fade" transition-dur="700">
+    <!-- decor: soft colour glows behind the grid -->
+    <shape geom="ellipse" x="620" y="-180" w="520" h="420" fill="radial(#7C5CFF/35 0%, #7C5CFF/0 100%)" soft-edge="60"/>
+    <shape geom="ellipse" x="-160" y="360" w="480" h="360" fill="radial(#3B82F6/25 0%, #3B82F6/0 100%)" soft-edge="60"/>
+
+    <!-- header -->
+    <group id="logo">
+      <shape geom="roundRect" radius="8" x="24" y="18" w="30" h="30" fill="linear(45, accent1 0%, accent2 100%)"/>
+      <icon name="shopping-bag" x="31" y="25" w="16" h="16" color="white" weight="2.2"/>
+    </group>
+    <group id="hdr">
+      <text x="64" y="17" w="460" h="20" font="heading" size="15" color="white">Korzina+ · Q3 2026 dashboard</text>
+      <text x="64" y="36" w="460" h="14" size="9.5" color="#8E9AB8">Online retail · July – September 2026 · vs Q3 2025</text>
+      <shape geom="roundRect" radius="11" x="776" y="22" w="160" h="22" fill="white/6" line="white/10 0.75"
+             size="9" color="#C9D1E6" align="center" anchor="middle" pad="0 0 0 0"><span color="accent4">●</span> Data as of Sep 30, 2026</shape>
+    </group>
+
+    <!-- row 1: KPI cards -->
+    <group id="k1">
+      <shape geom="roundRect" radius="10" x="24" y="62" w="216" h="80" fill="#1F2739" line="white/6 0.75"/>
+      <shape geom="ellipse" x="38" y="78" w="48" h="48" fill="linear(45, accent1 0%, accent2 100%)" glow="accent2/30 8"/>
+      <icon name="wallet" x="50" y="90" w="24" h="24" color="white" weight="2"/>
+      <text x="98" y="78" w="140" h="28" font="heading" size="22" color="white">₽4.82<span size="12" font="Manrope SemiBold" color="#C9D1E6">B</span></text>
+      <text x="98" y="108" w="140" h="14" size="9" caps="1" spacing="0.6" color="#8E9AB8">Revenue · <span color="accent4" bold="1">+27% YoY</span></text>
+    </group>
+    <group id="k2">
+      <shape geom="roundRect" radius="10" x="256" y="62" w="216" h="80" fill="linear(0, accent2 0%, accent3 100%)" glow="accent2/25 10"/>
+      <line x1="280" y1="62" x2="280" y2="142" stroke="white/45 0.75"/>
+      <line x1="448" y1="62" x2="448" y2="142" stroke="white/45 0.75"/>
+      <text x="262" y="92" w="14" h="16" size="11" color="white/80" align="center">‹</text>
+      <text x="452" y="92" w="14" h="16" size="11" color="white/80" align="center">›</text>
+      <icon name="shopping-cart" x="352" y="70" w="24" h="24" color="white" weight="2"/>
+      <text x="284" y="96" w="160" h="22" font="heading" size="16" color="white" align="center">1.26M orders</text>
+      <text x="284" y="118" w="160" h="14" size="9.5" color="white/85" align="center">+18% vs Q2 · 97K per week</text>
+    </group>
+    <group id="k3">
+      <shape geom="roundRect" radius="10" x="488" y="62" w="216" h="80" fill="#1F2739" line="white/6 0.75"/>
+      <shape geom="donut" adj="adj=9000" x="502" y="76" w="52" h="52" fill="white/8"/>
+      <text x="502" y="94" w="52" h="16" size="10" bold="1" color="white" align="center">92%</text>
+      <text x="568" y="78" w="132" h="28" font="heading" size="22" color="white">11<span size="12" font="Manrope SemiBold" color="#C9D1E6"> of 12</span></text>
+      <text x="568" y="108" w="132" h="14" size="9" caps="1" spacing="0.6" color="#8E9AB8">OKRs achieved</text>
+    </group>
+    <shape id="k3arc" geom="blockArc" adj="adj1=16200000;adj2=14472000;adj3=9000" x="502" y="76" w="52" h="52" fill="linear(0, accent3 0%, accent2 100%)"/>
+    <group id="k4">
+      <shape geom="roundRect" radius="10" x="720" y="62" w="216" h="80" fill="#1F2739" line="white/6 0.75"/>
+      <text x="736" y="78" w="106" h="28" font="heading" size="22" color="white">₽3,825</text>
+      <text x="736" y="108" w="110" h="14" size="9" caps="1" spacing="0.6" color="#8E9AB8">Avg. order value</text>
+    </group>
+    <chart id="k4chart" type="column" x="846" y="76" w="80" h="54" axis="none" gap="60" min="2.8">
+      <cat>1,2,3,4,5,6,7,8,9</cat>
+      <series name="AOV" values="3.1,3.3,3.2,3.4,3.5,3.4,3.6,3.7,3.8" colors="accent4,accent4,accent4,accent4,accent4,accent4,accent4,accent4,accent1"/>
+    </chart>
+
+    <!-- row 2 -->
+    <group id="c1">
+      <shape geom="roundRect" radius="10" x="24" y="154" w="216" h="156" fill="#1F2739" line="white/6 0.75"/>
+      <text x="38" y="166" w="188" h="14" size="9.5" bold="1" caps="1" spacing="0.8" color="#C9D1E6" align="center">Site conversion</text>
+      <shape geom="blockArc" adj="adj1=10800000;adj2=0;adj3=15000" x="62" y="184" w="140" h="140" fill="white/8"/>
+      <text x="82" y="264" w="100" h="26" font="heading" size="22" color="white" align="center">3.4%</text>
+      <text x="38" y="291" w="188" h="14" size="9" color="#8E9AB8" align="center"><span color="white" bold="1">85%</span> of 4.0% target · +0.4 pp YoY</text>
+    </group>
+    <group id="g1">
+      <shape geom="blockArc" adj="adj1=10800000;adj2=19980000;adj3=15000" x="62" y="184" w="140" h="140" fill="linear(0, accent5 0%, accent1 55%, accent2 100%)"/>
+      <shape geom="ellipse" x="70.5" y="252" w="4" h="4" fill="white/70"/>
+      <shape geom="ellipse" x="78.5" y="222.2" w="4" h="4" fill="white/70"/>
+      <shape geom="ellipse" x="100.3" y="200.5" w="4" h="4" fill="white/70"/>
+      <shape geom="ellipse" x="130.0" y="192.5" w="4" h="4" fill="white/70"/>
+      <shape geom="ellipse" x="159.8" y="200.5" w="4" h="4" fill="white/70"/>
+      <shape geom="ellipse" x="181.5" y="222.2" w="4" h="4" fill="white/70"/>
+      <shape geom="ellipse" x="189.5" y="252" w="4" h="4" fill="white/70"/>
+      <line x1="132" y1="254" x2="169.4" y2="234.9" stroke="white 2" head="oval"/>
+      <shape geom="ellipse" x="127" y="249" w="10" h="10" fill="white"/>
+      <shape geom="ellipse" x="130" y="252" w="4" h="4" fill="#1F2739"/>
+    </group>
+    <group id="c2">
+      <shape geom="roundRect" radius="10" x="256" y="154" w="216" h="156" fill="#1F2739" line="white/6 0.75"/>
+      <text x="270" y="166" w="150" h="14" size="9.5" bold="1" caps="1" spacing="0.8" color="#C9D1E6">Weekly orders</text>
+      <text x="270" y="182" w="140" h="26" font="heading" size="20" color="white">97<span size="11" font="Manrope SemiBold" color="#C9D1E6">K/week</span></text>
+      <shape geom="roundRect" radius="6" x="408" y="184" w="50" h="20" fill="accent4" size="9.5" bold="1" color="white" align="center" anchor="middle" pad="0 0 0 0">+24%</shape>
+    </group>
+    <chart id="c2chart" type="column" x="262" y="208" w="204" h="96" axis="none" gap="40">
+      <cat>1,2,3,4,5,6,7,8,9,10,11,12,13</cat>
+      <series name="Orders" values="88,91,86,94,90,112,121,104,96,93,99,101,85"
+              colors="accent5,accent5,accent5,accent5,accent5,accent2,accent2,accent5,accent5,accent5,accent5,accent5,accent3"/>
+    </chart>
+    <group id="c3">
+      <shape geom="roundRect" radius="10" x="488" y="154" w="216" h="156" fill="#1F2739" line="white/6 0.75"/>
+      <text x="502" y="166" w="188" h="14" size="9.5" bold="1" caps="1" spacing="0.8" color="#C9D1E6">Order sources</text>
+      <text x="502" y="188" w="140" h="14" size="9.5" color="#C9D1E6">Search &amp; SEO</text>
+      <text x="630" y="188" w="60" h="14" size="9.5" bold="1" color="white" align="right">38%</text>
+      <shape geom="roundRect" radius="4" x="502" y="205" w="188" h="8" fill="white/8"/>
+      <shape geom="roundRect" radius="4" x="502" y="205" w="71" h="8" fill="linear(0, #FACC15 0%, accent3 100%)"/>
+      <text x="502" y="226" w="140" h="14" size="9.5" color="#C9D1E6">Social &amp; influencers</text>
+      <text x="630" y="226" w="60" h="14" size="9.5" bold="1" color="white" align="right">27%</text>
+      <shape geom="roundRect" radius="4" x="502" y="243" w="188" h="8" fill="white/8"/>
+      <shape geom="roundRect" radius="4" x="502" y="243" w="51" h="8" fill="linear(0, accent1 0%, accent2 100%)"/>
+      <text x="502" y="264" w="140" h="14" size="9.5" color="#C9D1E6">Email &amp; push</text>
+      <text x="630" y="264" w="60" h="14" size="9.5" bold="1" color="white" align="right">19%</text>
+      <shape geom="roundRect" radius="4" x="502" y="281" w="188" h="8" fill="white/8"/>
+      <shape geom="roundRect" radius="4" x="502" y="281" w="36" h="8" fill="linear(0, accent6 0%, accent5 100%)"/>
+    </group>
+    <group id="c4">
+      <shape geom="roundRect" radius="10" x="720" y="154" w="216" h="156" fill="linear(0, accent5 0%, accent1 60%, #B04DFF 100%)" glow="accent1/30 10"/>
+      <text x="734" y="166" w="188" h="14" size="9.5" bold="1" caps="1" spacing="0.8" color="white" align="center">September 2026</text>
+      <text x="730" y="186" w="96" h="26" font="heading" size="20" color="white" align="center">2.9M</text>
+      <text x="730" y="211" w="96" h="12" size="8.5" color="white/85" align="center">site visitors</text>
+      <line x1="828" y1="190" x2="828" y2="222" stroke="white/50 0.75"/>
+      <text x="830" y="186" w="96" h="26" font="heading" size="20" color="white" align="center">640K</text>
+      <text x="830" y="211" w="96" h="12" size="8.5" color="white/85" align="center">app users</text>
+    </group>
+    <chart id="c4chart" type="column" x="728" y="226" w="200" h="78" axis="none" gap="45">
+        <cat>1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30</cat>
+        <series name="Visits" values="88,92,85,97,110,104,90,95,99,93,101,108,96,92,98,104,112,99,95,91,100,106,115,103,97,94,99,108,118,102" color="white/55"/>
+    </chart>
+
+    <!-- row 3 -->
+    <group id="c5">
+      <shape geom="roundRect" radius="10" x="24" y="322" w="293" h="194" fill="#1F2739" line="white/6 0.75"/>
+      <shape geom="round2SameRect" adj="adj1=29412;adj2=0" x="24" y="322" w="293" h="34" fill="white/5"/>
+      <text x="38" y="334" w="265" h="14" size="9.5" bold="1" caps="1" spacing="0.8" color="#C9D1E6">Revenue by category</text>
+      <chart type="doughnut" x="34" y="364" w="144" h="144" hole="64">
+        <cat>Electronics, Home &amp; garden, Apparel, Beauty, Other</cat>
+        <series name="Share" values="38,24,21,11,6" colors="accent1,accent2,accent3,accent6,#55607A"/>
+      </chart>
+      <text x="66" y="422" w="80" h="18" font="heading" size="14" color="white" align="center">4.82</text>
+      <text x="66" y="440" w="80" h="12" size="8.5" color="#8E9AB8" align="center">₽ billion</text>
+      <shape geom="ellipse" x="192" y="378" w="8" h="8" fill="accent1"/>
+      <text x="206" y="374" w="80" h="14" size="9.5" color="#C9D1E6">Electronics</text>
+      <text x="270" y="374" w="34" h="14" size="9.5" bold="1" color="white" align="right">38%</text>
+      <shape geom="ellipse" x="192" y="402" w="8" h="8" fill="accent2"/>
+      <text x="206" y="398" w="80" h="14" size="9.5" color="#C9D1E6">Home &amp; garden</text>
+      <text x="270" y="398" w="34" h="14" size="9.5" bold="1" color="white" align="right">24%</text>
+      <shape geom="ellipse" x="192" y="426" w="8" h="8" fill="accent3"/>
+      <text x="206" y="422" w="80" h="14" size="9.5" color="#C9D1E6">Apparel</text>
+      <text x="270" y="422" w="34" h="14" size="9.5" bold="1" color="white" align="right">21%</text>
+      <shape geom="ellipse" x="192" y="450" w="8" h="8" fill="accent6"/>
+      <text x="206" y="446" w="80" h="14" size="9.5" color="#C9D1E6">Beauty</text>
+      <text x="270" y="446" w="34" h="14" size="9.5" bold="1" color="white" align="right">11%</text>
+      <shape geom="ellipse" x="192" y="474" w="8" h="8" fill="#55607A"/>
+      <text x="206" y="470" w="80" h="14" size="9.5" color="#C9D1E6">Other</text>
+      <text x="270" y="470" w="34" h="14" size="9.5" bold="1" color="white" align="right">6%</text>
+    </group>
+    <group id="c6">
+      <shape geom="roundRect" radius="10" x="333" y="322" w="293" h="194" fill="#1F2739" line="white/6 0.75"/>
+      <shape geom="round2SameRect" adj="adj1=29412;adj2=0" x="333" y="322" w="293" h="34" fill="white/5"/>
+      <text x="347" y="334" w="265" h="14" size="9.5" bold="1" caps="1" spacing="0.8" color="#C9D1E6">Q3 plan attainment</text>
+      <!-- concentric rings: track + value arc -->
+      <shape geom="donut" adj="adj=8500" x="345" y="366" w="140" h="140" fill="white/8"/>
+      <shape geom="donut" adj="adj=11300" x="361" y="382" w="108" h="108" fill="white/8"/>
+      <shape geom="donut" adj="adj=16200" x="377" y="398" w="76" h="76" fill="white/8"/>
+      <text x="385" y="427" w="60" h="18" font="heading" size="13" color="white" align="center">94%</text>
+      <shape geom="roundRect" radius="2" x="502" y="378" w="4" h="30" fill="accent3"/>
+      <text x="514" y="376" w="106" h="14" size="9" color="#8E9AB8">Revenue</text>
+      <text x="514" y="390" w="106" h="18" font="heading" size="14" color="white">96%</text>
+      <shape geom="roundRect" radius="2" x="502" y="422" w="4" h="30" fill="accent2"/>
+      <text x="514" y="420" w="106" h="14" size="9" color="#8E9AB8">Orders</text>
+      <text x="514" y="434" w="50" h="18" font="heading" size="14" color="white">104%</text>
+      <shape geom="roundRect" radius="7" x="566" y="437" w="34" h="14" fill="accent4" size="8" bold="1" color="white" align="center" anchor="middle" pad="0 0 0 0">+4%</shape>
+      <shape geom="roundRect" radius="2" x="502" y="466" w="4" h="30" fill="accent6"/>
+      <text x="514" y="464" w="106" h="14" size="9" color="#8E9AB8">New customers</text>
+      <text x="514" y="478" w="106" h="18" font="heading" size="14" color="white">81%</text>
+    </group>
+    <shape id="r1" geom="blockArc" adj="adj1=16200000;adj2=15336000;adj3=8500" x="345" y="366" w="140" h="140" fill="linear(0, accent3 0%, #FACC15 100%)"/>
+    <group id="r2">
+      <shape geom="donut" adj="adj=11300" x="361" y="382" w="108" h="108" fill="linear(0, accent2 0%, accent1 100%)"/>
+      <shape geom="blockArc" adj="adj1=16200000;adj2=17064000;adj3=11300" x="361" y="382" w="108" h="108" fill="accent4"/>
+    </group>
+    <shape id="r3" geom="blockArc" adj="adj1=16200000;adj2=12096000;adj3=16200" x="377" y="398" w="76" h="76" fill="linear(0, accent6 0%, accent5 100%)"/>
+    <group id="c7">
+      <shape geom="roundRect" radius="10" x="642" y="322" w="294" h="194" fill="#1F2739" line="white/6 0.75"/>
+      <shape geom="round2SameRect" adj="adj1=29412;adj2=0" x="642" y="322" w="294" h="34" fill="white/5"/>
+      <text x="656" y="334" w="160" h="14" size="9.5" bold="1" caps="1" spacing="0.8" color="#C9D1E6">Revenue, ₽B</text>
+      <shape geom="roundRect" radius="2" x="818" y="339" w="12" h="3" fill="accent2"/>
+      <text x="834" y="334" w="40" h="14" size="9" color="#C9D1E6">2026</text>
+      <shape geom="roundRect" radius="2" x="874" y="339" w="12" h="3" fill="white/40"/>
+      <text x="890" y="334" w="40" h="14" size="9" color="#8E9AB8">2025</text>
+      <chart type="line" x="648" y="362" w="282" h="148" axis="both" grid="1" grid-color="white/8" smooth="1" size="8.5" color="#8E9AB8" axis-color="white/15" min="0.8" max="1.8">
+        <cat>Jan, Feb, Mar, Apr, May, Jun, Jul, Aug, Sep</cat>
+        <series name="2025" values="0.98,0.95,1.06,1.04,1.10,1.12,1.18,1.26,1.36" color="white/40" width="1.75"/>
+        <series name="2026" values="1.21,1.18,1.34,1.29,1.38,1.42,1.47,1.62,1.73" color="accent2" width="2.75"/>
+      </chart>
+    </group>
+
+    <text x="24" y="522" w="600" h="12" size="7.5" color="#5E6985">Figures are illustrative: a demo report of the fictional company Korzina+.</text>
+
+    <anim target="hdr" effect="fade" start="after" dur="500"/>
+    <anim target="k1" effect="float-up" start="with" delay="100" dur="500"/>
+    <anim target="k2" effect="float-up" start="with" delay="200" dur="500"/>
+    <anim target="k3" effect="float-up" start="with" delay="300" dur="500"/>
+    <anim target="k4" effect="float-up" start="with" delay="400" dur="500"/>
+    <anim target="k3arc" effect="zoom" start="with" delay="750" dur="450"/>
+    <anim target="k4chart" effect="wipe-bottom" start="with" delay="850" dur="450"/>
+    <anim target="c1" effect="float-up" start="with" delay="600" dur="500"/>
+    <anim target="c2" effect="float-up" start="with" delay="700" dur="500"/>
+    <anim target="c3" effect="float-up" start="with" delay="800" dur="500"/>
+    <anim target="c4" effect="float-up" start="with" delay="900" dur="500"/>
+    <anim target="g1" effect="wipe-left" start="with" delay="1100" dur="800"/>
+    <anim target="c2chart" effect="wipe-bottom" start="with" delay="1200" dur="600"/>
+    <anim target="c4chart" effect="wipe-bottom" start="with" delay="1400" dur="600"/>
+    <anim target="c5" effect="float-up" start="with" delay="1100" dur="500"/>
+    <anim target="c6" effect="float-up" start="with" delay="1200" dur="500"/>
+    <anim target="c7" effect="float-up" start="with" delay="1300" dur="500"/>
+    <anim target="r1" effect="zoom" start="with" delay="1650" dur="450"/>
+    <anim target="r2" effect="zoom" start="with" delay="1800" dur="450"/>
+    <anim target="r3" effect="zoom" start="with" delay="1950" dur="450"/>
+  </slide>
+
+  <!-- ============ 2. Light sales / team dashboard ============ -->
+  <slide id="light" bg="#EEF1F6" transition="morph" transition-dur="1000">
+    <group id="logo">
+      <shape geom="roundRect" radius="8" x="24" y="20" w="30" h="30" fill="linear(45, accent1 0%, accent2 100%)"/>
+      <icon name="shopping-bag" x="31" y="27" w="16" h="16" color="white" weight="2.2"/>
+    </group>
+    <text id="kick" x="64" y="18" w="500" h="14" size="9.5" bold="1" caps="1" spacing="1.5" color="accent1">Sales &amp; team · Q3 2026</text>
+    <text id="title" x="64" y="32" w="700" h="34" font="heading" size="24" color="#1B2236">Repeat customers drive 62% of orders</text>
+    <text id="sub2" x="736" y="44" w="200" h="16" size="10" color="#6B7690" align="right">change vs Q3 2025</text>
+
+    <!-- KPI strip -->
+    <group id="strip">
+      <shape geom="roundRect" radius="12" x="24" y="76" w="912" h="62" fill="white" shadow="18 4 #1B2236/10 90"/>
+      <shape geom="roundRect" radius="9" x="40" y="87" w="40" h="40" fill="accent5"/>
+      <icon name="users" x="50" y="97" w="20" h="20" color="white" weight="2"/>
+      <text x="90" y="83" w="100" h="13" size="9" color="#6B7690">Customers</text>
+      <text x="90" y="96" w="100" h="24" font="heading" size="19" color="#1B2236">2.31M</text>
+      <text x="90" y="120" w="100" h="12" size="8.5" bold="1" color="accent4">▲ +14%</text>
+      <shape geom="roundRect" radius="10" x="204" y="80" w="174" h="54" fill="linear(0, accent4 0%, accent6 100%)" glow="accent4/25 8"/>
+      <shape geom="roundRect" radius="9" x="214" y="87" w="40" h="40" fill="white/22"/>
+      <icon name="user-plus" x="224" y="97" w="20" h="20" color="white" weight="2"/>
+      <text x="264" y="83" w="110" h="13" size="9" color="white/85">New customers</text>
+      <text x="264" y="96" w="100" h="24" font="heading" size="19" color="white">612K</text>
+      <text x="264" y="120" w="100" h="12" size="8.5" bold="1" color="white">▲ +22%</text>
+      <shape geom="roundRect" radius="9" x="398" y="87" w="40" h="40" fill="accent3"/>
+      <icon name="package-x" x="408" y="97" w="20" h="20" color="white" weight="2"/>
+      <text x="448" y="83" w="110" h="13" size="9" color="#6B7690">Return rate</text>
+      <text x="448" y="96" w="100" h="24" font="heading" size="19" color="#1B2236">4.8%</text>
+      <text x="448" y="120" w="110" h="12" size="8.5" bold="1" color="accent4">▼ −0.6 pp</text>
+      <line x1="564" y1="87" x2="564" y2="127" stroke="#1B2236/10 0.75"/>
+      <shape geom="roundRect" radius="9" x="580" y="87" w="40" h="40" fill="accent1"/>
+      <icon name="id-card" x="590" y="97" w="20" h="20" color="white" weight="2"/>
+      <text x="630" y="83" w="110" h="13" size="9" color="#6B7690">Employees</text>
+      <text x="630" y="96" w="100" h="24" font="heading" size="19" color="#1B2236">1,940</text>
+      <text x="630" y="120" w="110" h="12" size="8.5" bold="1" color="accent4">▲ +120 staff</text>
+      <line x1="746" y1="87" x2="746" y2="127" stroke="#1B2236/10 0.75"/>
+      <shape geom="roundRect" radius="9" x="762" y="87" w="40" h="40" fill="accent6"/>
+      <icon name="truck" x="772" y="97" w="20" h="20" color="white" weight="2"/>
+      <text x="812" y="83" w="120" h="13" size="9" color="#6B7690">On-time delivery</text>
+      <text x="812" y="96" w="100" h="24" font="heading" size="19" color="#1B2236">96.2%</text>
+      <text x="812" y="120" w="110" h="12" size="8.5" bold="1" color="accent4">▲ +1.8 pp</text>
+    </group>
+
+    <!-- row 1 -->
+    <group id="d1">
+      <shape geom="roundRect" radius="12" x="24" y="150" w="300" h="176" fill="white" shadow="18 4 #1B2236/10 90"/>
+      <text x="40" y="162" w="270" h="14" size="10" bold="1" caps="1" spacing="0.4" color="#1B2236">Revenue by region, ₽M</text>
+      <chart type="bar" x="32" y="182" w="284" h="138" labels="1" label-size="8.5" label-color="#1B2236" size="8.5" color="#6B7690" gap="55" axis="cat" axis-color="#FFFFFF/0" format="#,##0">
+        <cat>Moscow area, St. Petersburg, Urals, Volga, Siberia, South</cat>
+        <series name="Revenue" values="1690,742,586,534,468,431" fill="linear(0, accent5/35 0%, accent5 100%)"/>
+      </chart>
+    </group>
+    <group id="d2">
+      <shape geom="roundRect" radius="12" x="336" y="150" w="288" h="176" fill="white" shadow="18 4 #1B2236/10 90"/>
+      <text x="352" y="162" w="260" h="14" size="10" bold="1" caps="1" spacing="0.4" color="#1B2236">New vs repeat orders</text>
+      <chart type="doughnut" x="416" y="180" w="128" h="128" hole="72">
+        <cat>New, Repeat</cat>
+        <series name="Orders" values="38,62" colors="accent3,accent5"/>
+      </chart>
+      <text x="440" y="230" w="80" h="18" font="heading" size="12.5" color="#1B2236" align="center">1.26M</text>
+      <text x="440" y="248" w="80" h="12" size="8.5" color="#6B7690" align="center">orders</text>
+      <text x="352" y="188" w="70" h="26" font="heading" size="21" color="accent3">38%</text>
+      <text x="538" y="188" w="72" h="26" font="heading" size="21" color="accent5" align="right">62%</text>
+      <icon name="user-plus" x="358" y="230" w="30" h="30" color="accent3/80" weight="2"/>
+      <icon name="repeat" x="574" y="230" w="30" h="30" color="accent5/80" weight="2"/>
+      <shape geom="ellipse" x="352" y="303.5" w="7" h="7" fill="accent3"/>
+      <text x="363" y="300" w="70" h="14" size="9" color="#4A5470">New</text>
+      <shape geom="ellipse" x="603" y="303.5" w="7" h="7" fill="accent5"/>
+      <text x="520" y="300" w="80" h="14" size="9" color="#4A5470" align="right">Repeat</text>
+    </group>
+    <group id="d3">
+      <shape geom="roundRect" radius="12" x="636" y="150" w="300" h="176" fill="white" shadow="18 4 #1B2236/10 90"/>
+      <text x="652" y="162" w="270" h="14" size="10" bold="1" caps="1" spacing="0.4" color="#1B2236">Avg. order value by age, ₽</text>
+      <chart type="column" x="644" y="182" w="284" h="138" labels="1" label-size="8" label-color="#1B2236" size="8.5" color="#6B7690" gap="70" axis-color="#1B2236/15" format="#,##0" min="0" max="5000">
+        <cat>18–24, 25–34, 35–44, 45–54, 55+</cat>
+        <series name="AOV" values="2450,3610,4280,4120,3390" fill="linear(90, accent3 0%, #FFC67A 100%)"/>
+      </chart>
+    </group>
+
+    <!-- row 2 -->
+    <shape id="focus-card" geom="roundRect" radius="12" x="24" y="338" w="300" h="178" fill="white" shadow="18 4 #1B2236/10 90"/>
+    <group id="d4">
+      <text x="40" y="350" w="180" h="14" size="10" bold="1" caps="1" spacing="0.4" color="#1B2236">Weekly orders, K</text>
+      <shape geom="roundRect" radius="1.5" x="224" y="355.5" w="12" h="3" fill="accent5"/>
+      <text x="240" y="350" w="26" h="14" size="9" color="#4A5470">2026</text>
+      <shape geom="roundRect" radius="1.5" x="270" y="355.5" w="12" h="3" fill="#B6BECF"/>
+      <text x="286" y="350" w="26" h="14" size="9" color="#6B7690">2025</text>
+      <chart type="line" x="32" y="370" w="284" h="140" axis="both" grid="1" grid-color="#1B2236/8" axis-color="#1B2236/15" smooth="1" size="8" color="#6B7690" min="40" max="140">
+        <cat>1,2,3,4,5,6,7,8,9,10,11,12,13</cat>
+        <series name="2025" values="74,76,73,78,77,86,90,84,80,79,82,83,75" color="#B6BECF" width="1.75"/>
+        <series name="2026" values="88,91,86,94,90,112,121,104,96,93,99,101,85" color="accent5" width="2.75"/>
+      </chart>
+    </group>
+    <group id="d5">
+      <shape geom="roundRect" radius="12" x="336" y="338" w="288" h="178" fill="white" shadow="18 4 #1B2236/10 90"/>
+      <text x="352" y="350" w="260" h="14" size="10" bold="1" caps="1" spacing="0.4" color="#1B2236">Payment methods</text>
+      <chart type="doughnut" x="348" y="370" w="138" h="138" hole="45">
+        <cat>Share, Other</cat>
+        <series name="Installments" values="15,85" colors="accent2,#E3E8F1"/>
+        <series name="SBP" values="31,69" colors="accent1,#E3E8F1"/>
+        <series name="Card" values="46,54" colors="accent5,#E3E8F1"/>
+      </chart>
+      <shape geom="roundRect" radius="2" x="500" y="386" w="4" h="28" fill="accent5"/>
+      <text x="512" y="384" w="100" h="13" size="9" color="#6B7690">Bank card</text>
+      <text x="512" y="397" w="100" h="18" font="heading" size="14" color="#1B2236">46%</text>
+      <shape geom="roundRect" radius="2" x="500" y="426" w="4" h="28" fill="accent1"/>
+      <text x="512" y="424" w="100" h="13" size="9" color="#6B7690">SBP instant pay</text>
+      <text x="512" y="437" w="100" h="18" font="heading" size="14" color="#1B2236">31% <span size="9" font="Manrope SemiBold" color="accent4">▲ +9 pp</span></text>
+      <shape geom="roundRect" radius="2" x="500" y="466" w="4" h="28" fill="accent2"/>
+      <text x="512" y="464" w="100" h="13" size="9" color="#6B7690">Installments/BNPL</text>
+      <text x="512" y="477" w="100" h="18" font="heading" size="14" color="#1B2236">15%</text>
+      <icon name="credit-card" x="406" y="428" w="22" h="22" color="#1B2236/55" weight="2"/>
+    </group>
+    <group id="d6">
+      <shape geom="roundRect" radius="12" x="636" y="338" w="300" h="178" fill="white" shadow="18 4 #1B2236/10 90"/>
+      <text x="652" y="350" w="270" h="14" size="10" bold="1" caps="1" spacing="0.4" color="#1B2236">Headcount by warehouse</text>
+      <chart type="bar" x="644" y="370" w="284" h="140" labels="1" label-size="8.5" label-color="#1B2236" size="8.5" color="#6B7690" gap="55" axis-color="#FFFFFF/0">
+        <cat>Podolsk, Kazan, Yekaterinburg, St. Petersburg, Novosibirsk, Krasnodar</cat>
+        <series name="Headcount" values="520,340,310,270,260,240" fill="linear(0, accent6/15 0%, accent6 100%)"/>
+      </chart>
+    </group>
+
+    <text x="24" y="522" w="600" h="12" size="7.5" color="#8A93A8">Figures are illustrative: a demo report of the fictional company Korzina+.</text>
+
+    <anim target="strip" effect="fade" start="after" delay="200" dur="500"/>
+    <anim target="d1" effect="float-up" start="with" delay="200" dur="500"/>
+    <anim target="d2" effect="float-up" start="with" delay="300" dur="500"/>
+    <anim target="d3" effect="float-up" start="with" delay="400" dur="500"/>
+    <anim target="d4" effect="float-up" start="with" delay="500" dur="500"/>
+    <anim target="d5" effect="float-up" start="with" delay="600" dur="500"/>
+    <anim target="d6" effect="float-up" start="with" delay="700" dur="500"/>
+  </slide>
+
+  <!-- ============ 3. Focus: one chart with annotations ============ -->
+  <slide id="focus" bg="#EEF1F6" transition="morph" transition-dur="1000">
+    <group id="logo">
+      <shape geom="roundRect" radius="8" x="24" y="20" w="30" h="30" fill="linear(45, accent1 0%, accent2 100%)"/>
+      <icon name="shopping-bag" x="31" y="27" w="16" h="16" color="white" weight="2.2"/>
+    </group>
+    <text id="kick" x="64" y="18" w="500" h="14" size="9.5" bold="1" caps="1" spacing="1.5" color="accent1">Weekly orders · Q3 2026</text>
+    <text id="title" x="64" y="32" w="860" h="34" font="heading" size="24" color="#1B2236">The “Back to School” promo set a quarterly record</text>
+
+    <shape id="focus-card" geom="roundRect" radius="12" x="24" y="80" w="640" h="436" fill="white" shadow="18 4 #1B2236/10 90"/>
+    <text id="unit3" x="44" y="96" w="400" h="14" size="10" color="#6B7690">Orders, K per week · July 1 – September 29</text>
+    <line id="avg-line" x1="66" y1="234.7" x2="598" y2="234.7" stroke="#1B2236/40 1 dash"/>
+    <chart id="big" type="column" x="36" y="116" w="566" h="390" labels="1" label-pos="inEnd" label-size="9" label-bold="1" label-color="#1B2236/75" size="9" color="#6B7690" gap="45" axis-color="#1B2236/15" min="0" max="140" grid="1" grid-color="#1B2236/6" axis="both">
+      <cat>W1, W2, W3, W4, W5, W6, W7, W8, W9, W10, W11, W12, W13</cat>
+      <series name="Orders" values="88,91,86,94,90,112,121,104,96,93,99,101,85"
+              colors="#DCE2F0,#DCE2F0,#DCE2F0,#DCE2F0,#DCE2F0,accent1,accent2,#DCE2F0,#DCE2F0,#DCE2F0,#DCE2F0,#DCE2F0,accent3"/>
+    </chart>
+    <!-- annotations (positions tuned to the rendered plot area) -->
+    <group id="ann-avg">
+      <text x="598" y="210" w="58" h="12" size="8" color="#6B7690" align="center">average</text>
+      <shape geom="roundRect" radius="9" x="600" y="225" w="54" h="19" fill="#1B2236" size="8.5" bold="1" color="white" align="center" anchor="middle" pad="0 0 0 0">97K</shape>
+    </group>
+    <group id="ann-peak">
+      <shape geom="roundRect" radius="8" x="110" y="122" w="168" h="46" fill="#1B2236" shadow="soft" pad="6 10 6 10" anchor="middle">
+        <p size="9.5" bold="1" color="white">121K — quarterly peak</p>
+        <p size="8.5" color="white/70">Aug 17–23, “Back to School”</p>
+      </shape>
+      <line x1="278" y1="145" x2="322" y2="173" stroke="accent2 1.25" tail="oval"/>
+    </group>
+    <group id="ann-dip">
+      <shape geom="roundRect" radius="8" x="392" y="150" w="196" h="46" fill="white" line="accent3 1.25" pad="6 10 6 10" anchor="middle">
+        <p size="9.5" bold="1" color="#1B2236">85K — payment outage</p>
+        <p size="8.5" color="#6B7690">Sep 24: gateway down for 4 hours</p>
+      </shape>
+      <line x1="570.5" y1="196" x2="570.5" y2="264" stroke="accent3 1.25" tail="oval"/>
+    </group>
+
+    <!-- right column: callout + insights -->
+    <group id="callout">
+      <shape geom="roundRect" radius="12" x="680" y="80" w="256" h="196" fill="linear(45, #1B2236 0%, #33275E 100%)" shadow="20 8 #1B2236/30 90"/>
+      <shape geom="roundRect" radius="8" x="700" y="100" w="34" h="34" fill="linear(45, accent1 0%, accent2 100%)" glow="accent2/35 10"/>
+      <icon name="trending-up" x="708" y="108" w="18" h="18" color="white" weight="2.2"/>
+      <text x="700" y="140" w="220" h="58" font="heading" size="46" color="linear(0, #FFFFFF 0%, #FFB3CF 100%)">+35%</text>
+      <text x="700" y="196" w="220" h="16" size="10.5" color="white/80">more orders in promo week vs July</text>
+      <text x="700" y="222" w="70" h="12" size="8.5" color="white/60">July avg.</text>
+      <shape geom="roundRect" radius="3" x="760" y="225" w="82" h="6" fill="white/25"/>
+      <text x="876" y="222" w="44" h="12" size="8.5" bold="1" color="white/80" align="right">89.8</text>
+      <text x="700" y="242" w="70" h="12" size="8.5" color="white/60">Week 7</text>
+      <shape geom="roundRect" radius="3" x="760" y="245" w="111" h="6" fill="linear(0, accent1 0%, accent2 100%)"/>
+      <text x="876" y="242" w="44" h="12" size="8.5" bold="1" color="white" align="right">121</text>
+    </group>
+    <group id="ins1">
+      <shape geom="roundRect" radius="12" x="680" y="288" w="256" h="108" fill="white" shadow="18 4 #1B2236/10 90"/>
+      <shape geom="roundRect" radius="9" x="696" y="304" w="36" h="36" fill="accent1/15"/>
+      <icon name="user-plus" x="705" y="313" w="18" h="18" color="accent1" weight="2.2"/>
+      <text x="744" y="302" w="180" h="24" font="heading" size="19" color="#1B2236">46%</text>
+      <text x="744" y="326" w="180" h="14" size="9" color="#6B7690">new customers in the promo</text>
+      <text x="696" y="352" w="228" h="34" size="9" line-height="1.2" color="#4A5470">The promo brought 118K new customers. 31% of them bought again in September.</text>
+    </group>
+    <group id="ins2">
+      <shape geom="roundRect" radius="12" x="680" y="408" w="256" h="108" fill="white" shadow="18 4 #1B2236/10 90"/>
+      <shape geom="roundRect" radius="9" x="696" y="424" w="36" h="36" fill="accent3/18"/>
+      <icon name="circle-alert" x="705" y="433" w="18" h="18" color="accent3" weight="2.2"/>
+      <text x="744" y="422" w="180" h="24" font="heading" size="19" color="#1B2236">≈₽14M</text>
+      <text x="744" y="446" w="180" h="14" size="9" color="#6B7690">lost to the payment outage</text>
+      <text x="696" y="472" w="228" h="34" size="9" line-height="1.2" color="#4A5470">In Q4 we add a backup payment gateway with automatic failover.</text>
+    </group>
+
+    <text x="24" y="522" w="600" h="12" size="7.5" color="#8A93A8">Figures are illustrative: a demo report of the fictional company Korzina+.</text>
+
+    <anim target="big" effect="wipe-bottom" start="after" delay="100" dur="900"/>
+    <anim target="avg-line" effect="wipe-left" start="after" dur="500"/>
+    <anim target="ann-avg" effect="fade" start="with" delay="300" dur="300"/>
+    <anim target="ann-peak" effect="zoom" start="after" dur="450"/>
+    <anim target="callout" effect="fly-right" start="with" delay="100" dur="600"/>
+    <anim target="ins1" effect="float-up" start="with" delay="300" dur="500"/>
+    <anim target="ann-dip" effect="zoom" start="click" dur="450"/>
+    <anim target="ins2" effect="float-up" start="with" delay="150" dur="500"/>
+  </slide>
+
+  <!-- ============ 4. Summary: three KPI highlights ============ -->
+  <slide id="summary" bg="#111727" transition="morph" transition-dur="1000">
+    <shape geom="ellipse" x="560" y="-200" w="560" h="440" fill="radial(#7C5CFF/35 0%, #7C5CFF/0 100%)" soft-edge="60"/>
+    <shape geom="ellipse" x="-180" y="320" w="520" h="400" fill="radial(#FF4D8D/20 0%, #FF4D8D/0 100%)" soft-edge="60"/>
+    <group id="logo">
+      <shape geom="roundRect" radius="8" x="24" y="20" w="30" h="30" fill="linear(45, accent1 0%, accent2 100%)"/>
+      <icon name="shopping-bag" x="31" y="27" w="16" h="16" color="white" weight="2.2"/>
+    </group>
+    <text id="kick" x="64" y="18" w="500" h="14" size="9.5" bold="1" caps="1" spacing="1.5" color="#A99BFF">Quarter summary</text>
+    <text id="title" x="64" y="32" w="860" h="34" font="heading" size="24" color="white">Q3 2026: growth three times the market</text>
+
+    <group id="callout">
+      <shape geom="roundRect" radius="14" x="24" y="96" w="291" h="284" fill="linear(45, #1B2236 0%, #33275E 100%)" line="white/8 0.75"/>
+      <shape geom="roundRect" radius="9" x="44" y="116" w="38" h="38" fill="linear(45, accent1 0%, accent2 100%)" glow="accent2/35 10"/>
+      <icon name="wallet" x="53" y="125" w="20" h="20" color="white" weight="2.2"/>
+      <shape geom="roundRect" radius="10" x="223" y="124" w="72" h="20" fill="accent4/25" size="9" bold="1" color="#5EE3B5" align="center" anchor="middle" pad="0 0 0 0">▲ +27% YoY</shape>
+      <text x="44" y="224" w="250" h="16" size="11" bold="1" color="white">Quarterly revenue</text>
+      <text x="44" y="242" w="250" h="30" size="9.5" line-height="1.2" color="white/65">The online retail market grew 9%.<br/>We grew three times faster.</text>
+      <chart type="area" x="36" y="290" w="267" h="80" axis="none" min="0.9">
+        <cat>Jan, Feb, Mar, Apr, May, Jun, Jul, Aug, Sep</cat>
+        <series name="2026" values="1.21,1.18,1.34,1.29,1.38,1.42,1.47,1.62,1.73" color="accent2/0" fill="linear(90, #FF7AA8/90 0%, accent2/5 100%)" width="0.5"/>
+      </chart>
+    </group>
+    <text id="n1" x="44" y="170" w="260" h="54" font="heading" size="42" color="linear(0, #FFFFFF 0%, #FFB3CF 100%)">₽4.82<span size="20">B</span></text>
+    <group id="h2">
+      <shape geom="roundRect" radius="14" x="334" y="96" w="291" h="284" fill="#1F2739" line="white/8 0.75"/>
+      <shape geom="roundRect" radius="9" x="354" y="116" w="38" h="38" fill="linear(45, accent5 0%, accent6 100%)"/>
+      <icon name="repeat" x="363" y="125" w="20" h="20" color="white" weight="2.2"/>
+      <shape geom="roundRect" radius="10" x="533" y="124" w="72" h="20" fill="accent4/25" size="9" bold="1" color="#5EE3B5" align="center" anchor="middle" pad="0 0 0 0">▲ +5 pp</shape>
+      <text x="354" y="224" w="250" h="16" size="11" bold="1" color="white">Repeat orders</text>
+      <text x="354" y="242" w="250" h="30" size="9.5" line-height="1.2" color="white/65">The “Korzina+ Plus” loyalty program gained<br/>410K new members.</text>
+      <chart id="h2chart" type="line" x="346" y="282" w="267" h="88" axis="cat" axis-color="#FFFFFF/0" size="8" color="#FFFFFF/50" labels="1" label-size="8.5" label-color="#FFFFFF/80" format="0&quot;%&quot;" min="54" max="64">
+        <cat>Q3’25, Q4’25, Q1’26, Q2’26, Q3’26</cat>
+        <series name="Share" values="57,58,59,60,62" color="accent6" width="2.5" colors="white/45,white/45,white/45,white/45,accent6"/>
+      </chart>
+    </group>
+    <text id="n2" x="354" y="170" w="260" h="54" font="heading" size="42" color="linear(0, #FFFFFF 0%, #9CD8FF 100%)">62%</text>
+    <group id="h3">
+      <shape geom="roundRect" radius="14" x="644" y="96" w="292" h="284" fill="#1F2739" line="white/8 0.75"/>
+      <shape geom="roundRect" radius="9" x="664" y="116" w="38" h="38" fill="linear(45, accent4 0%, accent6 100%)"/>
+      <icon name="truck" x="673" y="125" w="20" h="20" color="white" weight="2.2"/>
+      <shape geom="roundRect" radius="10" x="844" y="124" w="72" h="20" fill="accent4/25" size="9" bold="1" color="#5EE3B5" align="center" anchor="middle" pad="0 0 0 0">▼ −0.4 days</shape>
+      <text x="664" y="224" w="250" h="16" size="11" bold="1" color="white">Average delivery time</text>
+      <text x="664" y="242" w="250" h="30" size="9.5" line-height="1.2" color="white/65">The new Kazan warehouse brings next-day delivery to the Volga region.</text>
+      <!-- progress: share of next-day deliveries -->
+      <text x="664" y="316" w="200" h="14" size="9" color="white/65">Next-day delivery</text>
+      <text x="856" y="316" w="60" h="14" size="9" bold="1" color="white" align="right">72%</text>
+      <shape geom="roundRect" radius="5" x="664" y="336" w="252" h="10" fill="white/8"/>
+      <shape geom="roundRect" radius="0" x="865.6" y="332" w="1.5" h="18" fill="white/50"/>
+      <text x="664" y="354" w="252" h="14" size="8.5" color="white/45">Q4 target: 80%</text>
+    </group>
+    <text id="n3" x="664" y="170" w="260" h="54" font="heading" size="42" color="linear(0, #FFFFFF 0%, #9BF0D2 100%)">1.6<span size="20"> days</span></text>
+    <shape id="p3" geom="roundRect" radius="5" x="664" y="336" w="181" h="10" fill="linear(0, accent6 0%, accent4 100%)"/>
+
+    <!-- Q4 focus strip -->
+    <group id="next">
+      <shape geom="roundRect" radius="14" x="24" y="396" w="912" h="100" fill="linear(0, #1F2739 0%, #241F45 100%)" line="white/8 0.75"/>
+      <shape geom="roundRect" radius="1.5" x="24" y="410" w="3" h="72" fill="linear(90, accent1 0%, accent2 100%)"/>
+      <text x="44" y="414" w="200" h="14" size="9.5" bold="1" caps="1" spacing="1.2" color="#A99BFF">Q4 2026 focus</text>
+      <shape geom="roundRect" radius="8" x="44" y="444" w="30" h="30" fill="accent1/25"/>
+      <icon name="shield-check" x="51" y="451" w="16" h="16" color="#B9A8FF" weight="2"/>
+      <text x="84" y="442" w="240" h="40" size="10" line-height="1.25" color="white/85"><b>Backup payment gateway.</b> Protect revenue at Black Friday peaks.</text>
+      <shape geom="roundRect" radius="8" x="340" y="444" w="30" h="30" fill="accent2/25"/>
+      <icon name="sparkles" x="347" y="451" w="16" h="16" color="#FF9CC0" weight="2"/>
+      <text x="380" y="442" w="240" h="40" size="10" line-height="1.25" color="white/85"><b>Personalized picks.</b> Lift conversion from 3.4% to 3.8%.</text>
+      <shape geom="roundRect" radius="8" x="636" y="444" w="30" h="30" fill="accent4/25"/>
+      <icon name="warehouse" x="643" y="451" w="16" h="16" color="#8BEBC9" weight="2"/>
+      <text x="676" y="442" w="240" h="40" size="10" line-height="1.25" color="white/85"><b>Novosibirsk warehouse.</b> One-day delivery for Siberia.</text>
+    </group>
+
+    <text x="24" y="522" w="600" h="12" size="7.5" color="#5E6985">Figures are illustrative: a demo report of the fictional company Korzina+.</text>
+
+    <anim target="n1" effect="zoom" start="after" delay="100" dur="500"/>
+    <anim target="h2" effect="float-up" start="with" delay="250" dur="550"/>
+    <anim target="n2" effect="zoom" start="with" delay="700" dur="500"/>
+    <anim target="h3" effect="float-up" start="with" delay="450" dur="550"/>
+    <anim target="n3" effect="zoom" start="with" delay="900" dur="500"/>
+    <anim target="p3" effect="wipe-left" start="with" delay="1100" dur="800"/>
+    <anim target="next" effect="wipe-left" start="after" dur="700"/>
+  </slide>
+</deck>

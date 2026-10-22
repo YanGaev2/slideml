@@ -1,0 +1,121 @@
+<deck lang="en-US">
+  <theme font="Inter" heading="Inter SemiBold"
+         dk1="#111111" lt1="#F4F3EF" dk2="#6B6A66" lt2="#D9D7D1"
+         accent1="#FF4F12" accent2="#111111" accent3="#6B6A66" accent4="#D9D7D1" accent5="#6B6A66" accent6="#D9D7D1"/>
+
+  <styles>
+    <style name="kpi"       font="heading" size="120" spacing="-3" line-height="0.85" color="dk1"/>
+    <style name="kpi-muted" font="heading" size="60" spacing="-1.5" line-height="0.9" color="dk2"/>
+    <style name="display"   font="heading" size="54" spacing="-1.5" line-height="0.92" color="dk1"/>
+    <style name="h1"        font="heading" size="32" spacing="-0.6" line-height="1" color="dk1"/>
+    <style name="h2"        font="heading" size="20" line-height="1.05" color="dk1"/>
+    <style name="body"      size="16" line-height="1.2" color="dk2"/>
+    <style name="quote"     font="heading" size="36" spacing="-0.5" line-height="1.05" color="lt1"/>
+    <style name="label"     font="Cascadia Mono" size="11" caps="1" spacing="1" color="dk2"/>
+    <style name="chrome"    font="Cascadia Mono" size="10" caps="1" spacing="1" color="dk2"/>
+    <style name="credit"    size="10" color="lt1/70"/>
+  </styles>
+
+  <templates>
+    <template id="chrome">
+      <text id="chrome-brand" x="48" y="24" w="420" h="auto" class="chrome">{{section}}</text>
+      <line id="chrome-top" x1="48" y1="48" x2="912" y2="48" stroke="dk1/15 0.75"/>
+      <line id="chrome-bot" x1="48" y1="500" x2="912" y2="500" stroke="dk1/15 0.75"/>
+      <text id="chrome-page" x="714" y="512" w="198" h="auto" class="chrome" align="right">{{page}}</text>
+    </template>
+    <template id="chrome-plain">
+      <text id="chrome-brand" x="48" y="24" w="420" h="auto" class="chrome" color="lt1/70">{{section}}</text>
+      <text id="chrome-page" x="714" y="512" w="198" h="auto" class="chrome" color="lt1/70" align="right">{{page}}</text>
+    </template>
+  </templates>
+
+  <!-- A3 · V1 · cover: The bot resolves 63% of requests — we propose a rollout in Q1 2027 -->
+  <slide id="s1" bg="dk1" transition="fade" transition-dur="700">
+    <use template="chrome-plain" section="Bank · Support chatbot pilot" page="01"/>
+    <text id="s1-label" x="48" y="144" w="560" h="auto" class="label" color="lt1/70">Pilot results · 8 weeks · for the board</text>
+    <text id="s1-title" x="48" y="172" w="560" h="auto" class="display" size="44" color="lt1">The bot resolves 63% of requests — we propose a&#160;rollout in&#160;Q1&#160;2027</text>
+    <text id="s1-kpi" x="48" y="420" w="560" h="auto" class="body" color="lt1/80">41,200 requests in&#160;8 weeks · first response in 25&#160;s instead of 4&#160;min&#160;10&#160;s · ₽38 instead of ₽160 per&#160;request</text>
+    <waffle id="s1-grid" x="648" y="150" w="264" h="264" total="100" value="63" cols="10" gap="4" fill="dk2" accent="accent1"/>
+    <text id="s1-grid-l" x="648" y="424" w="264" h="auto" class="label" color="lt1/60">1 square = 1% of requests · orange — resolved by the bot</text>
+    <anim target="s1-grid-hi" effect="fade" start="after" dur="500"/>
+  </slide>
+
+  <!-- A7 · V3 · The bot resolved 25,956 of 41,200 requests on its own -->
+  <slide id="s2" bg="lt1" transition="fade" transition-dur="600">
+    <use template="chrome" section="Pilot · Scale" page="02"/>
+    <text id="s2-title" x="48" y="72" w="864" h="auto" class="h1">The bot resolved 25,956 of&#160;41,200 requests on&#160;its own</text>
+    <text id="s2-l" x="48" y="168" w="600" h="auto" class="label">Share of requests over the 8-week pilot</text>
+    <!-- Segment width = 864 × share. Bot: 864 × 0.63 = 544; operator: 864 − 544 = 320. -->
+    <shape id="s2-bot" x="48" y="192" w="544" h="132" fill="accent1" line="none" anchor="middle" align="left" pad="0 20" font="heading" size="32" color="lt1">63%</shape>
+    <shape id="s2-ops" x="592" y="192" w="320" h="132" fill="lt2" line="none" anchor="middle" align="left" pad="0 20" font="heading" size="32" color="dk1">37%</shape>
+    <text id="s2-bot-h" x="48" y="348" w="544" h="auto" class="h2">Bot: answered without an agent</text>
+    <text id="s2-bot-b" x="48" y="382" w="544" h="auto" class="body">Resolved 25,956 requests on&#160;its own.</text>
+    <text id="s2-ops-h" x="592" y="348" w="320" h="auto" class="h2">Agent</text>
+    <text id="s2-ops-b" x="592" y="382" w="320" h="auto" class="body">The bot handed over 15,244 requests.</text>
+    <line id="s2-rule" x1="48" y1="436" x2="912" y2="436" stroke="dk1/15 0.75"/>
+    <text id="s2-csat-v" x="48" y="452" w="140" h="auto" class="h2" color="dk1">4.3 of 5</text>
+    <text id="s2-csat-l" x="204" y="456" w="708" h="auto" class="body">customer rating of bot answers · agents — 4.5 of&#160;5</text>
+    <anim target="s2-bot" effect="wipe-left" start="after" dur="700"/>
+  </slide>
+
+  <!-- A4 · V2 · Customers get a first response in 25 s, not 4 min 10 s -->
+  <slide id="s3" bg="lt1" transition="fade" transition-dur="600">
+    <use template="chrome" section="Pilot · Speed" page="03"/>
+    <text id="s3-title" x="48" y="72" w="864" h="auto" class="h1">Customers get a first response in&#160;25&#160;s, not 4&#160;min&#160;10&#160;s</text>
+    <!-- Bar length = 640 × value / max, max = 250 s. Before: 640. With bot: 640 × 25 / 250 = 64. -->
+    <text id="s3-a-l" x="48" y="176" w="440" h="auto" class="label">Before the bot · avg first response time</text>
+    <shape id="s3-a" x="48" y="198" w="640" h="64" fill="lt2" line="none"/>
+    <text id="s3-a-v" x="704" y="212" w="208" h="auto" class="h1" color="dk2">4 min 10 s</text>
+    <text id="s3-b-l" x="48" y="288" w="440" h="auto" class="label" color="accent1">With the bot · avg first response time</text>
+    <shape id="s3-b" x="48" y="310" w="64" h="64" fill="accent1" line="none"/>
+    <text id="s3-b-v" x="128" y="324" w="208" h="auto" class="h1" color="accent1">25 s</text>
+    <text id="s3-delta" x="48" y="404" w="864" h="auto" class="h1" size="40" color="accent1">−3 min 45 s · 10× faster (−90%)</text>
+    <text id="s3-why" x="48" y="456" w="720" h="auto" class="body">Average first response time across all pilot requests.</text>
+    <anim target="s3-b" effect="wipe-left" start="after" dur="600"/>
+  </slide>
+
+  <!-- A3 · V4+V5 · Each bot request saves ₽122 — ₽3.2M over the pilot -->
+  <slide id="s4" bg="lt1" transition="fade" transition-dur="600">
+    <use template="chrome" section="Pilot · Economics" page="04"/>
+    <text id="s4-title" x="48" y="72" w="864" h="auto" class="h1">The bot saves ₽122 on&#160;every request</text>
+    <!-- Old cost = full width 864. New cost = 864 × 38 / 160 = 205. Savings = 864 − 205 = 659. -->
+    <text id="s4-old-l" x="48" y="172" w="440" h="auto" class="label">Agent · ₽160 per request</text>
+    <shape id="s4-old" x="48" y="194" w="864" h="56" fill="lt2" line="none"/>
+    <text id="s4-new-l" x="48" y="272" w="440" h="auto" class="label" color="accent1">Bot · ₽38 per request</text>
+    <shape id="s4-new" x="48" y="294" w="205" h="56" fill="accent1" line="none"/>
+    <shape id="s4-save" x="253" y="294" w="659" h="56" fill="pattern(wdUpDiag, accent1, lt1)" line="accent1 1"/>
+    <text id="s4-save-l" x="253" y="366" w="659" h="auto" class="h2" color="accent1">−₽122 on every request · −76%</text>
+    <line id="s4-rule" x1="48" y1="412" x2="912" y2="412" stroke="dk1/15 0.75"/>
+    <text id="s4-formula" x="48" y="428" w="864" h="auto" class="h2">25,956 requests × ₽122 ≈ ₽3.2M over 8&#160;weeks</text>
+    <text id="s4-note" x="48" y="460" w="864" h="auto" class="body">₽3,166,632 for the pilot · at the pilot volume ≈&#160;₽20.6M per&#160;year.</text>
+    <anim target="s4-save" effect="fade" start="after" dur="500"/>
+    <anim target="s4-save-l" effect="fade" start="with" dur="500"/>
+  </slide>
+
+  <!-- A7 · V1 · 7% of requests are routed to the wrong agent -->
+  <slide id="s5" bg="dk1" transition="fade" transition-dur="700">
+    <use template="chrome-plain" section="Pilot · Risk" page="05"/>
+    <text id="s5-title" x="48" y="72" w="864" h="auto" class="h1" color="lt1">7% of requests are routed to&#160;the wrong agent</text>
+    <waffle id="s5-grid" x="48" y="168" w="312" h="312" total="100" value="7" cols="10" gap="6" fill="dk2" accent="accent1"/>
+    <text id="s5-kpi" x="416" y="164" w="496" h="auto" class="kpi" size="96" color="accent1">7%</text>
+    <text id="s5-what" x="416" y="290" w="496" h="auto" class="h2" color="lt1">2,884 requests over the 8-week pilot</text>
+    <text id="s5-why" x="416" y="330" w="460" h="auto" class="body" color="lt1/70">The agent gets a request outside their area.</text>
+    <text id="s5-how" x="416" y="386" w="460" h="auto" class="body" color="lt1">Before rollout: rework the routing rules and&#160;re-measure on&#160;the pilot flow.</text>
+    <text id="s5-key" x="416" y="452" w="496" h="auto" class="label" color="lt1/60">Orange — misrouted handovers · 1 square = 1%</text>
+    <anim target="s5-grid-hi" effect="fade" start="after" dur="500"/>
+  </slide>
+
+  <!-- A12 · Decision: roll out the bot to all channels in Q1 2027 -->
+  <slide id="s6" bg="dk1" transition="fade" transition-dur="700">
+    <use template="chrome-plain" section="Pilot · Decision" page="06"/>
+    <text id="s6-title" x="48" y="96" w="700" h="auto" class="display" size="44" color="lt1">Roll out the bot across all channels in&#160;Q1&#160;2027</text>
+    <text id="s6-n1" x="48" y="240" w="60" h="auto" class="h1" color="accent1">1</text>
+    <text id="s6-a1" x="112" y="244" w="760" h="auto" class="h2" color="lt1">Approve the rollout to&#160;all channels — January–March 2027</text>
+    <text id="s6-n2" x="48" y="304" w="60" h="auto" class="h1" color="accent1">2</text>
+    <text id="s6-a2" x="112" y="308" w="760" h="auto" class="h2" color="lt1">Approve the rollout budget — [amount: to clarify]</text>
+    <text id="s6-n3" x="48" y="368" w="60" h="auto" class="h1" color="accent1">3</text>
+    <text id="s6-a3" x="112" y="372" w="760" h="auto" class="h2" color="lt1">Report on&#160;the first quarter of&#160;rollout — April 2027</text>
+    <line id="s6-rule" x1="48" y1="440" x2="912" y2="440" stroke="lt1/20 0.75"/>
+    <text id="s6-recap" x="48" y="456" w="864" h="auto" class="body" color="lt1/70">63% of requests without an&#160;agent · response in&#160;25&#160;s · −₽122 per&#160;request</text>
+  </slide>
+</deck>

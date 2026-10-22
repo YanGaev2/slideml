@@ -1,0 +1,471 @@
+<!-- Pixel: credentials deck of a UI agency. Retro UI / neo-brutalism style. -->
+<deck lang="en-US">
+  <theme font="Manrope" heading="Unbounded ExtraBold" dk1="#111111" lt1="#FBF5E9" dk2="#3A322B" lt2="#D9CFC3"
+         accent1="#F4C2C2" accent2="#CDE5D7" accent3="#DCCBEA" accent4="#F8CBA6" accent5="#F3E3A1" accent6="#6B6259"/>
+
+  <!-- ============ 1. COVER ============ -->
+  <slide id="cover" bg="#D9CFC3">
+    <dots x="0" y="400" w="180" h="140" step="10" r="2.2" fill="#9B8F82"/>
+    <dots x="880" y="300" w="80" h="240" step="10" r="2.2" fill="#9B8F82"/>
+
+    <!-- back window -->
+    <shape id="back" x="30" y="24" w="860" h="476" fill="#FBF5E9" line="#111111 2.5" shadow="hard"/>
+    <line id="backbar" x1="30" y1="56" x2="890" y2="56" stroke="#111111 2.5"/>
+    <icon name="square" x="824" y="29" w="22" h="22" color="#111111" weight="3"/>
+    <icon name="x" x="856" y="29" w="22" h="22" color="#111111" weight="3"/>
+
+    <!-- front window -->
+    <shape id="win" x="110" y="74" w="720" h="396" fill="#FBF5E9" line="#111111 2.5" shadow="hard"/>
+    <line id="bar" x1="110" y1="110" x2="830" y2="110" stroke="#111111 2.5"/>
+    <text id="bartxt" x="128" y="85" w="300" h="18" font="Cascadia Mono" size="11" color="#111111">pixel.exe — home</text>
+    <icon id="b1" name="minus" x="738" y="81" w="22" h="22" color="#111111" weight="3"/>
+    <icon id="b2" name="square" x="768" y="81" w="22" h="22" color="#111111" weight="3"/>
+    <icon id="b3" name="x" x="798" y="81" w="22" h="22" color="#111111" weight="3"/>
+
+    <shape id="tag" geom="roundRect" radius="14" x="355" y="134" w="230" h="28" fill="accent2" line="#111111 2"
+           size="12" font="Manrope SemiBold" align="center" anchor="middle" color="#111111">UI/UX agency · since 2016</shape>
+    <text id="title" x="170" y="168" w="600" h="130" font="Unbounded ExtraBold" size="96" align="center" color="#111111">Pixel</text>
+    <text id="sub" x="190" y="300" w="560" h="30" size="18" align="center" color="#3A322B">Designing interfaces people love to use</text>
+    <shape x="700" y="124" w="56" h="12" viewbox="0 0 70 12" fill="none" line="#111111 2"
+           path="M0 6 q4.375 -6 8.75 0 t8.75 0 t8.75 0 t8.75 0 t8.75 0 t8.75 0 t8.75 0 t8.75 0"/>
+    <text x="214" y="118" w="90" h="24" font="Arial Black" size="16" color="#111111" spacing="2">• • • • •</text>
+
+    <group id="field">
+      <shape x="230" y="368" w="480" h="42" fill="white" line="#111111 2" pad="0 12 0 44" anchor="middle"
+             size="14" color="#3A322B">Task: redesign a mobile banking app</shape>
+      <icon name="search" x="244" y="378" w="22" h="22" color="#111111" weight="2.5"/>
+      <line x1="526" y1="379" x2="526" y2="399" stroke="#111111 2"/>
+    </group>
+    <text x="134" y="426" w="100" h="26" font="Arial Black" size="18" color="#111111" spacing="-1">&gt;&gt;&gt;&gt;&gt;</text>
+
+    <!-- mini window: video -->
+    <group id="mini1">
+      <shape x="24" y="140" w="172" h="134" fill="#FBF5E9" line="#111111 2.5" shadow="hard"/>
+      <line x1="24" y1="162" x2="196" y2="162" stroke="#111111 2.5"/>
+      <shape x="38" y="176" w="144" h="64" fill="accent1" line="#111111 2"/>
+      <icon name="circle-play" x="91" y="189" w="38" h="38" color="#111111" fill="accent3" weight="2"/>
+      <shape geom="roundRect" radius="6" x="38" y="250" w="144" h="12" fill="accent2" line="#111111 1.5"/>
+      <shape geom="roundRect" radius="6" x="38" y="250" w="62" h="12" fill="accent3" line="#111111 1.5"/>
+    </group>
+
+    <!-- mini window: metric -->
+    <group id="mini2">
+      <shape x="40" y="298" w="182" h="104" fill="#FBF5E9" line="#111111 2.5" shadow="hard"/>
+      <line x1="40" y1="320" x2="222" y2="320" stroke="#111111 2.5"/>
+      <shape geom="roundRect" radius="8" x="54" y="334" w="50" h="50" fill="accent4" line="#111111 2"/>
+      <icon name="trending-up" x="64" y="344" w="30" h="30" color="#111111" weight="2.5"/>
+      <text x="114" y="334" w="104" h="30" font="Unbounded ExtraBold" size="22" color="#111111">+38%</text>
+      <text x="114" y="364" w="104" h="18" size="11" color="#3A322B">lead conversion</text>
+    </group>
+
+    <!-- mini window: rating -->
+    <group id="mini3">
+      <shape x="766" y="128" w="172" h="112" fill="#FBF5E9" line="#111111 2.5" shadow="hard"/>
+      <line x1="766" y1="150" x2="938" y2="150" stroke="#111111 2.5"/>
+      <shape geom="roundRect" radius="3" x="796" y="164" w="112" h="7" fill="#111111"/>
+      <shape geom="roundRect" radius="3" x="812" y="178" w="80" h="7" fill="#111111"/>
+      <icon name="star" x="784" y="196" w="32" h="32" color="#111111" fill="accent2" weight="2"/>
+      <icon name="star" x="836" y="196" w="32" h="32" color="#111111" fill="accent2" weight="2"/>
+      <icon name="star" x="888" y="196" w="32" h="32" color="#111111" fill="accent2" weight="2"/>
+    </group>
+
+    <!-- wired mouse -->
+    <group id="mouse">
+      <line x1="852" y1="240" x2="852" y2="292" stroke="#111111 2.5"/>
+      <shape geom="roundRect" radius="40" x="812" y="290" w="80" h="132" fill="accent3" line="#111111 2.5" shadow="hard"/>
+      <line x1="852" y1="292" x2="852" y2="344" stroke="#111111 2"/>
+      <line x1="813" y1="344" x2="891" y2="344" stroke="#111111 2"/>
+      <shape geom="roundRect" radius="7" x="845" y="304" w="14" h="28" fill="accent4" line="#111111 2"/>
+    </group>
+
+    <icon id="cursor" name="mouse-pointer-2" x="690" y="388" w="40" h="40" color="#111111" fill="white" weight="2"/>
+
+    <anim target="title" effect="zoom" start="after" dur="600"/>
+    <anim target="tag" effect="fade" start="after" dur="300"/>
+    <anim target="sub" effect="fade" start="with" dur="400"/>
+    <anim target="field" effect="wipe-right" start="after" dur="500"/>
+    <anim target="mini1" effect="float-up" start="after" dur="400"/>
+    <anim target="mini2" effect="float-up" start="with" delay="150" dur="400"/>
+    <anim target="mini3" effect="float-down" start="with" delay="300" dur="400"/>
+    <anim target="mouse" effect="float-up" start="with" delay="450" dur="400"/>
+    <anim target="cursor" effect="fly-bottom" start="after" dur="500"/>
+  </slide>
+
+  <!-- ============ 2. ABOUT ============ -->
+  <slide id="about" bg="#D9CFC3" transition="morph" transition-dur="900">
+    <dots x="0" y="400" w="180" h="140" step="10" r="2.2" fill="#9B8F82"/>
+    <dots x="880" y="300" w="80" h="240" step="10" r="2.2" fill="#9B8F82"/>
+    <shape id="win" x="40" y="30" w="870" h="470" fill="#FBF5E9" line="#111111 2.5" shadow="hard"/>
+    <line id="bar" x1="40" y1="66" x2="910" y2="66" stroke="#111111 2.5"/>
+    <text id="bartxt" x="60" y="41" w="300" h="18" font="Cascadia Mono" size="11" color="#111111">about_us.txt</text>
+    <icon id="b1" name="minus" x="818" y="37" w="22" h="22" color="#111111" weight="3"/>
+    <icon id="b2" name="square" x="848" y="37" w="22" h="22" color="#111111" weight="3"/>
+    <icon id="b3" name="x" x="878" y="37" w="22" h="22" color="#111111" weight="3"/>
+
+    <shape id="pill" geom="roundRect" radius="13" x="80" y="94" w="100" h="26" fill="accent4" line="#111111 2"
+           size="11" font="Manrope ExtraBold" align="center" anchor="middle" color="#111111" spacing="1">ABOUT US</shape>
+    <text id="h" x="80" y="134" w="410" h="86" font="Unbounded ExtraBold" size="32" line-height="1.0" color="#111111">Complex made<br/>simple</text>
+    <text id="lead" x="80" y="230" w="380" h="96" size="14" line-height="1.25" color="#3A322B">Pixel is 27 designers, researchers and front-end developers. We design interfaces for banks, marketplaces and medtech, from first interview to design system.</text>
+
+    <group id="ticks">
+      <shape geom="roundRect" radius="5" x="80" y="346" w="24" h="24" fill="accent2" line="#111111 2"/>
+      <icon name="check" x="84" y="350" w="16" h="16" color="#111111" weight="3.5"/>
+      <text x="116" y="348" w="340" h="22" size="14" font="Manrope SemiBold" color="#111111">We work in two-week sprints</text>
+      <shape geom="roundRect" radius="5" x="80" y="386" w="24" h="24" fill="accent1" line="#111111 2"/>
+      <icon name="check" x="84" y="390" w="16" h="16" color="#111111" weight="3.5"/>
+      <text x="116" y="388" w="340" h="22" size="14" font="Manrope SemiBold" color="#111111">We ship mockups with component code</text>
+      <shape geom="roundRect" radius="5" x="80" y="426" w="24" h="24" fill="accent3" line="#111111 2"/>
+      <icon name="check" x="84" y="430" w="16" h="16" color="#111111" weight="3.5"/>
+      <text x="116" y="428" w="340" h="22" size="14" font="Manrope SemiBold" color="#111111">We track metrics after release</text>
+    </group>
+
+    <shape id="k1" x="478" y="94" w="174" h="100" fill="accent1" line="#111111 2.5" shadow="hard" pad="8 12 8 14" anchor="middle" color="#111111">
+      <p font="Unbounded ExtraBold" size="30">9 years</p>
+      <p size="11.5" color="#3A322B">designing interfaces</p>
+    </shape>
+    <shape id="k2" x="670" y="94" w="174" h="100" fill="accent2" line="#111111 2.5" shadow="hard" pad="8 12 8 14" anchor="middle" color="#111111">
+      <p font="Unbounded ExtraBold" size="30">140+</p>
+      <p size="11.5" color="#3A322B">products launched</p>
+    </shape>
+    <shape id="k3" x="478" y="212" w="174" h="100" fill="accent3" line="#111111 2.5" shadow="hard" pad="8 12 8 14" anchor="middle" color="#111111">
+      <p font="Unbounded ExtraBold" size="30">27</p>
+      <p size="11.5" color="#3A322B">people on the team</p>
+    </shape>
+    <shape id="k4" x="670" y="212" w="174" h="100" fill="accent4" line="#111111 2.5" shadow="hard" pad="8 12 8 14" anchor="middle" color="#111111">
+      <p font="Unbounded ExtraBold" size="30">4.9</p>
+      <p size="11.5" color="#3A322B">rating on Clutch</p>
+    </shape>
+
+    <group id="donutwin">
+      <shape x="478" y="332" w="366" h="146" fill="#FBF5E9" line="#111111 2.5" shadow="hard"/>
+      <line x1="478" y1="354" x2="844" y2="354" stroke="#111111 2.5"/>
+      <text x="490" y="337" w="250" h="16" font="Cascadia Mono" size="9.5" color="#111111">clients_by_industry.chart</text>
+      <shape geom="blockArc" x="500" y="362" w="108" h="108" adj="adj1=16200000;adj2=2808000;adj3=15000" fill="accent1" line="#111111 2"/>
+      <shape geom="blockArc" x="500" y="362" w="108" h="108" adj="adj1=2808000;adj2=8640000;adj3=15000" fill="accent2" line="#111111 2"/>
+      <shape geom="blockArc" x="500" y="362" w="108" h="108" adj="adj1=8640000;adj2=12744000;adj3=15000" fill="accent3" line="#111111 2"/>
+      <shape geom="blockArc" x="500" y="362" w="108" h="108" adj="adj1=12744000;adj2=16200000;adj3=15000" fill="accent4" line="#111111 2"/>
+      <shape x="640" y="371" w="16" h="16" fill="accent1" line="#111111 1.5"/>
+      <text x="666" y="370" w="170" h="18" size="12.5" color="#111111"><b>38%</b> fintech</text>
+      <shape x="640" y="397" w="16" h="16" fill="accent2" line="#111111 1.5"/>
+      <text x="666" y="396" w="170" h="18" size="12.5" color="#111111"><b>27%</b> e-commerce</text>
+      <shape x="640" y="423" w="16" h="16" fill="accent3" line="#111111 1.5"/>
+      <text x="666" y="422" w="170" h="18" size="12.5" color="#111111"><b>19%</b> medtech</text>
+      <shape x="640" y="449" w="16" h="16" fill="accent4" line="#111111 1.5"/>
+      <text x="666" y="448" w="170" h="18" size="12.5" color="#111111"><b>16%</b> SaaS</text>
+    </group>
+
+    <!-- "reviews" sticker window, sticks out past the window edge -->
+    <group id="stars">
+      <shape x="852" y="222" w="96" h="82" fill="#FBF5E9" line="#111111 2.5" shadow="hard"/>
+      <line x1="852" y1="242" x2="948" y2="242" stroke="#111111 2.5"/>
+      <text x="860" y="226" w="80" h="14" font="Cascadia Mono" size="8" color="#111111">reviews</text>
+      <icon name="star" x="861" y="252" w="22" h="22" color="#111111" fill="accent5" weight="2.2"/>
+      <icon name="star" x="889" y="252" w="22" h="22" color="#111111" fill="accent5" weight="2.2"/>
+      <icon name="star" x="917" y="252" w="22" h="22" color="#111111" fill="accent5" weight="2.2"/>
+      <shape geom="roundRect" radius="3" x="866" y="284" w="68" h="7" fill="#111111"/>
+    </group>
+
+    <icon id="ptr" name="mouse-pointer-2" x="585" y="432" w="40" h="40" color="#111111" fill="white" weight="2"/>
+    <text x="480" y="514" w="390" h="16" size="9" align="right" color="#6B6259">Illustrative figures</text>
+
+    <anim target="pill" effect="fade" start="after" dur="300"/>
+    <anim target="h" effect="float-up" start="with" dur="500"/>
+    <anim target="lead" effect="fade" start="after" dur="400"/>
+    <anim target="ticks" effect="wipe-right" start="after" dur="500"/>
+    <anim target="k1" effect="zoom" start="after" dur="300"/>
+    <anim target="k2" effect="zoom" start="with" delay="120" dur="300"/>
+    <anim target="k3" effect="zoom" start="with" delay="240" dur="300"/>
+    <anim target="k4" effect="zoom" start="with" delay="360" dur="300"/>
+    <anim target="stars" effect="zoom" start="after" dur="300"/>
+    <anim target="donutwin" effect="float-up" start="after" dur="500"/>
+    <anim target="ptr" effect="fly-bottom" start="after" dur="400"/>
+  </slide>
+
+  <!-- ============ 3. SERVICES ============ -->
+  <slide id="services" bg="#D9CFC3" transition="morph" transition-dur="900">
+    <dots x="0" y="400" w="180" h="140" step="10" r="2.2" fill="#9B8F82"/>
+    <dots x="880" y="300" w="80" h="240" step="10" r="2.2" fill="#9B8F82"/>
+    <shape id="win" x="40" y="30" w="870" h="470" fill="#FBF5E9" line="#111111 2.5" shadow="hard"/>
+    <line id="bar" x1="40" y1="66" x2="910" y2="66" stroke="#111111 2.5"/>
+    <text id="bartxt" x="60" y="41" w="300" h="18" font="Cascadia Mono" size="11" color="#111111">services/</text>
+    <icon id="b1" name="minus" x="818" y="37" w="22" h="22" color="#111111" weight="3"/>
+    <icon id="b2" name="square" x="848" y="37" w="22" h="22" color="#111111" weight="3"/>
+    <icon id="b3" name="x" x="878" y="37" w="22" h="22" color="#111111" weight="3"/>
+
+    <text id="h" x="180" y="88" w="600" h="52" font="Unbounded ExtraBold" size="36" align="center" color="#111111">What we do</text>
+    <group id="spark">
+      <shape geom="star4" x="210" y="92" w="26" h="26" fill="accent5" line="#111111 2"/>
+      <shape geom="star4" x="240" y="118" w="14" h="14" fill="accent1" line="#111111 1.5"/>
+      <shape geom="star4" x="718" y="112" w="20" h="20" fill="accent3" line="#111111 2"/>
+    </group>
+
+    <group id="c1">
+      <shape x="70" y="160" w="186" h="286" fill="#FBF5E9" line="#111111 2.5" shadow="hard"/>
+      <shape x="70" y="160" w="186" h="28" fill="accent1" line="#111111 2.5"/>
+      <text x="82" y="166" w="60" h="16" font="Cascadia Mono" size="10" color="#111111">01</text>
+      <icon name="x" x="232" y="167" w="14" h="14" color="#111111" weight="3"/>
+      <shape geom="roundRect" radius="10" x="86" y="204" w="56" h="56" fill="accent1" line="#111111 2"/>
+      <icon name="search" x="98" y="216" w="32" h="32" color="#111111" weight="2.2"/>
+      <text x="86" y="276" w="160" h="22" font="Unbounded ExtraBold" size="13.5" color="#111111">Research</text>
+      <text x="86" y="304" w="158" h="88" size="12" line-height="1.2" color="#3A322B">Interviews, usability tests and funnel analytics. We find where people get lost.</text>
+      <shape x="86" y="404" w="154" h="26" fill="white" line="#111111 2" size="11" font="Manrope ExtraBold" align="center" anchor="middle" color="#111111">from 2 weeks</shape>
+    </group>
+    <group id="c2">
+      <shape x="278" y="160" w="186" h="286" fill="#FBF5E9" line="#111111 2.5" shadow="hard"/>
+      <shape x="278" y="160" w="186" h="28" fill="accent2" line="#111111 2.5"/>
+      <text x="290" y="166" w="60" h="16" font="Cascadia Mono" size="10" color="#111111">02</text>
+      <icon name="x" x="440" y="167" w="14" h="14" color="#111111" weight="3"/>
+      <shape geom="roundRect" radius="10" x="294" y="204" w="56" h="56" fill="accent2" line="#111111 2"/>
+      <icon name="pen-tool" x="306" y="216" w="32" h="32" color="#111111" weight="2.2"/>
+      <text x="294" y="276" w="160" h="22" font="Unbounded ExtraBold" size="13.5" color="#111111">UI design</text>
+      <text x="294" y="304" w="158" h="88" size="12" line-height="1.2" color="#3A322B">Web and mobile interfaces: from wireframes to mockups ready for coding.</text>
+      <shape x="294" y="404" w="154" h="26" fill="white" line="#111111 2" size="11" font="Manrope ExtraBold" align="center" anchor="middle" color="#111111">from 4 weeks</shape>
+    </group>
+    <group id="c3">
+      <shape x="486" y="148" w="186" h="286" fill="#FBF5E9" line="#111111 3.5" shadow="hard"/>
+      <shape x="486" y="148" w="186" h="28" fill="accent3" line="#111111 3.5"/>
+      <text x="498" y="154" w="60" h="16" font="Cascadia Mono" size="10" color="#111111">03</text>
+      <icon name="x" x="648" y="155" w="14" h="14" color="#111111" weight="3"/>
+      <shape geom="roundRect" radius="10" x="502" y="192" w="56" h="56" fill="accent3" line="#111111 2"/>
+      <icon name="component" x="514" y="204" w="32" h="32" color="#111111" weight="2.2"/>
+      <text x="502" y="264" w="166" h="22" font="Unbounded ExtraBold" size="13.5" color="#111111">Design systems</text>
+      <text x="502" y="292" w="158" h="88" size="12" line-height="1.2" color="#3A322B">Figma component libraries and dev tokens. They save teams up to 30% of time.</text>
+      <shape x="502" y="392" w="154" h="26" fill="accent5" line="#111111 2" size="11" font="Manrope ExtraBold" align="center" anchor="middle" color="#111111">from 6 weeks</shape>
+    </group>
+    <group id="c4">
+      <shape x="694" y="160" w="186" h="286" fill="#FBF5E9" line="#111111 2.5" shadow="hard"/>
+      <shape x="694" y="160" w="186" h="28" fill="accent4" line="#111111 2.5"/>
+      <text x="706" y="166" w="60" h="16" font="Cascadia Mono" size="10" color="#111111">04</text>
+      <icon name="x" x="856" y="167" w="14" h="14" color="#111111" weight="3"/>
+      <shape geom="roundRect" radius="10" x="710" y="204" w="56" h="56" fill="accent4" line="#111111 2"/>
+      <icon name="mouse-pointer-click" x="722" y="216" w="32" h="32" color="#111111" weight="2.2"/>
+      <text x="710" y="276" w="160" h="22" font="Unbounded ExtraBold" size="13.5" color="#111111">Prototypes</text>
+      <text x="710" y="304" w="158" h="88" size="12" line-height="1.2" color="#3A322B">Clickable prototypes and micro-animations. We test ideas before coding.</text>
+      <shape x="710" y="404" w="154" h="26" fill="white" line="#111111 2" size="11" font="Manrope ExtraBold" align="center" anchor="middle" color="#111111">from 1 week</shape>
+    </group>
+
+    <!-- "export" mini window, sticks out past the bottom-left corner -->
+    <group id="export">
+      <shape x="18" y="458" w="170" h="66" fill="#FBF5E9" line="#111111 2.5" shadow="hard"/>
+      <line x1="18" y1="476" x2="188" y2="476" stroke="#111111 2.5"/>
+      <text x="26" y="461" w="140" h="14" font="Cascadia Mono" size="8" color="#111111">export.fig</text>
+      <shape geom="roundRect" radius="6" x="30" y="486" w="146" h="12" fill="accent2" line="#111111 1.5"/>
+      <shape geom="roundRect" radius="6" x="30" y="486" w="104" h="12" fill="accent3" line="#111111 1.5"/>
+      <text x="30" y="503" w="146" h="16" font="Cascadia Mono" size="8.5" color="#3A322B">72% · 148 mockups</text>
+    </group>
+
+    <icon id="ptr" name="mouse-pointer-2" x="412" y="414" w="40" h="40" color="#111111" fill="white" weight="2"/>
+
+    <anim target="h" effect="fade" start="after" dur="400"/>
+    <anim target="spark" effect="zoom" start="with" delay="200" dur="400"/>
+    <anim target="c1" effect="float-up" start="after" dur="400"/>
+    <anim target="c2" effect="float-up" start="with" delay="150" dur="400"/>
+    <anim target="c3" effect="float-up" start="with" delay="300" dur="400"/>
+    <anim target="c4" effect="float-up" start="with" delay="450" dur="400"/>
+    <anim target="ptr" effect="fly-bottom" start="after" dur="400"/>
+    <anim target="export" effect="wipe-right" start="after" delay="100" dur="500"/>
+  </slide>
+
+  <!-- ============ 4. TIMELINE ============ -->
+  <slide id="history" bg="#D9CFC3" transition="morph" transition-dur="900">
+    <dots x="0" y="400" w="180" h="140" step="10" r="2.2" fill="#9B8F82"/>
+    <dots x="880" y="300" w="80" h="240" step="10" r="2.2" fill="#9B8F82"/>
+    <shape id="win" x="40" y="30" w="870" h="470" fill="#FBF5E9" line="#111111 2.5" shadow="hard"/>
+    <line id="bar" x1="40" y1="66" x2="910" y2="66" stroke="#111111 2.5"/>
+    <text id="bartxt" x="60" y="41" w="300" h="18" font="Cascadia Mono" size="11" color="#111111">history.log</text>
+    <icon id="b1" name="minus" x="818" y="37" w="22" h="22" color="#111111" weight="3"/>
+    <icon id="b2" name="square" x="848" y="37" w="22" h="22" color="#111111" weight="3"/>
+    <icon id="b3" name="x" x="878" y="37" w="22" h="22" color="#111111" weight="3"/>
+
+    <text x="84" y="98" w="100" h="24" font="Arial Black" size="16" color="#111111" spacing="2">• • • • •</text>
+    <text id="h" x="180" y="88" w="600" h="52" font="Unbounded ExtraBold" size="36" align="center" color="#111111">Our story</text>
+
+    <!-- chart mini window, sticks out past the right edge -->
+    <group id="chartwin">
+      <shape x="800" y="128" w="150" h="98" fill="#FBF5E9" line="#111111 2.5" shadow="hard"/>
+      <line x1="800" y1="148" x2="950" y2="148" stroke="#111111 2.5"/>
+      <shape geom="blockArc" x="812" y="160" w="54" h="54" adj="adj1=0;adj2=7200000;adj3=16000" fill="accent3" line="#111111 1.5"/>
+      <shape geom="blockArc" x="812" y="160" w="54" h="54" adj="adj1=7200000;adj2=15000000;adj3=16000" fill="accent4" line="#111111 1.5"/>
+      <shape geom="blockArc" x="812" y="160" w="54" h="54" adj="adj1=15000000;adj2=0;adj3=16000" fill="accent2" line="#111111 1.5"/>
+      <shape geom="roundRect" radius="4" x="878" y="164" w="60" h="9" fill="accent2" line="#111111 1.5"/>
+      <shape x="876" y="182" w="64" h="28" viewbox="0 0 64 28" fill="none" line="#111111 6" path="M3 22 L18 8 L32 20 L46 6 L61 16"/>
+      <shape x="876" y="182" w="64" h="28" viewbox="0 0 64 28" fill="none" line="#DCCBEA 3" path="M3 22 L18 8 L32 20 L46 6 L61 16"/>
+    </group>
+
+    <line id="axis" x1="88" y1="300" x2="878" y2="300" stroke="#111111 2.5" head="oval" tail="oval"/>
+
+    <group id="t1">
+      <line x1="200" y1="250" x2="200" y2="274" stroke="#111111 2.5"/>
+      <shape x="120" y="274" w="160" h="52" fill="accent1" line="#111111 2.5" shadow="hard" font="Unbounded ExtraBold" size="24" align="center" anchor="middle" color="#111111">2016</shape>
+      <text x="85" y="172" w="230" h="28" font="Unbounded ExtraBold" size="17" align="center" color="#111111">Launch</text>
+      <text x="85" y="202" w="230" h="44" size="12.5" align="center" line-height="1.15" color="#3A322B">Three designers and a first order —<br/>a coffee shop site in Kazan</text>
+    </group>
+    <group id="t2">
+      <line x1="390" y1="326" x2="390" y2="350" stroke="#111111 2.5"/>
+      <shape x="310" y="274" w="160" h="52" fill="accent2" line="#111111 2.5" shadow="hard" font="Unbounded ExtraBold" size="24" align="center" anchor="middle" color="#111111">2018</shape>
+      <text x="275" y="356" w="230" h="28" font="Unbounded ExtraBold" size="17" align="center" color="#111111">First bank</text>
+      <text x="275" y="386" w="230" h="44" size="12.5" align="center" line-height="1.15" color="#3A322B">Mobile bank redesign: store rating rose from 3.6 to 4.7</text>
+    </group>
+    <group id="t3">
+      <line x1="580" y1="250" x2="580" y2="274" stroke="#111111 2.5"/>
+      <shape x="500" y="274" w="160" h="52" fill="accent3" line="#111111 2.5" shadow="hard" font="Unbounded ExtraBold" size="24" align="center" anchor="middle" color="#111111">2021</shape>
+      <text x="465" y="172" w="230" h="28" font="Unbounded ExtraBold" size="17" align="center" color="#111111">Design system</text>
+      <text x="465" y="202" w="230" h="44" size="12.5" align="center" line-height="1.15" color="#3A322B">Launched Pixel Kit — 400 components for client teams</text>
+    </group>
+    <group id="t4">
+      <line x1="770" y1="326" x2="770" y2="350" stroke="#111111 2.5"/>
+      <shape x="690" y="274" w="160" h="52" fill="accent4" line="#111111 2.5" shadow="hard" font="Unbounded ExtraBold" size="24" align="center" anchor="middle" color="#111111">2024</shape>
+      <text x="655" y="356" w="230" h="28" font="Unbounded ExtraBold" size="17" align="center" color="#111111">140 projects</text>
+      <text x="655" y="386" w="230" h="44" size="12.5" align="center" line-height="1.15" color="#3A322B">27 people, offices in Moscow and Kazan, clients in 6 countries</text>
+    </group>
+
+    <shape x="84" y="440" w="64" h="12" viewbox="0 0 70 12" fill="none" line="#111111 2"
+           path="M0 6 q4.375 -6 8.75 0 t8.75 0 t8.75 0 t8.75 0 t8.75 0 t8.75 0 t8.75 0 t8.75 0"/>
+    <text x="82" y="456" w="100" h="26" font="Arial Black" size="18" color="#111111" spacing="-1">&gt;&gt;&gt;&gt;&gt;</text>
+
+    <icon id="ptr" name="mouse-pointer-2" x="834" y="306" w="40" h="40" color="#111111" fill="white" weight="2"/>
+    <text x="480" y="514" w="390" h="16" size="9" align="right" color="#6B6259">Illustrative figures</text>
+
+    <anim target="h" effect="fade" start="after" dur="400"/>
+    <anim target="axis" effect="wipe-right" start="after" dur="700"/>
+    <anim target="t1" effect="float-down" start="after" dur="400"/>
+    <anim target="t2" effect="float-up" start="after" dur="400"/>
+    <anim target="t3" effect="float-down" start="after" dur="400"/>
+    <anim target="t4" effect="float-up" start="after" dur="400"/>
+    <anim target="ptr" effect="fly-bottom" start="after" dur="400"/>
+    <anim target="chartwin" effect="zoom" start="after" dur="400"/>
+  </slide>
+
+  <!-- ============ 5. PRICING ============ -->
+  <slide id="pricing" bg="#D9CFC3" transition="morph" transition-dur="900">
+    <dots x="0" y="400" w="180" h="140" step="10" r="2.2" fill="#9B8F82"/>
+    <dots x="880" y="300" w="80" h="240" step="10" r="2.2" fill="#9B8F82"/>
+    <shape id="win" x="40" y="30" w="870" h="470" fill="#FBF5E9" line="#111111 2.5" shadow="hard"/>
+    <line id="bar" x1="40" y1="66" x2="910" y2="66" stroke="#111111 2.5"/>
+    <text id="bartxt" x="60" y="41" w="300" h="18" font="Cascadia Mono" size="11" color="#111111">prices.xls</text>
+    <icon id="b1" name="minus" x="818" y="37" w="22" h="22" color="#111111" weight="3"/>
+    <icon id="b2" name="square" x="848" y="37" w="22" h="22" color="#111111" weight="3"/>
+    <icon id="b3" name="x" x="878" y="37" w="22" h="22" color="#111111" weight="3"/>
+
+    <text id="h" x="80" y="88" w="440" h="52" font="Unbounded ExtraBold" size="36" color="#111111">Plans &amp; pricing</text>
+    <text id="hs" x="730" y="94" w="140" h="40" size="12.5" align="right" line-height="1.1" color="#3A322B">Three formats —<br/>pick your pace</text>
+
+    <group id="tbl">
+      <shape x="80" y="150" w="790" h="290" fill="#FBF5E9" line="#111111 2.5" shadow="hard"/>
+      <table x="80" y="150" w="790" h="290" cols="1fr 1fr 1fr 1fr" lines="all" line="#111111 2.5" size="12.5" color="#111111" fill="#FBF5E9">
+        <tr h="48">
+          <th fill="#F3EADB" anchor="middle" font="Cascadia Mono" size="11" color="#6B6259">plan →</th>
+          <th fill="accent2" font="Unbounded ExtraBold" size="15" align="center" anchor="middle">Start</th>
+          <th fill="accent1" font="Unbounded ExtraBold" size="15" align="center" anchor="middle">Product</th>
+          <th fill="accent3" font="Unbounded ExtraBold" size="15" align="center" anchor="middle">Partner</th>
+        </tr>
+        <tr h="44"><th fill="#F3EADB" anchor="middle">Timeline</th><td anchor="middle" align="center">3–4 weeks</td><td anchor="middle" align="center">8–10 weeks</td><td anchor="middle" align="center">6+ months</td></tr>
+        <tr h="60"><th fill="#F3EADB" anchor="middle">What we do</th><td anchor="middle" align="center">Audit and redesign of one flow</td><td anchor="middle" align="center">Turnkey product: UX, UI and prototype</td><td anchor="middle" align="center">Dedicated team and design system</td></tr>
+        <tr h="44"><th fill="#F3EADB" anchor="middle">Team</th><td anchor="middle" align="center">2 designers</td><td anchor="middle" align="center">4 specialists</td><td anchor="middle" align="center">6+ people</td></tr>
+        <tr h="44"><th fill="#F3EADB" anchor="middle">Support</th><td anchor="middle" align="center">2 weeks</td><td anchor="middle" align="center">2 months</td><td anchor="middle" align="center">full term</td></tr>
+        <tr h="50" fill="accent4"><th anchor="middle">Price</th><td anchor="middle" align="center" font="Unbounded ExtraBold" size="13">from ₽450K</td><td anchor="middle" align="center" font="Unbounded ExtraBold" size="13">from ₽1.6M</td><td anchor="middle" align="center" font="Unbounded ExtraBold" size="13">₽900K/month</td></tr>
+      </table>
+      <shape x="79.5" y="149.5" w="791" h="291" fill="none" line="#111111 4"/>
+    </group>
+    <shape id="focus" x="475" y="150" w="197.5" h="290" fill="none" line="#111111 4.5"/>
+
+    <shape id="hit" geom="star12" x="628" y="104" w="64" h="64" rot="-12" fill="accent5" line="#111111 2" shadow="hard"
+           font="Unbounded ExtraBold" size="11" align="center" anchor="middle" color="#111111" pad="0 0 0 0">HOT</shape>
+
+    <!-- "estimate" mini window, sticks out past the bottom edge -->
+    <group id="calc">
+      <shape x="744" y="456" w="176" h="66" fill="#FBF5E9" line="#111111 2.5" shadow="hard"/>
+      <line x1="744" y1="474" x2="920" y2="474" stroke="#111111 2.5"/>
+      <text x="752" y="459" w="140" h="14" font="Cascadia Mono" size="8" color="#111111">estimate.calc</text>
+      <shape geom="roundRect" radius="6" x="756" y="484" w="30" h="30" fill="accent2" line="#111111 2"/>
+      <icon name="calculator" x="762" y="490" w="18" h="18" color="#111111" weight="2.4"/>
+      <text x="796" y="482" w="120" h="18" font="Manrope ExtraBold" size="11.5" color="#111111">in 2 business days</text>
+      <text x="796" y="499" w="120" h="16" size="9.5" color="#3A322B">after the brief</text>
+    </group>
+
+    <icon id="ptr" name="mouse-pointer-2" x="628" y="414" w="40" h="40" color="#111111" fill="white" weight="2"/>
+    <text x="80" y="462" w="640" h="18" size="10.5" color="#6B6259">Indicative prices, excl. VAT. We prepare an exact estimate after the brief.</text>
+
+    <anim target="h" effect="fade" start="after" dur="400"/>
+    <anim target="hs" effect="fade" start="with" dur="400"/>
+    <anim target="tbl" effect="wipe-bottom" start="after" dur="700"/>
+    <anim target="ptr" effect="fly-bottom" start="after" dur="400"/>
+    <anim target="focus" effect="expand" start="after" dur="300"/>
+    <anim target="hit" effect="zoom" start="with" delay="150" dur="400"/>
+    <anim target="calc" effect="float-up" start="after" dur="400"/>
+  </slide>
+
+  <!-- ============ 6. THANKS ============ -->
+  <slide id="thanks" bg="#D9CFC3" transition="morph" transition-dur="900">
+    <dots x="0" y="400" w="180" h="140" step="10" r="2.2" fill="#9B8F82"/>
+    <dots x="880" y="300" w="80" h="240" step="10" r="2.2" fill="#9B8F82"/>
+    <shape id="win" x="40" y="30" w="870" h="470" fill="#FBF5E9" line="#111111 2.5" shadow="hard"/>
+    <line id="bar" x1="40" y1="66" x2="910" y2="66" stroke="#111111 2.5"/>
+    <text id="bartxt" x="60" y="41" w="300" h="18" font="Cascadia Mono" size="11" color="#111111">contacts.exe</text>
+    <icon id="b1" name="minus" x="818" y="37" w="22" h="22" color="#111111" weight="3"/>
+    <icon id="b2" name="square" x="848" y="37" w="22" h="22" color="#111111" weight="3"/>
+    <icon id="b3" name="x" x="878" y="37" w="22" h="22" color="#111111" weight="3"/>
+
+    <text id="h" x="80" y="110" w="430" h="84" font="Unbounded ExtraBold" size="56" color="#111111">Thanks!</text>
+    <text id="lead" x="80" y="206" w="400" h="64" size="16" line-height="1.25" color="#3A322B">Tell us about your task — in two business days we will send a work plan and an estimate.</text>
+    <shape id="btn" x="80" y="296" w="270" h="54" fill="accent1" line="#111111 2.5" shadow="hard"
+           font="Unbounded ExtraBold" size="14" align="center" anchor="middle" color="#111111">Start a project →</shape>
+
+    <group id="cwin">
+      <shape x="526" y="100" w="346" h="252" fill="#FBF5E9" line="#111111 2.5" shadow="hard"/>
+      <shape x="526" y="100" w="346" h="26" fill="accent3" line="#111111 2.5"/>
+      <text x="538" y="105" w="200" h="16" font="Cascadia Mono" size="10" color="#111111">contacts.vcf</text>
+      <icon name="x" x="848" y="106" w="14" h="14" color="#111111" weight="3"/>
+
+      <shape x="546" y="144" w="40" h="40" fill="accent1" line="#111111 2"/>
+      <icon name="mail" x="555" y="153" w="22" h="22" color="#111111" weight="2.2"/>
+      <shape x="586" y="144" w="266" h="40" fill="white" line="#111111 2" pad="0 12 0 14" anchor="middle" size="14" font="Manrope SemiBold" color="#111111">hello@pixel.design</shape>
+
+      <shape x="546" y="194" w="40" h="40" fill="accent2" line="#111111 2"/>
+      <icon name="send" x="555" y="203" w="22" h="22" color="#111111" weight="2.2"/>
+      <shape x="586" y="194" w="266" h="40" fill="white" line="#111111 2" pad="0 12 0 14" anchor="middle" size="14" font="Manrope SemiBold" color="#111111">@pixel_studio</shape>
+
+      <shape x="546" y="244" w="40" h="40" fill="accent4" line="#111111 2"/>
+      <icon name="globe" x="555" y="253" w="22" h="22" color="#111111" weight="2.2"/>
+      <shape x="586" y="244" w="266" h="40" fill="white" line="#111111 2" pad="0 12 0 14" anchor="middle" size="14" font="Manrope SemiBold" color="#111111">pixel.design</shape>
+
+      <shape x="546" y="294" w="40" h="40" fill="accent5" line="#111111 2"/>
+      <icon name="phone" x="555" y="303" w="22" h="22" color="#111111" weight="2.2"/>
+      <shape x="586" y="294" w="266" h="40" fill="white" line="#111111 2" pad="0 12 0 14" anchor="middle" size="14" font="Manrope SemiBold" color="#111111">+7 495 123-45-67</shape>
+    </group>
+    <group id="geo">
+      <icon name="map-pin" x="546" y="374" w="20" h="20" color="#111111" fill="accent1" weight="2.2"/>
+      <text x="574" y="375" w="220" h="20" size="13" font="Manrope SemiBold" color="#111111">Moscow · Kazan · remote</text>
+    </group>
+
+    <group id="toast">
+      <shape x="80" y="388" w="270" h="62" fill="accent2" line="#111111 2.5" shadow="hard"/>
+      <icon name="circle-check" x="96" y="403" w="32" h="32" color="#111111" fill="white" weight="2.2"/>
+      <text x="140" y="398" w="200" h="20" font="Manrope ExtraBold" size="13" color="#111111">Brief sent</text>
+      <text x="140" y="418" w="200" h="18" size="11" color="#3A322B">We will reply within a day</text>
+    </group>
+
+    <!-- "Your_project.fig" mini window, sticks out past the right edge -->
+    <group id="fig">
+      <shape x="780" y="402" w="150" h="88" fill="#FBF5E9" line="#111111 2.5" shadow="hard"/>
+      <line x1="780" y1="424" x2="930" y2="424" stroke="#111111 2.5"/>
+      <text x="788" y="406" w="134" h="16" font="Cascadia Mono" size="9.5" color="#111111">Your_project.fig</text>
+      <shape geom="roundRect" radius="8" x="794" y="436" w="42" h="42" fill="accent1" line="#111111 2"/>
+      <icon name="heart" x="803" y="445" w="24" h="24" color="#111111" fill="white" weight="2.2"/>
+      <shape geom="roundRect" radius="3" x="848" y="442" w="68" h="7" fill="#111111"/>
+      <shape geom="roundRect" radius="3" x="848" y="456" w="44" h="7" fill="#111111"/>
+      <shape geom="roundRect" radius="3" x="848" y="469" w="56" h="7" fill="accent3" line="#111111 1.5"/>
+    </group>
+
+    <icon id="ptr" name="mouse-pointer-2" x="318" y="326" w="40" h="40" color="#111111" fill="white" weight="2"/>
+
+    <anim target="h" effect="zoom" start="after" dur="500"/>
+    <anim target="lead" effect="fade" start="after" dur="400"/>
+    <anim target="btn" effect="float-up" start="after" dur="400"/>
+    <anim target="ptr" effect="fly-bottom" start="after" dur="400"/>
+    <anim target="toast" effect="zoom" start="after" delay="150" dur="300"/>
+    <anim target="cwin" effect="fly-right" start="after" dur="500"/>
+    <anim target="geo" effect="fade" start="after" dur="400"/>
+    <anim target="fig" effect="float-up" start="with" delay="200" dur="400"/>
+  </slide>
+</deck>
