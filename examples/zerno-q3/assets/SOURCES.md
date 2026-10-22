@@ -1,0 +1,5 @@
+- coffee-shop-interior-counter-1.jpg — Bar stools counter blinded windows — Фото: неизвестный автор, CC0 1.0 — https://www.rawpixel.com/image/3303131/free-photo-image-window-shade-home-decoration-banister
+- latte-coffee-cup-barista-1.jpg — Barista Latte — Фото: Burst, CC0 1.0 — https://stocksnap.io/photo/barista-latte-V7HJ1MBGUP
+- latte-coffee-cup-barista-2.jpg — Coffee Hot — Фото: Nathan Dumlao, CC0 1.0 — https://stocksnap.io/photo/coffee-hot-4DW84GDZ41
+- latte-coffee-cup-barista-3.jpg — Barista Latte — Фото: Kristin Hardwick, CC0 1.0 — https://stocksnap.io/photo/barista-latte-UURYRCF9I6
+- coffee-shop-interior-counter-2.jpg — Dash Coffee at Gate 1 Dasma café counter — 15 May 2025 — Фото: UndueMarmot, CC0 1.0 — https://commons.wikimedia.org/w/index.php?curid=165317882

@@ -1,0 +1,112 @@
+<deck lang="ru-RU">
+  <theme font="Manrope" heading="Unbounded SemiBold"
+         dk1="#1E1A17" lt1="#F7F3EC" dk2="#6E655C" lt2="#E4DDD2"
+         accent1="#C2410C" accent2="#1E1A17" accent3="#6E655C" accent4="#E4DDD2" accent5="#6E655C" accent6="#E4DDD2"/>
+
+  <styles>
+    <style name="kpi"       font="heading" size="120" spacing="-3" line-height="0.85" color="dk1"/>
+    <style name="kpi-muted" font="heading" size="60" spacing="-1.5" line-height="0.9" color="dk2"/>
+    <style name="display"   font="heading" size="54" spacing="-1.5" line-height="0.92" color="dk1"/>
+    <style name="h1"        font="heading" size="32" spacing="-0.6" line-height="1" color="dk1"/>
+    <style name="h2"        font="heading" size="20" line-height="1.05" color="dk1"/>
+    <style name="body"      size="16" line-height="1.2" color="dk2"/>
+    <style name="quote"     font="heading" size="36" spacing="-0.5" line-height="1.05" color="lt1"/>
+    <style name="label"     font="Cascadia Mono" size="11" caps="1" spacing="1" color="dk2"/>
+    <style name="chrome"    font="Cascadia Mono" size="10" caps="1" spacing="1" color="dk2"/>
+    <style name="credit"    size="10" color="lt1/70"/>
+  </styles>
+
+  <templates>
+    <template id="chrome">
+      <text id="chrome-brand" x="48" y="24" w="420" h="auto" class="chrome">{{section}}</text>
+      <line id="chrome-top" x1="48" y1="48" x2="912" y2="48" stroke="dk1/15 0.75"/>
+      <line id="chrome-bot" x1="48" y1="500" x2="912" y2="500" stroke="dk1/15 0.75"/>
+      <text id="chrome-page" x="714" y="512" w="198" h="auto" class="chrome" align="right">{{page}}</text>
+    </template>
+    <template id="chrome-plain">
+      <text id="chrome-brand" x="48" y="24" w="420" h="auto" class="chrome" color="lt1/70">{{section}}</text>
+      <text id="chrome-page" x="714" y="512" w="198" h="auto" class="chrome" color="lt1/70" align="right">{{page}}</text>
+    </template>
+  </templates>
+
+  <!-- A1 · Q3 принёс 4,5 млн ₽ — сеть выросла до 5 кофеен -->
+  <slide id="cover" bg="dk1" transition="fade" transition-dur="700">
+    <image id="cover-photo" src="assets/coffee1.jpg" x="0" y="0" w="960" h="540" fit="cover" focus="60% 40%" tint="duotone(#1E1A17, #E9D8C4)"/>
+    <shape id="cover-shade" x="0" y="0" w="960" h="540" fill="linear(0, dk1/92 0%, dk1/60 55%, dk1/10 100%)" line="none"/>
+    <use template="chrome-plain" section="Зерно · Q3 2026" page="01"/>
+    <text id="cover-label" x="48" y="200" w="560" h="auto" class="label" color="lt1/70">Отчёт инвесторам · октябрь 2026</text>
+    <text id="cover-title" x="48" y="232" w="660" h="auto" class="display" size="40" color="lt1">Q3 принёс 4,5&#160;млн&#160;₽ — сеть выросла до&#160;5&#160;кофеен</text>
+    <text id="cover-kpis" x="48" y="440" w="600" h="auto" class="body" color="lt1/80">Сентябрь — 1,9 млн ₽ · средний чек 420 ₽ · рейтинг 4,8</text>
+    <text id="cover-credit" x="48" y="512" w="420" h="auto" class="credit">Фото: Burst, CC0 1.0</text>
+  </slide>
+
+  <!-- A5 · Выручка росла каждый месяц: сентябрь +58 % к июлю -->
+  <slide id="revenue" bg="lt1" transition="fade" transition-dur="600">
+    <use template="chrome" section="Зерно · Выручка" page="02"/>
+    <text id="rev-title" x="48" y="72" w="864" h="auto" class="h1">Выручка росла каждый месяц: сентябрь +58&#160;% к&#160;июлю</text>
+    <chart id="rev-chart" type="column" x="48" y="168" w="560" h="312" labels="1" label-bold="1" label-size="14" size="12" color="dk2" gap="70" format="0.0&quot; млн&quot;">
+      <cat>Июль, Август, Сентябрь</cat>
+      <series name="Выручка, млн ₽" values="1.2, 1.4, 1.9" colors="lt2, lt2, accent1"/>
+      <note at="Сентябрь" w="170" size="12" fill="dk1" color="lt1">+58 % к июлю</note>
+    </chart>
+    <text id="rev-total-l" x="640" y="196" w="272" h="auto" class="label">Итого за квартал</text>
+    <text id="rev-total" x="640" y="220" w="272" h="auto" class="h1" size="36">4,5 млн ₽</text>
+    <text id="rev-why" x="640" y="284" w="272" h="auto" class="body">Рост совпал с открытием двух новых точек [уточнить месяцы открытия].</text>
+    <anim target="rev-chart" effect="wipe-bottom" start="after" dur="800"/>
+  </slide>
+
+  <!-- A4 · Средний чек вырос на 10,5 % — до 420 ₽ -->
+  <slide id="check" bg="lt1" transition="fade" transition-dur="600">
+    <use template="chrome" section="Зерно · Средний чек" page="03"/>
+    <text id="chk-title" x="48" y="72" w="864" h="auto" class="h1">Средний чек вырос на&#160;10,5&#160;% — до&#160;420&#160;₽</text>
+    <text id="chk-before-l" x="48" y="172" w="240" h="auto" class="label">Было</text>
+    <text id="chk-before" x="48" y="202" w="240" h="auto" class="kpi-muted">380 ₽</text>
+    <line id="chk-arrow" x1="292" y1="236" x2="388" y2="236" stroke="dk1 2" tail="triangle"/>
+    <text id="chk-after-l" x="412" y="172" w="300" h="auto" class="label">Стало</text>
+    <text id="chk-after" x="408" y="186" w="400" h="auto" class="kpi" size="96" color="accent1">420 ₽</text>
+    <text id="chk-delta" x="48" y="316" w="560" h="auto" class="h2" color="accent1">+40 ₽ к каждому чеку · +10,5 %</text>
+    <text id="chk-why" x="48" y="356" w="560" h="auto" class="body">Причина роста: [уточнить — новое меню, цены, доля десертов].</text>
+    <line id="chk-rule" x1="640" y1="316" x2="912" y2="316" stroke="dk1/15 0.75"/>
+    <text id="chk-rate-l" x="640" y="332" w="272" h="auto" class="label">Рейтинг Яндекс Карт</text>
+    <text id="chk-rate" x="640" y="352" w="272" h="auto" class="h1" size="48">4,8</text>
+    <anim target="chk-after" effect="zoom" start="after" dur="500"/>
+  </slide>
+
+  <!-- A7 · Сеть выросла с 3 до 5 кофеен за квартал -->
+  <slide id="network" bg="lt1" transition="fade" transition-dur="600">
+    <use template="chrome" section="Зерно · Сеть" page="04"/>
+    <text id="net-title" x="48" y="72" w="864" h="auto" class="h1">Сеть выросла с&#160;3 до&#160;5 кофеен за&#160;квартал</text>
+    <shape id="net-t1" x="48" y="172" w="156" h="188" radius="10" fill="lt2" line="none" anchor="bottom" pad="16" align="left" font="heading" size="28" color="dk1">1</shape>
+    <shape id="net-t2" x="225" y="172" w="156" h="188" radius="10" fill="lt2" line="none" anchor="bottom" pad="16" align="left" font="heading" size="28" color="dk1">2</shape>
+    <shape id="net-t3" x="402" y="172" w="156" h="188" radius="10" fill="lt2" line="none" anchor="bottom" pad="16" align="left" font="heading" size="28" color="dk1">3</shape>
+    <shape id="net-t4" x="579" y="172" w="156" h="188" radius="10" fill="accent1" line="none" anchor="bottom" pad="16" align="left" font="heading" size="28" color="lt1">4</shape>
+    <shape id="net-t5" x="756" y="172" w="156" h="188" radius="10" fill="accent1" line="none" anchor="bottom" pad="16" align="left" font="heading" size="28" color="lt1">5</shape>
+    <line id="net-b1" x1="48" y1="380" x2="558" y2="380" stroke="dk2 1"/>
+    <text id="net-b1t" x="48" y="392" w="510" h="auto" class="label">Работали до Q3</text>
+    <line id="net-b2" x1="579" y1="380" x2="912" y2="380" stroke="accent1 1.5"/>
+    <text id="net-b2t" x="579" y="392" w="333" h="auto" class="label" color="accent1">Открыты в Q3</text>
+    <text id="net-fact" x="48" y="432" w="864" h="auto" class="body">Выручка на точку в сентябре — ≈ 380 тыс ₽ (1,9 млн ₽ / 5, без учёта даты открытия).</text>
+    <anim target="net-t4" effect="zoom" start="after" dur="400"/>
+    <anim target="net-t5" effect="zoom" start="after" dur="400"/>
+  </slide>
+
+  <!-- A9 · В Q4 открываем шестую точку и запускаем доставку -->
+  <slide id="plan" bg="dk1" transition="fade" transition-dur="700">
+    <use template="chrome-plain" section="Зерно · План Q4" page="05"/>
+    <text id="plan-title" x="48" y="72" w="864" h="auto" class="h1" color="lt1">В Q4 открываем шестую точку и&#160;запускаем доставку</text>
+    <line id="plan-axis" x1="48" y1="248" x2="912" y2="248" stroke="lt1/30 1.25"/>
+    <shape id="plan-m1" geom="ellipse" x="42" y="242" w="12" h="12" fill="accent1" line="none"/>
+    <text id="plan-d1" x="48" y="200" w="260" h="auto" class="label" color="accent1">Сейчас · сентябрь</text>
+    <text id="plan-a1" x="48" y="272" w="260" h="auto" class="h2" color="lt1">5 кофеен, 1,9 млн ₽ в месяц</text>
+    <shape id="plan-m2" geom="ellipse" x="330" y="242" w="12" h="12" fill="lt1" line="none"/>
+    <text id="plan-d2" x="336" y="200" w="260" h="auto" class="label" color="lt1/70">[срок]</text>
+    <text id="plan-a2" x="336" y="272" w="260" h="auto" class="h2" color="lt1">Открыть шестую точку</text>
+    <text id="plan-g2" x="336" y="324" w="260" h="auto" class="body" color="lt1/70">Цель: [выручка точки в месяц]</text>
+    <shape id="plan-m3" geom="ellipse" x="618" y="242" w="12" h="12" fill="lt1" line="none"/>
+    <text id="plan-d3" x="624" y="200" w="288" h="auto" class="label" color="lt1/70">[срок]</text>
+    <text id="plan-a3" x="624" y="272" w="288" h="auto" class="h2" color="lt1">Запустить доставку</text>
+    <text id="plan-g3" x="624" y="324" w="288" h="auto" class="body" color="lt1/70">Цель: [доля доставки в выручке]</text>
+    <line id="plan-goal-rule" x1="48" y1="400" x2="912" y2="400" stroke="lt1/25 0.75"/>
+    <text id="plan-goal" x="48" y="416" w="864" h="auto" class="h2" color="accent1">Цель к концу Q4: 6 кофеен и&#160;[выручка в месяц — уточнить]</text>
+  </slide>
+</deck>

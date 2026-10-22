@@ -1,0 +1,24 @@
+# Build output
+/proto/target/
+/dist/
+/.claude/skills/slideml/bin/
+/proto/tools/validate/bin/
+/proto/tools/validate/obj/
+__pycache__/
+
+# Local runs and chat logs
+/out/
+/examples/**/out/
+.claude-conversations/
+
+# The build reads only the icons from the lucide-static npm package
+/proto/vendor/lucide/package/*
+!/proto/vendor/lucide/package/icons/
+!/proto/vendor/lucide/package/LICENSE
+
+# Third-party images with an unknown license, and the decks that use them
+/examples/refs/
+/examples/assets/
+/examples/solar.xml
+/examples/features.xml
+/examples/archetypes/

@@ -1,0 +1,87 @@
+<deck lang="ru-RU">
+<slide id="s">
+<text id="t0" x="0" y="0" w="80" h="20" size="24" font="Inter" line-height="0.8">Аб</text>
+<text id="t1" x="90" y="0" w="80" h="20" size="24" font="Inter" line-height="0.8">Аб<br/>Аб</text>
+<text id="t2" x="180" y="0" w="80" h="20" size="24" font="Inter" line-height="0.8">Аб<br/>Аб<br/>Аб</text>
+<text id="t3" x="270" y="0" w="80" h="20" size="24" font="Inter" line-height="0.9">Аб</text>
+<text id="t4" x="360" y="0" w="80" h="20" size="24" font="Inter" line-height="0.9">Аб<br/>Аб</text>
+<text id="t5" x="450" y="0" w="80" h="20" size="24" font="Inter" line-height="0.9">Аб<br/>Аб<br/>Аб</text>
+<text id="t6" x="540" y="0" w="80" h="20" size="24" font="Inter" line-height="1.0">Аб</text>
+<text id="t7" x="630" y="0" w="80" h="20" size="24" font="Inter" line-height="1.0">Аб<br/>Аб</text>
+<text id="t8" x="720" y="0" w="80" h="20" size="24" font="Inter" line-height="1.0">Аб<br/>Аб<br/>Аб</text>
+<text id="t9" x="810" y="0" w="80" h="20" size="24" font="Inter" line-height="1.1">Аб</text>
+<text id="t10" x="0" y="30" w="80" h="20" size="24" font="Inter" line-height="1.1">Аб<br/>Аб</text>
+<text id="t11" x="90" y="30" w="80" h="20" size="24" font="Inter" line-height="1.1">Аб<br/>Аб<br/>Аб</text>
+<text id="t12" x="180" y="30" w="80" h="20" size="24" font="Inter" line-height="1.3">Аб</text>
+<text id="t13" x="270" y="30" w="80" h="20" size="24" font="Inter" line-height="1.3">Аб<br/>Аб</text>
+<text id="t14" x="360" y="30" w="80" h="20" size="24" font="Inter" line-height="1.3">Аб<br/>Аб<br/>Аб</text>
+<text id="t15" x="450" y="30" w="80" h="20" size="24" font="Inter" line-height="1.5">Аб</text>
+<text id="t16" x="540" y="30" w="80" h="20" size="24" font="Inter" line-height="1.5">Аб<br/>Аб</text>
+<text id="t17" x="630" y="30" w="80" h="20" size="24" font="Inter" line-height="1.5">Аб<br/>Аб<br/>Аб</text>
+<text id="t18" x="720" y="30" w="80" h="20" size="24" font="Inter" line-height="2.0">Аб</text>
+<text id="t19" x="810" y="30" w="80" h="20" size="24" font="Inter" line-height="2.0">Аб<br/>Аб</text>
+<text id="t20" x="0" y="60" w="80" h="20" size="24" font="Inter" line-height="2.0">Аб<br/>Аб<br/>Аб</text>
+<text id="t21" x="90" y="60" w="80" h="20" size="24" font="Manrope" line-height="0.8">Аб</text>
+<text id="t22" x="180" y="60" w="80" h="20" size="24" font="Manrope" line-height="0.8">Аб<br/>Аб</text>
+<text id="t23" x="270" y="60" w="80" h="20" size="24" font="Manrope" line-height="0.8">Аб<br/>Аб<br/>Аб</text>
+<text id="t24" x="360" y="60" w="80" h="20" size="24" font="Manrope" line-height="0.9">Аб</text>
+<text id="t25" x="450" y="60" w="80" h="20" size="24" font="Manrope" line-height="0.9">Аб<br/>Аб</text>
+<text id="t26" x="540" y="60" w="80" h="20" size="24" font="Manrope" line-height="0.9">Аб<br/>Аб<br/>Аб</text>
+<text id="t27" x="630" y="60" w="80" h="20" size="24" font="Manrope" line-height="1.0">Аб</text>
+<text id="t28" x="720" y="60" w="80" h="20" size="24" font="Manrope" line-height="1.0">Аб<br/>Аб</text>
+<text id="t29" x="810" y="60" w="80" h="20" size="24" font="Manrope" line-height="1.0">Аб<br/>Аб<br/>Аб</text>
+<text id="t30" x="0" y="90" w="80" h="20" size="24" font="Manrope" line-height="1.1">Аб</text>
+<text id="t31" x="90" y="90" w="80" h="20" size="24" font="Manrope" line-height="1.1">Аб<br/>Аб</text>
+<text id="t32" x="180" y="90" w="80" h="20" size="24" font="Manrope" line-height="1.1">Аб<br/>Аб<br/>Аб</text>
+<text id="t33" x="270" y="90" w="80" h="20" size="24" font="Manrope" line-height="1.3">Аб</text>
+<text id="t34" x="360" y="90" w="80" h="20" size="24" font="Manrope" line-height="1.3">Аб<br/>Аб</text>
+<text id="t35" x="450" y="90" w="80" h="20" size="24" font="Manrope" line-height="1.3">Аб<br/>Аб<br/>Аб</text>
+<text id="t36" x="540" y="90" w="80" h="20" size="24" font="Manrope" line-height="1.5">Аб</text>
+<text id="t37" x="630" y="90" w="80" h="20" size="24" font="Manrope" line-height="1.5">Аб<br/>Аб</text>
+<text id="t38" x="720" y="90" w="80" h="20" size="24" font="Manrope" line-height="1.5">Аб<br/>Аб<br/>Аб</text>
+<text id="t39" x="810" y="90" w="80" h="20" size="24" font="Manrope" line-height="2.0">Аб</text>
+<text id="t40" x="0" y="120" w="80" h="20" size="24" font="Manrope" line-height="2.0">Аб<br/>Аб</text>
+<text id="t41" x="90" y="120" w="80" h="20" size="24" font="Manrope" line-height="2.0">Аб<br/>Аб<br/>Аб</text>
+<text id="t42" x="180" y="120" w="80" h="20" size="24" font="Unbounded" line-height="0.8">Аб</text>
+<text id="t43" x="270" y="120" w="80" h="20" size="24" font="Unbounded" line-height="0.8">Аб<br/>Аб</text>
+<text id="t44" x="360" y="120" w="80" h="20" size="24" font="Unbounded" line-height="0.8">Аб<br/>Аб<br/>Аб</text>
+<text id="t45" x="450" y="120" w="80" h="20" size="24" font="Unbounded" line-height="0.9">Аб</text>
+<text id="t46" x="540" y="120" w="80" h="20" size="24" font="Unbounded" line-height="0.9">Аб<br/>Аб</text>
+<text id="t47" x="630" y="120" w="80" h="20" size="24" font="Unbounded" line-height="0.9">Аб<br/>Аб<br/>Аб</text>
+<text id="t48" x="720" y="120" w="80" h="20" size="24" font="Unbounded" line-height="1.0">Аб</text>
+<text id="t49" x="810" y="120" w="80" h="20" size="24" font="Unbounded" line-height="1.0">Аб<br/>Аб</text>
+<text id="t50" x="0" y="150" w="80" h="20" size="24" font="Unbounded" line-height="1.0">Аб<br/>Аб<br/>Аб</text>
+<text id="t51" x="90" y="150" w="80" h="20" size="24" font="Unbounded" line-height="1.1">Аб</text>
+<text id="t52" x="180" y="150" w="80" h="20" size="24" font="Unbounded" line-height="1.1">Аб<br/>Аб</text>
+<text id="t53" x="270" y="150" w="80" h="20" size="24" font="Unbounded" line-height="1.1">Аб<br/>Аб<br/>Аб</text>
+<text id="t54" x="360" y="150" w="80" h="20" size="24" font="Unbounded" line-height="1.3">Аб</text>
+<text id="t55" x="450" y="150" w="80" h="20" size="24" font="Unbounded" line-height="1.3">Аб<br/>Аб</text>
+<text id="t56" x="540" y="150" w="80" h="20" size="24" font="Unbounded" line-height="1.3">Аб<br/>Аб<br/>Аб</text>
+<text id="t57" x="630" y="150" w="80" h="20" size="24" font="Unbounded" line-height="1.5">Аб</text>
+<text id="t58" x="720" y="150" w="80" h="20" size="24" font="Unbounded" line-height="1.5">Аб<br/>Аб</text>
+<text id="t59" x="810" y="150" w="80" h="20" size="24" font="Unbounded" line-height="1.5">Аб<br/>Аб<br/>Аб</text>
+<text id="t60" x="0" y="180" w="80" h="20" size="24" font="Unbounded" line-height="2.0">Аб</text>
+<text id="t61" x="90" y="180" w="80" h="20" size="24" font="Unbounded" line-height="2.0">Аб<br/>Аб</text>
+<text id="t62" x="180" y="180" w="80" h="20" size="24" font="Unbounded" line-height="2.0">Аб<br/>Аб<br/>Аб</text>
+<text id="t63" x="270" y="180" w="80" h="20" size="24" font="Segoe UI" line-height="0.8">Аб</text>
+<text id="t64" x="360" y="180" w="80" h="20" size="24" font="Segoe UI" line-height="0.8">Аб<br/>Аб</text>
+<text id="t65" x="450" y="180" w="80" h="20" size="24" font="Segoe UI" line-height="0.8">Аб<br/>Аб<br/>Аб</text>
+<text id="t66" x="540" y="180" w="80" h="20" size="24" font="Segoe UI" line-height="0.9">Аб</text>
+<text id="t67" x="630" y="180" w="80" h="20" size="24" font="Segoe UI" line-height="0.9">Аб<br/>Аб</text>
+<text id="t68" x="720" y="180" w="80" h="20" size="24" font="Segoe UI" line-height="0.9">Аб<br/>Аб<br/>Аб</text>
+<text id="t69" x="810" y="180" w="80" h="20" size="24" font="Segoe UI" line-height="1.0">Аб</text>
+<text id="t70" x="0" y="210" w="80" h="20" size="24" font="Segoe UI" line-height="1.0">Аб<br/>Аб</text>
+<text id="t71" x="90" y="210" w="80" h="20" size="24" font="Segoe UI" line-height="1.0">Аб<br/>Аб<br/>Аб</text>
+<text id="t72" x="180" y="210" w="80" h="20" size="24" font="Segoe UI" line-height="1.1">Аб</text>
+<text id="t73" x="270" y="210" w="80" h="20" size="24" font="Segoe UI" line-height="1.1">Аб<br/>Аб</text>
+<text id="t74" x="360" y="210" w="80" h="20" size="24" font="Segoe UI" line-height="1.1">Аб<br/>Аб<br/>Аб</text>
+<text id="t75" x="450" y="210" w="80" h="20" size="24" font="Segoe UI" line-height="1.3">Аб</text>
+<text id="t76" x="540" y="210" w="80" h="20" size="24" font="Segoe UI" line-height="1.3">Аб<br/>Аб</text>
+<text id="t77" x="630" y="210" w="80" h="20" size="24" font="Segoe UI" line-height="1.3">Аб<br/>Аб<br/>Аб</text>
+<text id="t78" x="720" y="210" w="80" h="20" size="24" font="Segoe UI" line-height="1.5">Аб</text>
+<text id="t79" x="810" y="210" w="80" h="20" size="24" font="Segoe UI" line-height="1.5">Аб<br/>Аб</text>
+<text id="t80" x="0" y="240" w="80" h="20" size="24" font="Segoe UI" line-height="1.5">Аб<br/>Аб<br/>Аб</text>
+<text id="t81" x="90" y="240" w="80" h="20" size="24" font="Segoe UI" line-height="2.0">Аб</text>
+<text id="t82" x="180" y="240" w="80" h="20" size="24" font="Segoe UI" line-height="2.0">Аб<br/>Аб</text>
+<text id="t83" x="270" y="240" w="80" h="20" size="24" font="Segoe UI" line-height="2.0">Аб<br/>Аб<br/>Аб</text>
+</slide></deck>

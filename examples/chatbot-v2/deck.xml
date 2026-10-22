@@ -1,0 +1,138 @@
+<deck lang="ru-RU">
+  <theme font="Inter" heading="Inter SemiBold"
+         dk1="#111111" lt1="#F4F3EF" dk2="#6B6A66" lt2="#D9D7D1"
+         accent1="#FF4F12" accent2="#111111" accent3="#6B6A66" accent4="#D9D7D1" accent5="#6B6A66" accent6="#D9D7D1"/>
+
+  <styles>
+    <style name="kpi"       font="heading" size="120" spacing="-3" line-height="0.85" color="dk1"/>
+    <style name="kpi-muted" font="heading" size="60" spacing="-1.5" line-height="0.9" color="dk2"/>
+    <style name="display"   font="heading" size="54" spacing="-1.5" line-height="0.92" color="dk1"/>
+    <style name="h1"        font="heading" size="32" spacing="-0.6" line-height="1" color="dk1"/>
+    <style name="h2"        font="heading" size="20" line-height="1.05" color="dk1"/>
+    <style name="body"      size="16" line-height="1.2" color="dk2"/>
+    <style name="quote"     font="heading" size="36" spacing="-0.5" line-height="1.05" color="lt1"/>
+    <style name="label"     font="Cascadia Mono" size="11" caps="1" spacing="1" color="dk2"/>
+    <style name="chrome"    font="Cascadia Mono" size="10" caps="1" spacing="1" color="dk2"/>
+    <style name="credit"    size="10" color="lt1/70"/>
+  </styles>
+
+  <templates>
+    <template id="chrome">
+      <text id="chrome-brand" x="48" y="24" w="420" h="auto" class="chrome">{{section}}</text>
+      <line id="chrome-top" x1="48" y1="48" x2="912" y2="48" stroke="dk1/15 0.75"/>
+      <line id="chrome-bot" x1="48" y1="500" x2="912" y2="500" stroke="dk1/15 0.75"/>
+      <text id="chrome-page" x="714" y="512" w="198" h="auto" class="chrome" align="right">{{page}}</text>
+    </template>
+    <template id="chrome-plain">
+      <text id="chrome-brand" x="48" y="24" w="420" h="auto" class="chrome" color="lt1/70">{{section}}</text>
+      <text id="chrome-page" x="714" y="512" w="198" h="auto" class="chrome" color="lt1/70" align="right">{{page}}</text>
+    </template>
+  </templates>
+
+  <!-- A3 как обложка · Бот закрыл 63 % обращений — рекомендуем раскатку с Q1 2027 -->
+  <slide id="cover" bg="dk1" transition="fade" transition-dur="700">
+    <shape id="cover-blob" x="560" y="-160" w="640" h="640" fill="radial(accent1/16 0%, accent1/0 70%)" soft-edge="120" line="none"/>
+    <use template="chrome-plain" section="Банк · Чат-бот поддержки" page="01"/>
+    <text id="cover-kicker" x="48" y="76" w="600" h="auto" class="label" color="lt1/70">Отчёт совету директоров · пилот 8 недель</text>
+    <text id="cover-title" x="48" y="106" w="860" h="auto" class="h1" size="38" color="lt1">Бот закрыл 63&#160;% обращений — рекомендуем раскатку с&#160;Q1&#160;2027</text>
+    <text id="cover-kpi" x="40" y="212" w="520" h="auto" class="kpi" color="accent1">63<span size="44"> %</span></text>
+    <text id="cover-base" x="640" y="238" w="272" h="auto" class="h2" color="lt1">обращений закрыто без оператора</text>
+    <text id="cover-base2" x="640" y="306" w="272" h="auto" class="body" color="lt1/70">из&#160;41&#160;200 обработанных за&#160;8&#160;недель пилота</text>
+    <line id="cover-rule" x1="48" y1="396" x2="912" y2="396" stroke="lt1/20 0.75"/>
+    <text id="cover-f1v" x="48" y="412" w="270" h="auto" class="h1" size="28" color="lt1">25 с</text>
+    <text id="cover-f1l" x="48" y="452" w="270" h="auto" class="label" color="lt1/60">первый ответ — было 4:10</text>
+    <text id="cover-f2v" x="345" y="412" w="270" h="auto" class="h1" size="28" color="lt1">38 ₽</text>
+    <text id="cover-f2l" x="345" y="452" w="270" h="auto" class="label" color="lt1/60">обращение — против 160 ₽</text>
+    <text id="cover-f3v" x="640" y="412" w="270" h="auto" class="h1" size="28" color="lt1">4,3 из 5</text>
+    <text id="cover-f3l" x="640" y="452" w="270" h="auto" class="label" color="lt1/60">оценка клиентов — операторы 4,5</text>
+  </slide>
+
+  <!-- A8 · Бот отвечает в 10 раз быстрее и в 4 раза дешевле оператора -->
+  <slide id="compare" bg="lt1" transition="fade" transition-dur="600">
+    <use template="chrome" section="Банк · Чат-бот поддержки" page="02"/>
+    <text id="cmp-kicker" x="48" y="66" w="600" h="auto" class="label">Результаты · бот против операторов</text>
+    <text id="cmp-title" x="48" y="92" w="864" h="auto" class="h1">Бот отвечает в&#160;10 раз быстрее и&#160;в&#160;4 раза дешевле оператора</text>
+    <table id="cmp-table" x="48" y="168" w="864" h="220" cols="2fr 1fr 1fr 1fr" lines="h" line="dk1/15 0.75" size="16" color="dk1" pad="6 8 6 0">
+      <tr h="40"><th font="Cascadia Mono" size="11" caps="1" color="dk2" bold="0">Метрика</th><th font="Cascadia Mono" size="11" caps="1" color="dk2" bold="0" align="right">Бот</th><th font="Cascadia Mono" size="11" caps="1" color="dk2" bold="0" align="right">Операторы</th><th font="Cascadia Mono" size="11" caps="1" color="dk2" bold="0" align="right">Изменение</th></tr>
+      <tr h="60"><td>Первый ответ</td><td align="right">25 с</td><td align="right" color="dk2">4 мин 10 с</td><td align="right" color="accent1" bold="1">−90 %</td></tr>
+      <tr h="60"><td>Стоимость обращения</td><td align="right">38 ₽</td><td align="right" color="dk2">160 ₽</td><td align="right" color="accent1" bold="1">−76 %</td></tr>
+      <tr h="60"><td>Оценка клиентов</td><td align="right">4,3 из 5</td><td align="right" color="dk2">4,5 из 5</td><td align="right" color="dk2">−0,2</td></tr>
+    </table>
+    <line id="cmp-rule" x1="48" y1="408" x2="912" y2="408" stroke="dk1/15 0.75"/>
+    <text id="cmp-bridge" x="48" y="424" w="864" h="auto" class="h2">Каждое обращение у&#160;бота дешевле на&#160;<span color="accent1">122&#160;₽</span></text>
+  </slide>
+
+  <!-- A3 · Бот сэкономил 3,2 млн ₽ за 8 недель пилота -->
+  <slide id="money" bg="dk1" transition="fade" transition-dur="600">
+    <shape id="money-blob" x="-180" y="240" w="600" h="600" fill="radial(accent1/14 0%, accent1/0 70%)" soft-edge="120" line="none"/>
+    <use template="chrome-plain" section="Банк · Чат-бот поддержки" page="03"/>
+    <text id="money-kicker" x="48" y="66" w="600" h="auto" class="label" color="lt1/70">Экономика пилота</text>
+    <text id="money-title" x="48" y="92" w="864" h="auto" class="h1" color="lt1">Бот сэкономил 3,2&#160;млн&#160;₽ за&#160;8&#160;недель пилота</text>
+    <text id="money-kpi" x="40" y="190" w="560" h="auto" class="kpi" color="accent1">3,2<span size="44"> млн ₽</span></text>
+    <text id="money-base" x="640" y="206" w="272" h="auto" class="h2" color="lt1">Закрытые ботом обращения стоили 38&#160;₽ вместо 160&#160;₽</text>
+    <text id="money-formula" x="640" y="300" w="272" h="auto" class="body" color="lt1/70">Расчёт: 26,0&#160;тыс. обращений ×&#160;122&#160;₽ экономии</text>
+    <line id="money-rule" x1="48" y1="396" x2="912" y2="396" stroke="lt1/20 0.75"/>
+    <text id="money-f1v" x="48" y="412" w="270" h="auto" class="h1" size="28" color="lt1">122 ₽</text>
+    <text id="money-f1l" x="48" y="452" w="270" h="auto" class="label" color="lt1/60">экономия на обращении</text>
+    <text id="money-f2v" x="345" y="412" w="270" h="auto" class="h1" size="28" color="lt1">26,0 тыс.</text>
+    <text id="money-f2l" x="345" y="452" w="270" h="auto" class="label" color="lt1/60">обращений закрыл бот</text>
+    <text id="money-f3v" x="640" y="412" w="270" h="auto" class="h1" size="28" color="lt1">≈ 20,6 млн ₽</text>
+    <text id="money-f3l" x="640" y="452" w="270" h="auto" class="label" color="lt1/60">в год при том же объёме [оценка]</text>
+  </slide>
+
+  <!-- A7 · Бот закрывает 63 % обращений без оператора -->
+  <slide id="share" bg="lt1" transition="fade" transition-dur="600">
+    <use template="chrome" section="Банк · Чат-бот поддержки" page="04"/>
+    <text id="share-kicker" x="48" y="66" w="600" h="auto" class="label">Автоматизация и качество</text>
+    <text id="share-title" x="48" y="92" w="864" h="auto" class="h1">Бот закрывает 63&#160;% обращений без оператора</text>
+    <chart id="share-chart" type="doughnut" x="48" y="164" w="480" h="296" hole="62" labels="1" label-size="14" label-bold="1" label-color="dk1" legend="none" size="13" color="dk2" format="0&quot;%&quot;" outline="none">
+      <cat>Закрыто ботом, Передано оператору</cat>
+      <series name="Доля обращений" values="63, 37" colors="accent1, lt2" label-points="1"/>
+      <center size="40" sub="закрыто ботом">63 %</center>
+    </chart>
+    <text id="share-caption" x="48" y="470" w="480" h="auto" class="label">Доля от 41&#160;200 обращений · 8 недель</text>
+    <text id="share-q-l" x="600" y="176" w="312" h="auto" class="label">Оценка клиентов</text>
+    <text id="share-q-v" x="600" y="202" w="312" h="auto" class="h1" size="36">4,3 из 5</text>
+    <text id="share-q-b" x="600" y="252" w="312" h="auto" class="body">У&#160;операторов — 4,5 из&#160;5. Разница — 0,2 балла.</text>
+    <text id="share-v-l" x="600" y="318" w="312" h="auto" class="label">Объём пилота</text>
+    <text id="share-v-v" x="600" y="344" w="312" h="auto" class="h1" size="36">41 200</text>
+    <text id="share-v-b" x="600" y="394" w="312" h="auto" class="body">Обращений обработал бот за&#160;8&#160;недель.</text>
+  </slide>
+
+  <!-- A9 · 7 % передач идут с ошибкой — исправляем до раскатки -->
+  <slide id="risk" bg="lt1" transition="fade" transition-dur="600">
+    <use template="chrome" section="Банк · Чат-бот поддержки" page="05"/>
+    <text id="risk-kicker" x="48" y="66" w="600" h="auto" class="label">Риск и план</text>
+    <text id="risk-title" x="48" y="92" w="864" h="auto" class="h1">7&#160;% передач идут с&#160;ошибкой — исправляем до&#160;раскатки</text>
+    <line id="risk-axis" x1="48" y1="248" x2="912" y2="248" stroke="dk1 1.25"/>
+    <shape id="risk-m1" geom="ellipse" x="42" y="242" w="12" h="12" fill="accent1" line="none"/>
+    <text id="risk-d1" x="48" y="200" w="260" h="auto" class="label" color="accent1">Сейчас · пилот завершён</text>
+    <text id="risk-a1" x="48" y="272" w="260" h="auto" class="h2">7&#160;% передач — с&#160;ошибкой маршрутизации</text>
+    <text id="risk-g1" x="48" y="352" w="260" h="auto" class="body">≈&#160;2&#160;900 обращений за&#160;8&#160;недель (7&#160;% от&#160;41&#160;200)</text>
+    <shape id="risk-m2" geom="ellipse" x="330" y="242" w="12" h="12" fill="dk1" line="none"/>
+    <text id="risk-d2" x="336" y="200" w="260" h="auto" class="label">До&#160;конца 2026 [уточнить]</text>
+    <text id="risk-a2" x="336" y="272" w="260" h="auto" class="h2">Дообучить маршрутизацию</text>
+    <text id="risk-g2" x="336" y="352" w="260" h="auto" class="body">Разметить диалоги, дообучить правила</text>
+    <shape id="risk-m3" geom="ellipse" x="618" y="242" w="12" h="12" fill="dk1" line="none"/>
+    <text id="risk-d3" x="624" y="200" w="288" h="auto" class="label">Q1 2027</text>
+    <text id="risk-a3" x="624" y="272" w="288" h="auto" class="h2">Раскатка на&#160;все каналы</text>
+    <text id="risk-g3" x="624" y="352" w="288" h="auto" class="body">Усиленный контроль маршрутизации на&#160;первых неделях</text>
+    <line id="risk-goal-rule" x1="48" y1="420" x2="912" y2="420" stroke="dk1/15 0.75"/>
+    <text id="risk-goal" x="48" y="436" w="864" h="auto" class="h2">Цель к&#160;раскатке: доля ошибочных передач — <span color="accent1">не&#160;выше 2&#160;%</span></text>
+  </slide>
+
+  <!-- A12 · Раскатываем бота на все каналы в Q1 2027 -->
+  <slide id="ask" bg="dk1" transition="fade" transition-dur="700">
+    <shape id="ask-blob" x="620" y="240" w="560" h="560" fill="radial(accent1/14 0%, accent1/0 70%)" soft-edge="120" line="none"/>
+    <use template="chrome-plain" section="Банк · Решение" page="06"/>
+    <text id="ask-kicker" x="48" y="64" w="600" h="auto" class="label" color="lt1/70">Рекомендация проекта</text>
+    <text id="ask-title" x="48" y="94" w="760" h="auto" class="display" size="44" color="lt1">Раскатываем бота на&#160;все каналы в&#160;Q1&#160;2027</text>
+    <text id="ask-n1" x="48" y="236" w="60" h="auto" class="h1" color="accent1">1</text>
+    <text id="ask-a1" x="112" y="240" w="760" h="auto" class="h2" color="lt1">Утвердить раскатку чат-бота на&#160;все каналы с&#160;Q1&#160;2027</text>
+    <text id="ask-n2" x="48" y="304" w="60" h="auto" class="h1" color="accent1">2</text>
+    <text id="ask-a2" x="112" y="308" w="760" h="auto" class="h2" color="lt1">Согласовать бюджет и&#160;план-график раскатки — <span color="lt1/60">[сумма — уточнить]</span></text>
+    <text id="ask-n3" x="48" y="372" w="60" h="auto" class="h1" color="accent1">3</text>
+    <text id="ask-a3" x="112" y="376" w="760" h="auto" class="h2" color="lt1">Назначить отчёт о&#160;первых неделях раскатки — <span color="lt1/60">[дата — уточнить]</span></text>
+    <text id="ask-contact" x="48" y="456" w="600" h="auto" class="body" color="lt1/70">Докладчик: [имя, должность, почта]</text>
+  </slide>
+</deck>

@@ -1,0 +1,10 @@
+[package]
+name = "slideml"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+imagesize = "0.15.0"
+roxmltree = "0.21.1"
+skrifa = "0.48.0"
+zip = { version = "9.0.3", default-features = false, features = ["deflate"] }

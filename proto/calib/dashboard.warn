@@ -1,0 +1,35 @@
+warning: slide `dark` 114:7 <text>: font size 8.5pt is unreadable on a projector; use 10pt or more
+warning: slide `dark` 117:7 <text>: font size 8.5pt is unreadable on a projector; use 10pt or more
+warning: slide `dark` 134:7 <text>: font size 8.5pt is unreadable on a projector; use 10pt or more
+warning: slide `dark` 166:7 <shape>: font size 8pt is unreadable on a projector; use 10pt or more
+warning: slide `dark` 192:5 <text>: font size 7.5pt is unreadable on a projector; use 10pt or more
+lint: slide `dark`: left edges of `text 35` (x=736) and `text 79` (x=734) almost align: use one value
+lint: slide `dark`: left edges of `text 36` (x=736) and `text 79` (x=734) almost align: use one value
+lint: slide `dark`: text `text 65` and `text 66` overlap (12x11pt)
+lint: slide `dark`: text `text 69` and `text 70` overlap (12x11pt)
+lint: slide `dark`: text `text 73` and `text 74` overlap (12x11pt)
+lint: slide `dark`: text `text 94` and `text 95` overlap (16x11pt)
+lint: slide `dark`: text `text 97` and `text 98` overlap (16x11pt)
+lint: slide `dark`: text `text 100` and `text 101` overlap (16x11pt)
+lint: slide `dark`: text `text 103` and `text 104` overlap (16x11pt)
+lint: slide `dark`: text `text 106` and `text 107` overlap (16x11pt)
+warning: slide `light` 233:7 <text>: font size 8.5pt is unreadable on a projector; use 10pt or more
+warning: slide `light` 239:7 <text>: font size 8.5pt is unreadable on a projector; use 10pt or more
+warning: slide `light` 244:7 <text>: font size 8.5pt is unreadable on a projector; use 10pt or more
+warning: slide `light` 250:7 <text>: font size 8.5pt is unreadable on a projector; use 10pt or more
+warning: slide `light` 256:7 <text>: font size 8.5pt is unreadable on a projector; use 10pt or more
+warning: slide `light` 276:7 <text>: font size 8.5pt is unreadable on a projector; use 10pt or more
+warning: slide `light` 338:5 <text>: font size 7.5pt is unreadable on a projector; use 10pt or more
+lint: slide `light`: text `title` and `sub2` overlap (28x12pt)
+warning: slide `focus` 368:7 <text>: font size 8pt is unreadable on a projector; use 10pt or more
+warning: slide `focus` 369:7 <shape>: font size 8.5pt is unreadable on a projector; use 10pt or more
+warning: slide `focus` 372:7 <shape>: font size 8.5pt is unreadable on a projector; use 10pt or more
+warning: slide `focus` 379:7 <shape>: font size 8.5pt is unreadable on a projector; use 10pt or more
+warning: slide `focus` 393:7 <text>: font size 8.5pt is unreadable on a projector; use 10pt or more
+warning: slide `focus` 395:7 <text>: font size 8.5pt is unreadable on a projector; use 10pt or more
+warning: slide `focus` 396:7 <text>: font size 8.5pt is unreadable on a projector; use 10pt or more
+warning: slide `focus` 398:7 <text>: font size 8.5pt is unreadable on a projector; use 10pt or more
+warning: slide `focus` 417:5 <text>: font size 7.5pt is unreadable on a projector; use 10pt or more
+warning: slide `summary` 478:7 <text>: font size 8.5pt is unreadable on a projector; use 10pt or more
+warning: slide `summary` 499:5 <text>: font size 7.5pt is unreadable on a projector; use 10pt or more
+lint: slide `summary`: text `text 34` and `text 35` overlap (8x11pt)

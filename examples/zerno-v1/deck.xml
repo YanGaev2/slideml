@@ -1,0 +1,120 @@
+<!-- Кофейня «Зерно» · Итоги Q3 2026 · для инвесторов. Canvas 960x540 pt. -->
+<deck lang="ru-RU">
+  <theme font="Manrope" heading="Unbounded SemiBold"
+         dk1="#2B1D16" lt1="#FAF6F0" dk2="#6B5D52" lt2="#E8DFD3"
+         accent1="#C46A2B" accent2="#2B1D16" accent3="#6B5D52" accent4="#E8DFD3" accent5="#6B5D52" accent6="#E8DFD3"/>
+
+  <styles>
+    <style name="display" font="heading" size="60" spacing="-1" line-height="0.95" color="dk1"/>
+    <style name="h1" font="heading" size="34" spacing="-0.5" line-height="1.05" color="dk1"/>
+    <style name="h2" font="heading" size="20" line-height="1.15" color="dk1"/>
+    <style name="body" size="16" line-height="1.25" color="dk2"/>
+    <style name="lead" font="Manrope SemiBold" size="20" line-height="1.3" color="accent1"/>
+    <style name="kpi" font="heading" size="52" spacing="-1" color="dk1"/>
+    <style name="label" font="Cascadia Mono" size="11" caps="1" spacing="1" color="dk2"/>
+    <style name="chrome" font="Cascadia Mono" size="10" caps="1" spacing="1" color="dk2"/>
+  </styles>
+
+  <templates>
+    <template id="chrome">
+      <text id="chrome-brand" x="48" y="24" w="420" h="auto" class="chrome">{{section}}</text>
+      <line id="chrome-top" x1="48" y1="48" x2="912" y2="48" stroke="dk1/15 0.75"/>
+      <line id="chrome-bot" x1="48" y1="500" x2="912" y2="500" stroke="dk1/15 0.75"/>
+      <text id="chrome-page" x="714" y="512" w="198" h="auto" class="chrome" align="right">{{page}}</text>
+    </template>
+  </templates>
+
+  <!-- 1. Обложка -->
+  <slide id="cover" bg="lt1" transition="fade" transition-dur="700">
+    <use template="chrome" section="Кофейня «Зерно» · Q3 2026" page="01 / 05"/>
+    <text id="cover-label" x="48" y="112" w="600" h="auto" class="label">Итоги третьего квартала 2026 · для инвесторов</text>
+    <text id="cover-title" x="48" y="146" w="630" h="auto" class="display">Квартал роста</text>
+    <text id="cover-lead" x="48" y="300" w="630" h="auto" class="lead">Выручка +58 % · средний чек 420 ₽ · 5 точек · оценка 4,8</text>
+    <text id="cover-sub" x="48" y="420" w="420" h="auto" class="body">Материал для инвесторов. Данные: июль–сентябрь 2026 года.</text>
+    <shape id="cover-card" x="690" y="130" w="222" h="290" radius="24" fill="accent1" line="none" shadow="lift"/>
+    <icon id="cover-icon" name="coffee" x="750" y="224" w="102" h="102" color="lt1" weight="1.75"/>
+    <anim target="cover-title" effect="float-up" start="after" dur="700"/>
+    <anim target="cover-lead" effect="fade" start="after" dur="400"/>
+  </slide>
+
+  <!-- 2. Выручка по месяцам -->
+  <slide id="revenue" bg="lt1" transition="morph" transition-dur="900">
+    <use template="chrome" section="Зерно · Результаты квартала" page="02 / 05"/>
+    <shape id="accent" x="48" y="64" w="48" h="3" fill="accent1" line="none"/>
+    <text id="rev-title" x="48" y="92" w="560" h="auto" class="h1">Выручка выросла с 1,2 до 1,9 млн ₽</text>
+    <text id="rev-body" x="640" y="96" w="272" h="auto" class="body">Рост три месяца подряд. Сентябрь — рекорд квартала.</text>
+    <chart id="rev-chart" type="column" x="48" y="210" w="864" h="270" labels="1" label-bold="1" label-size="14" size="12" color="dk2" gap="90" axis="cat" grid="0" min="0" max="2" format="0.0">
+      <cat>Июль, Август, Сентябрь</cat>
+      <series name="Выручка, млн ₽" values="1.2, 1.4, 1.9" colors="dk1/12, dk1/12, accent1"/>
+      <note at="Сентябрь" w="170" dy="-52" size="12" fill="dk1" color="lt1">+58 % к июлю</note>
+    </chart>
+    <anim target="rev-chart" effect="wipe-bottom" start="after" dur="800"/>
+  </slide>
+
+  <!-- 3. Чек и оценка -->
+  <slide id="metrics" bg="lt1" transition="morph" transition-dur="900">
+    <use template="chrome" section="Зерно · Метрики" page="03 / 05"/>
+    <shape id="accent" x="48" y="64" w="48" h="3" fill="accent1" line="none"/>
+    <text id="kpi-title" x="48" y="92" w="700" h="auto" class="h1">Средний чек вырос до 420 ₽</text>
+    <group id="card-check">
+      <shape x="48" y="200" w="408" h="250" radius="20" fill="lt2/40" line="none" shadow="lift"/>
+      <icon name="wallet" x="84" y="236" w="44" h="44" color="accent1" weight="2"/>
+      <text x="84" y="312" w="300" h="auto" class="kpi">420 ₽</text>
+      <text x="84" y="392" w="340" h="auto" class="label">средний чек · было 380 ₽</text>
+    </group>
+    <group id="card-rating">
+      <shape x="504" y="200" w="408" h="250" radius="20" fill="lt2/40" line="none" shadow="lift"/>
+      <icon name="star" x="540" y="236" w="44" h="44" color="accent1" weight="2"/>
+      <text x="540" y="312" w="300" h="auto" class="kpi">4,8</text>
+      <text x="540" y="392" w="340" h="auto" class="label">оценка в Яндекс Картах</text>
+    </group>
+    <anim target="card-check" effect="float-up" start="after" dur="600"/>
+    <anim target="card-rating" effect="float-up" start="after" dur="600"/>
+  </slide>
+
+  <!-- 4. Экспансия: 5 точек -->
+  <slide id="network" bg="lt1" transition="morph" transition-dur="900">
+    <use template="chrome" section="Зерно · Экспансия" page="04 / 05"/>
+    <shape id="accent" x="48" y="64" w="48" h="3" fill="accent1" line="none"/>
+    <text id="net-title" x="48" y="92" w="700" h="auto" class="h1">Открыли 2 точки — сеть выросла до 5</text>
+    <group id="net-old">
+      <shape x="48" y="200" w="150" h="160" radius="16" fill="lt2/40" line="none"/>
+      <icon name="store" x="95" y="252" w="56" h="56" color="dk2" weight="1.75"/>
+      <shape x="222" y="200" w="150" h="160" radius="16" fill="lt2/40" line="none"/>
+      <icon name="store" x="269" y="252" w="56" h="56" color="dk2" weight="1.75"/>
+      <shape x="396" y="200" w="150" h="160" radius="16" fill="lt2/40" line="none"/>
+      <icon name="store" x="443" y="252" w="56" h="56" color="dk2" weight="1.75"/>
+    </group>
+    <group id="net-new">
+      <shape x="570" y="200" w="150" h="160" radius="16" fill="accent1" line="none" shadow="lift"/>
+      <icon name="store" x="617" y="252" w="56" h="56" color="lt1" weight="1.75"/>
+      <shape x="744" y="200" w="150" h="160" radius="16" fill="accent1" line="none" shadow="lift"/>
+      <icon name="store" x="791" y="252" w="56" h="56" color="lt1" weight="1.75"/>
+    </group>
+    <line id="net-line-old" x1="48" y1="392" x2="546" y2="392" stroke="dk1/25 1"/>
+    <text id="net-label-old" x="48" y="404" w="300" h="auto" class="label">работали до Q3 2026</text>
+    <line id="net-line-new" x1="570" y1="392" x2="894" y2="392" stroke="accent1 1.5"/>
+    <text id="net-label-new" x="570" y="404" w="300" h="auto" class="label" color="accent1">открыты в Q3 2026</text>
+    <anim target="net-old" effect="float-up" start="after" dur="600"/>
+    <anim target="net-new" effect="zoom" start="after" dur="500"/>
+  </slide>
+
+  <!-- 5. План Q4 -->
+  <slide id="plan" bg="dk1" transition="morph" transition-dur="900">
+    <shape id="accent" x="0" y="0" w="420" h="540" fill="accent1" line="none"/>
+    <text id="chrome-brand" x="48" y="24" w="420" h="auto" class="chrome" color="lt1/75">Зерно · План Q4 2026</text>
+    <line id="chrome-top" x1="48" y1="48" x2="912" y2="48" stroke="lt1/25 0.75"/>
+    <line id="chrome-bot" x1="48" y1="500" x2="912" y2="500" stroke="lt1/25 0.75"/>
+    <text id="chrome-page" x="714" y="512" w="198" h="auto" class="chrome" color="lt1/75" align="right">05 / 05</text>
+    <text id="plan-label" x="48" y="120" w="320" h="auto" class="label" color="lt1/80">План на четвёртый квартал</text>
+    <text id="plan-title" x="48" y="152" w="340" h="auto" class="display" size="48" color="lt1">Шестая точка и&#160;доставка</text>
+    <text id="plan-intro" x="492" y="120" w="420" h="auto" class="body" color="lt1/80">Два шага на Q4 2026:</text>
+    <icon id="plan-icon-1" name="store" x="492" y="182" w="40" h="40" color="lt1" weight="2"/>
+    <text id="plan-step-1" x="552" y="186" w="360" h="auto" class="h2" color="lt1">Открыть шестую точку</text>
+    <icon id="plan-icon-2" name="bike" x="492" y="252" w="40" h="40" color="lt1" weight="2"/>
+    <text id="plan-step-2" x="552" y="256" w="360" h="auto" class="h2" color="lt1">Запустить доставку</text>
+    <text id="plan-recap" x="492" y="400" w="420" h="auto" class="body" color="lt1/70">База Q3 2026: выручка 4,5 млн ₽ за квартал, средний чек 420 ₽, 5 точек, оценка 4,8.</text>
+    <anim target="plan-step-1" effect="fade" start="after" dur="400"/>
+    <anim target="plan-step-2" effect="fade" start="after" dur="400"/>
+  </slide>
+</deck>

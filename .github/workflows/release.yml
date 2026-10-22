@@ -1,0 +1,20 @@
+name: release
+
+on:
+  push:
+    tags: ['v*']
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: ./package.ps1
+        shell: pwsh
+      - run: gh release create $env:GITHUB_REF_NAME dist/slideml-skill.zip install.ps1 --generate-notes
+        shell: pwsh
+        env:
+          GH_TOKEN: ${{ github.token }}

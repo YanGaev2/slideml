@@ -1,0 +1,3 @@
+- latte-art-coffee-cup-1.jpg — Coffee Latte — Фото: David Bares, CC0 1.0 — https://stocksnap.io/photo/coffee-latte-WDJES619M1
+- latte-art-coffee-cup-2.jpg — Barista Latte — Фото: Burst, CC0 1.0 — https://stocksnap.io/photo/barista-latte-V7HJ1MBGUP
+- latte-art-coffee-cup-3.jpg — Still Items — Фото: Clem Onojeghuo, CC0 1.0 — https://stocksnap.io/photo/still-items-XF3EEHX92J

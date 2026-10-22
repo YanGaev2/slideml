@@ -1,0 +1,313 @@
+<deck lang="ru-RU">
+  <!-- СИГНАЛ+ round 4. Swiss grid, paper + ink + one orange signal block.
+       Motif: the editor SELECTION FRAME (frame, 8 handles, tag with the real object name = element id).
+       Rule: the frame sits exactly on the bounds of a real object (a shape, a padded text box,
+       or a group whose bounds rect is part of the group). Tag: 6 pt outside the frame, above it,
+       or below it when the space above is taken.
+       Grid: 960x540, margins 48, 12 cols x 50, gutter 24. Col n left = 48 + 74*(n-1).
+       Leading: line pitch = 1.2 * size * line-height, so styles store target-em / 1.2.
+       Text colours are pre-mixed (no alpha on text): PowerPoint dithers semi-transparent glyphs. -->
+  <theme font="Inter" heading="Inter SemiBold"
+    lt1="#F4F3EF" dk1="#111111" dk2="#6B6A66" lt2="#D9D7D1"
+    accent1="#FF4F12" accent2="#111111" accent3="#6B6A66"
+    accent4="#D9D7D1" accent5="#6B6A66" accent6="#D9D7D1"/>
+
+  <!-- Type scale: 10 / 12 / 14 / 16 / 22 / 40 / 84 / 132 / 400 -->
+  <styles>
+    <style name="display" font="heading" size="84" spacing="-2.5" line-height="0.79" color="dk1"/>
+    <style name="hero"    font="heading" size="132" spacing="-4" line-height="0.75" color="dk1"/>
+    <style name="hero-xl" font="heading" size="400" spacing="-10" line-height="0.71" color="dk1"/>
+    <style name="h1"      font="heading" size="40" spacing="-1" line-height="0.88" color="dk1"/>
+    <style name="num"     font="heading" size="40" spacing="-1" line-height="0.83" color="dk1"/>
+    <style name="h2"      font="heading" size="22" spacing="-0.3" line-height="0.96" color="dk1"/>
+    <style name="body"    font="Inter" size="16" line-height="1.12" color="dk2"/>
+    <style name="body-s"  font="Inter" size="14" line-height="1.12" color="dk2"/>
+    <style name="fact"    font="Inter" size="16" line-height="1" color="dk2"/>
+    <style name="label"   font="Cascadia Mono" size="12" spacing="1" caps="1" line-height="1" color="dk2"/>
+    <style name="code"    font="Cascadia Mono" size="16" line-height="1.04" color="dk1"/>
+    <style name="chrome"  font="Cascadia Mono" size="10" spacing="1" caps="1" line-height="1"/>
+  </styles>
+
+  <templates>
+    <template id="chrome">
+      <text id="chrome-brand" x="48" y="24" w="64" h="auto" class="chrome" color="{{ink}}">SLIDEML</text>
+      <text id="chrome-section" x="104" y="24" w="420" h="auto" class="chrome" color="{{ink}}">/ {{section}}</text>
+      <line id="chrome-top" x1="48" y1="48" x2="912" y2="48" stroke="{{rule}} 0.75"/>
+      <line id="chrome-bot" x1="48" y1="500" x2="912" y2="500" stroke="{{rule}} 0.75"/>
+      <text id="chrome-foot" x="48" y="512" w="420" h="auto" class="chrome" color="{{ink}}">Собрано агентом в SlideML</text>
+      <text id="chrome-page" x="714" y="512" w="198" h="auto" class="chrome" color="{{ink}}" align="right">{{page}} / 08</text>
+    </template>
+    <!-- Cover: the same ids without section and page. -->
+    <template id="cover">
+      <text id="chrome-brand" x="48" y="24" w="64" h="auto" class="chrome" color="dk2">SLIDEML</text>
+      <line id="chrome-top" x1="48" y1="48" x2="912" y2="48" stroke="#111111/15 0.75"/>
+      <line id="chrome-bot" x1="48" y1="500" x2="912" y2="500" stroke="#111111/15 0.75"/>
+      <text id="chrome-foot" x="48" y="512" w="420" h="auto" class="chrome" color="dk2">Собрано агентом в SlideML</text>
+    </template>
+
+    <!-- Selection frame. dx/dy = frame top-left = target top-left. Pass r = w-3, b = h-3, mx = w/2-3, my = h/2-3,
+         tx/ty = tag position (ty=-22 above, ty=h+6 below), tw = tag width (Cascadia 10: id width + 10). -->
+    <template id="sel">
+      <shape id="sel-frame" geom="rect" x="0" y="0" w="{{w}}" h="{{h}}" fill="none" line="dk1 1"/>
+      <shape id="sel-h1" geom="rect" x="-3" y="-3" w="6" h="6" fill="lt1" line="dk1 1"/>
+      <shape id="sel-h2" geom="rect" x="{{mx}}" y="-3" w="6" h="6" fill="lt1" line="dk1 1"/>
+      <shape id="sel-h3" geom="rect" x="{{r}}" y="-3" w="6" h="6" fill="lt1" line="dk1 1"/>
+      <shape id="sel-h4" geom="rect" x="{{r}}" y="{{my}}" w="6" h="6" fill="lt1" line="dk1 1"/>
+      <shape id="sel-h5" geom="rect" x="{{r}}" y="{{b}}" w="6" h="6" fill="lt1" line="dk1 1"/>
+      <shape id="sel-h6" geom="rect" x="{{mx}}" y="{{b}}" w="6" h="6" fill="lt1" line="dk1 1"/>
+      <shape id="sel-h7" geom="rect" x="-3" y="{{b}}" w="6" h="6" fill="lt1" line="dk1 1"/>
+      <shape id="sel-h8" geom="rect" x="-3" y="{{my}}" w="6" h="6" fill="lt1" line="dk1 1"/>
+      <shape id="sel-tag" geom="rect" x="{{tx}}" y="{{ty}}" w="{{tw}}" h="16" fill="dk1" line="none" pad="0 5 0 5" anchor="middle" wrap="0"
+             font="Cascadia Mono" size="10" color="lt1">{{tag}}</shape>
+    </template>
+  </templates>
+
+  <!-- S1 COVER: the signal block is a selected native rectangle and shows its own properties. -->
+  <slide id="s1" bg="lt1" transition="fade" transition-dur="800">
+    <use template="cover"/>
+    <text id="s1-kicker" x="48" y="96" w="642" h="auto" class="label">AI-native формат презентаций</text>
+    <text id="s1-title" x="44" y="128" w="646" h="auto" class="display">Презентации,<br/>которые пишет<br/>агент<span color="accent1">.</span></text>
+    <shape id="signal" geom="rect" x="714" y="96" w="198" h="392" fill="accent1" line="none" anchor="bottom" pad="0 16 16 16"
+           font="Cascadia Mono" size="12" color="dk1" line-height="1.15">x 714 · y 96<br/>w 198 · h 392<br/>fill #FF4F12</shape>
+    <group id="s1-sel">
+      <use template="sel" dx="714" dy="96" w="198" h="392" r="195" b="389" mx="96" my="193"
+           tx="0" ty="-22" tw="46" tag="signal"/>
+    </group>
+    <group id="s1-sub">
+      <text id="s1-code" x="48" y="416" w="642" h="auto" class="code">deck.xml → slideml build → .pptx</text>
+      <text id="s1-body" x="48" y="448" w="642" h="auto" class="body" color="dk1">Нативный редактируемый .pptx. Эту презентацию тоже собрал агент.</text>
+    </group>
+    <anim target="signal" effect="wipe-bottom" start="after" dur="500"/>
+    <anim target="s1-sel" effect="appear" start="after" delay="150"/>
+    <anim target="s1-sub" effect="fade" start="after" dur="300"/>
+  </slide>
+
+  <!-- S2 PROBLEM: a screenshot is one picture object; a converter loses fonts and motion. -->
+  <slide id="s2" bg="lt1" transition="morph" transition-dur="900">
+    <use template="chrome" section="Проблема" page="02" ink="dk2" rule="#111111/15"/>
+    <text id="s2-title" x="48" y="80" w="642" h="auto" class="h1">Агент делает слайды.<br/>PowerPoint получает картинку.</text>
+    <shape id="signal" geom="rect" x="458" y="170" w="178" h="4" fill="accent1" line="none"/>
+
+    <image id="s2-shot" src="assets/shot.png" x="48" y="240" w="198" h="104" fit="cover" tint="grayscale" alt="Скриншот слайда"/>
+    <use template="sel" dx="48" dy="240" w="198" h="104" r="195" b="101" mx="96" my="49"
+         tx="0" ty="-22" tw="52" tag="s2-shot"/>
+    <group id="s2-left">
+      <text id="s2-l-label" x="270" y="240" w="198" h="auto" class="label">Путь 01</text>
+      <text id="s2-l-head" x="270" y="260" w="198" h="auto" class="h2">Скриншот</text>
+      <text id="s2-l-body" x="270" y="292" w="198" h="auto" class="body-s">Playwright или Chrome снимают слайд в&#160;PNG. Править в&#160;нём нечего.</text>
+    </group>
+
+    <group id="s2-right">
+      <group id="s2-conv">
+        <shape id="s2-c-bg" geom="rect" x="492" y="240" w="198" h="104" fill="white" line="#111111/15 0.75"/>
+        <text id="s2-c-t" x="504" y="250" w="104" h="40" font="Times New Roman" size="14" color="dk2" line-height="0.9" rot="-2">Акция «Снова в&#160;школу»</text>
+        <shape id="s2-c-l1" geom="rect" x="504" y="288" w="78" h="4" fill="dk2/35" line="none"/>
+        <shape id="s2-c-l2" geom="rect" x="504" y="296" w="92" h="4" fill="dk2/35" line="none"/>
+        <shape id="s2-c-ph" geom="rect" x="614" y="252" w="64" h="48" fill="none" line="dk2 0.75 dash"/>
+        <icon id="s2-c-ic" name="image-off" x="636" y="266" w="20" h="20" color="dk2" weight="1.5"/>
+        <text id="s2-c-meta" x="504" y="312" w="180" h="auto" font="Cascadia Mono" size="11" color="dk2" line-height="1">шрифт: fallback<br/>anim: 0</text>
+      </group>
+      <text id="s2-r-label" x="714" y="240" w="198" h="auto" class="label">Путь 02</text>
+      <text id="s2-r-head" x="714" y="260" w="198" h="auto" class="h2">Конвертер</text>
+      <text id="s2-r-body" x="714" y="292" w="198" h="auto" class="body-s">Marp, Slidev, экспорт Gamma, pandoc. Теряются анимации, шрифты, правки.</text>
+    </group>
+
+    <line id="s2-rule-c" x1="48" y1="376" x2="912" y2="376" stroke="#111111/15 0.75"/>
+    <group id="s2-why">
+      <text id="s2-cause-l" x="48" y="392" w="198" h="auto" class="label">Причина</text>
+      <text id="s2-cause" x="48" y="416" w="864" h="auto" class="h2" size="28">Одна на&#160;двоих: модель HTML/CSS не&#160;ложится на&#160;DrawingML.</text>
+    </group>
+    <anim target="s2-right" effect="fade" start="after" delay="200"/>
+    <anim target="s2-why" effect="fade" start="click"/>
+  </slide>
+
+  <!-- S3 INSIGHT (dark): the rejected verb is struck, then the answer arrives; the compiler is the signal. -->
+  <slide id="s3" bg="dk1" transition="morph" transition-dur="900">
+    <use template="chrome" section="Инсайт" page="03" ink="#888886" rule="white/20"/>
+    <text id="s3-not" x="44" y="104" w="868" h="auto" class="display" color="#5E5E5C">Не экспортировать.</text>
+    <line id="s3-strike" x1="50" y1="140" x2="842" y2="140" stroke="#5E5E5C 5"/>
+    <group id="s3-ans">
+      <text id="s3-yes" x="44" y="196" w="868" h="auto" class="display" color="white">Компилировать.</text>
+      <text id="s3-body" x="48" y="312" w="642" h="auto" class="body" color="#B8B8B6">SlideML — не конвертер, а компилятор.<br/>Каждый элемент XML становится объектом DrawingML.</text>
+    </group>
+
+    <shape id="signal" geom="rect" x="344" y="392" w="272" h="56" fill="accent1" line="none" anchor="middle" align="center"
+           font="Cascadia Mono" size="14" color="dk1" line-height="1.2">slideml · Rust<br/>3&#160;426 строк</shape>
+    <group id="s3-pipe">
+      <shape id="s3-in" geom="rect" x="48" y="392" w="198" h="56" fill="none" line="white/30 1" anchor="middle" align="center"
+             font="Cascadia Mono" size="16" color="#B8B8B6">deck.xml</shape>
+      <line id="s3-a1" x1="254" y1="420" x2="336" y2="420" stroke="white/70 1.5" tail="triangle"/>
+      <line id="s3-a2" x1="624" y1="420" x2="706" y2="420" stroke="white/70 1.5" tail="triangle"/>
+      <shape id="s3-out" geom="rect" x="714" y="392" w="198" h="56" fill="none" line="white 1" anchor="middle" align="center"
+             font="Cascadia Mono" size="16" color="white">deck.pptx</shape>
+    </group>
+    <anim target="s3-strike" effect="wipe-left" start="after" delay="300" dur="400"/>
+    <anim target="s3-ans" effect="float-up" start="after" dur="500"/>
+    <anim target="s3-pipe" effect="wipe-left" start="click" dur="700"/>
+  </slide>
+
+  <!-- S4 LINE = OBJECT: each code line arrives with its object; line 1 is selected. -->
+  <slide id="s4" bg="lt1" transition="morph" transition-dur="900">
+    <use template="chrome" section="Как устроено" page="04" ink="dk2" rule="#111111/15"/>
+    <text id="s4-title" x="44" y="80" w="868" h="auto" class="display">Строка = объект.</text>
+    <text id="s4-file" x="48" y="184" w="420" h="auto" class="label">deck.xml</text>
+    <shape id="s4-panel" geom="rect" x="48" y="208" w="420" h="208" fill="dk1" line="none"/>
+    <line id="s4-sep1" x1="48" y1="264" x2="468" y2="264" stroke="white/8 0.75"/>
+    <line id="s4-sep2" x1="48" y1="312" x2="468" y2="312" stroke="white/8 0.75"/>
+    <line id="s4-sep3" x1="48" y1="360" x2="468" y2="360" stroke="white/8 0.75"/>
+    <shape id="signal" geom="rect" x="48" y="226" w="420" h="28" fill="accent1" line="none"/>
+
+    <group id="s4-r1">
+      <text id="s4-g1" x="60" y="208" w="24" h="auto" class="code" line-height="2.5" color="dk1" align="right">1</text>
+      <text id="s4-c1" x="100" y="208" w="356" h="auto" class="code" line-height="2.5" color="dk1">&lt;shape geom="roundRect"/&gt;</text>
+      <line id="s4-l1" x1="476" y1="240" x2="556" y2="240" stroke="#111111 1" head="oval"/>
+      <shape id="s4-o1" geom="roundRect" x="571" y="225" w="30" h="30" radius="6" fill="none" line="dk1 2.5"/>
+      <text id="s4-f1" x="640" y="230" w="272" h="auto" class="fact"><span font="heading" color="dk1">187</span> фигур + SVG-контуры</text>
+    </group>
+    <use template="sel" dx="571" dy="225" w="30" h="30" r="27" b="27" mx="12" my="12"
+         tx="0" ty="-22" tw="40" tag="s4-o1"/>
+    <group id="s4-r2">
+      <text id="s4-g2" x="60" y="256" w="24" h="auto" class="code" line-height="2.5" color="#555553" align="right">2</text>
+      <text id="s4-c2" x="100" y="256" w="356" h="auto" class="code" line-height="2.5" color="#B0AFAC">&lt;icon name="zap"/&gt;</text>
+      <line id="s4-l2" x1="476" y1="288" x2="556" y2="288" stroke="#111111 1" head="oval"/>
+      <icon id="s4-o2" name="zap" x="568" y="270" w="36" h="36" color="dk1" weight="1.75"/>
+      <text id="s4-f2" x="640" y="278" w="272" h="auto" class="fact"><span font="heading" color="dk1">2&#160;154</span> иконки Lucide</text>
+    </group>
+    <group id="s4-r3">
+      <text id="s4-g3" x="60" y="304" w="24" h="auto" class="code" line-height="2.5" color="#555553" align="right">3</text>
+      <text id="s4-c3" x="100" y="304" w="356" h="auto" class="code" line-height="2.5" color="#B0AFAC">&lt;chart type="column"&gt;…</text>
+      <line id="s4-l3" x1="476" y1="336" x2="556" y2="336" stroke="#111111 1" head="oval"/>
+      <chart id="s4-o3" type="column" x="571" y="321" w="30" h="30" axis="none" legend="none" labels="0" gap="60" plot="0 0 0 0" min="0" max="4">
+        <cat>a, b, c, d</cat>
+        <series name="s" values="2, 3, 2.5, 4" colors="dk1, dk1, dk1, dk1"/>
+        <ref id="s4-o3-ref" value="3" stroke="accent1 1.5"/>
+      </chart>
+      <text id="s4-f3" x="640" y="326" w="272" h="auto" class="fact"><span font="heading" color="dk1">Графики</span> с&#160;книгой Excel</text>
+    </group>
+    <group id="s4-r4">
+      <text id="s4-g4" x="60" y="352" w="24" h="auto" class="code" line-height="2.5" color="#555553" align="right">4</text>
+      <text id="s4-c4" x="100" y="352" w="356" h="auto" class="code" line-height="2.5" color="#B0AFAC">&lt;anim effect="float-up"/&gt;</text>
+      <line id="s4-l4" x1="476" y1="384" x2="556" y2="384" stroke="#111111 1" head="oval"/>
+      <icon id="s4-o4" name="play" x="568" y="366" w="36" h="36" color="dk1" weight="1.75"/>
+      <text id="s4-f4" x="640" y="374" w="272" h="auto" class="fact"><span font="heading" color="dk1">14</span> нативных анимаций</text>
+    </group>
+    <text id="s4-more" x="48" y="448" w="642" h="auto" class="body-s">Также нативно: таблицы, группы, переходы fade, push, wipe и&#160;morph, шаблоны и&#160;стили.</text>
+    <anim target="s4-r2" effect="wipe-left" start="after" delay="200" dur="300"/>
+    <anim target="s4-r3" effect="wipe-left" start="after" dur="300"/>
+    <anim target="s4-r4" effect="wipe-left" start="after" dur="300"/>
+  </slide>
+
+  <!-- S5 PROOF: TEXT. 367 checked text blocks as a grid in check order; the 2 misses (#101, #120)
+       are orange at their real positions. The signal morphs into block #101. -->
+  <slide id="s5" bg="lt1" transition="morph" transition-dur="900">
+    <use template="chrome" section="Доказательство" page="05" ink="dk2" rule="#111111/15"/>
+    <text id="s5-label" x="48" y="80" w="494" h="auto" class="label">Точность вёрстки</text>
+    <text id="s5-hero" x="41" y="124" w="560" h="128" class="hero">99,5<span size="44"> </span>%</text>
+    <text id="s5-head" x="640" y="108" w="272" h="auto" class="h2">Текст не вылезет за&#160;рамку: агент знает это до&#160;рендера.</text>
+    <text id="s5-body" x="640" y="196" w="272" h="auto" class="body">Сверили с&#160;PowerPoint 367 блоков из&#160;четырёх тестовых презентаций. В&#160;365 число строк совпало.</text>
+
+    <shape id="s5-grid" x="48" y="288" w="859.22" h="145.48" viewbox="0 0 859.22 145.48" fill="lt2" line="none"
+           path="M0.00 0.00h14v14h-14Z M18.78 0.00h14v14h-14Z M37.57 0.00h14v14h-14Z M56.35 0.00h14v14h-14Z M75.13 0.00h14v14h-14Z M93.91 0.00h14v14h-14Z M112.70 0.00h14v14h-14Z M131.48 0.00h14v14h-14Z M150.26 0.00h14v14h-14Z M169.04 0.00h14v14h-14Z M187.83 0.00h14v14h-14Z M206.61 0.00h14v14h-14Z M225.39 0.00h14v14h-14Z M244.17 0.00h14v14h-14Z M262.96 0.00h14v14h-14Z M281.74 0.00h14v14h-14Z M300.52 0.00h14v14h-14Z M319.30 0.00h14v14h-14Z M338.09 0.00h14v14h-14Z M356.87 0.00h14v14h-14Z M375.65 0.00h14v14h-14Z M394.43 0.00h14v14h-14Z M413.22 0.00h14v14h-14Z M432.00 0.00h14v14h-14Z M450.78 0.00h14v14h-14Z M469.57 0.00h14v14h-14Z M488.35 0.00h14v14h-14Z M507.13 0.00h14v14h-14Z M525.91 0.00h14v14h-14Z M544.70 0.00h14v14h-14Z M563.48 0.00h14v14h-14Z M582.26 0.00h14v14h-14Z M601.04 0.00h14v14h-14Z M619.83 0.00h14v14h-14Z M638.61 0.00h14v14h-14Z M657.39 0.00h14v14h-14Z M676.17 0.00h14v14h-14Z M694.96 0.00h14v14h-14Z M713.74 0.00h14v14h-14Z M732.52 0.00h14v14h-14Z M751.30 0.00h14v14h-14Z M770.09 0.00h14v14h-14Z M788.87 0.00h14v14h-14Z M807.65 0.00h14v14h-14Z M826.43 0.00h14v14h-14Z M845.22 0.00h14v14h-14Z M0.00 18.78h14v14h-14Z M18.78 18.78h14v14h-14Z M37.57 18.78h14v14h-14Z M56.35 18.78h14v14h-14Z M75.13 18.78h14v14h-14Z M93.91 18.78h14v14h-14Z M112.70 18.78h14v14h-14Z M131.48 18.78h14v14h-14Z M150.26 18.78h14v14h-14Z M169.04 18.78h14v14h-14Z M187.83 18.78h14v14h-14Z M206.61 18.78h14v14h-14Z M225.39 18.78h14v14h-14Z M244.17 18.78h14v14h-14Z M262.96 18.78h14v14h-14Z M281.74 18.78h14v14h-14Z M300.52 18.78h14v14h-14Z M319.30 18.78h14v14h-14Z M338.09 18.78h14v14h-14Z M356.87 18.78h14v14h-14Z M375.65 18.78h14v14h-14Z M394.43 18.78h14v14h-14Z M413.22 18.78h14v14h-14Z M432.00 18.78h14v14h-14Z M450.78 18.78h14v14h-14Z M469.57 18.78h14v14h-14Z M488.35 18.78h14v14h-14Z M507.13 18.78h14v14h-14Z M525.91 18.78h14v14h-14Z M544.70 18.78h14v14h-14Z M563.48 18.78h14v14h-14Z M582.26 18.78h14v14h-14Z M601.04 18.78h14v14h-14Z M619.83 18.78h14v14h-14Z M638.61 18.78h14v14h-14Z M657.39 18.78h14v14h-14Z M676.17 18.78h14v14h-14Z M694.96 18.78h14v14h-14Z M713.74 18.78h14v14h-14Z M732.52 18.78h14v14h-14Z M751.30 18.78h14v14h-14Z M770.09 18.78h14v14h-14Z M788.87 18.78h14v14h-14Z M807.65 18.78h14v14h-14Z M826.43 18.78h14v14h-14Z M845.22 18.78h14v14h-14Z M0.00 37.57h14v14h-14Z M18.78 37.57h14v14h-14Z M37.57 37.57h14v14h-14Z M56.35 37.57h14v14h-14Z M75.13 37.57h14v14h-14Z M93.91 37.57h14v14h-14Z M112.70 37.57h14v14h-14Z M131.48 37.57h14v14h-14Z M169.04 37.57h14v14h-14Z M187.83 37.57h14v14h-14Z M206.61 37.57h14v14h-14Z M225.39 37.57h14v14h-14Z M244.17 37.57h14v14h-14Z M262.96 37.57h14v14h-14Z M281.74 37.57h14v14h-14Z M300.52 37.57h14v14h-14Z M319.30 37.57h14v14h-14Z M338.09 37.57h14v14h-14Z M356.87 37.57h14v14h-14Z M375.65 37.57h14v14h-14Z M394.43 37.57h14v14h-14Z M413.22 37.57h14v14h-14Z M432.00 37.57h14v14h-14Z M450.78 37.57h14v14h-14Z M469.57 37.57h14v14h-14Z M488.35 37.57h14v14h-14Z M525.91 37.57h14v14h-14Z M544.70 37.57h14v14h-14Z M563.48 37.57h14v14h-14Z M582.26 37.57h14v14h-14Z M601.04 37.57h14v14h-14Z M619.83 37.57h14v14h-14Z M638.61 37.57h14v14h-14Z M657.39 37.57h14v14h-14Z M676.17 37.57h14v14h-14Z M694.96 37.57h14v14h-14Z M713.74 37.57h14v14h-14Z M732.52 37.57h14v14h-14Z M751.30 37.57h14v14h-14Z M770.09 37.57h14v14h-14Z M788.87 37.57h14v14h-14Z M807.65 37.57h14v14h-14Z M826.43 37.57h14v14h-14Z M845.22 37.57h14v14h-14Z M0.00 56.35h14v14h-14Z M18.78 56.35h14v14h-14Z M37.57 56.35h14v14h-14Z M56.35 56.35h14v14h-14Z M75.13 56.35h14v14h-14Z M93.91 56.35h14v14h-14Z M112.70 56.35h14v14h-14Z M131.48 56.35h14v14h-14Z M150.26 56.35h14v14h-14Z M169.04 56.35h14v14h-14Z M187.83 56.35h14v14h-14Z M206.61 56.35h14v14h-14Z M225.39 56.35h14v14h-14Z M244.17 56.35h14v14h-14Z M262.96 56.35h14v14h-14Z M281.74 56.35h14v14h-14Z M300.52 56.35h14v14h-14Z M319.30 56.35h14v14h-14Z M338.09 56.35h14v14h-14Z M356.87 56.35h14v14h-14Z M375.65 56.35h14v14h-14Z M394.43 56.35h14v14h-14Z M413.22 56.35h14v14h-14Z M432.00 56.35h14v14h-14Z M450.78 56.35h14v14h-14Z M469.57 56.35h14v14h-14Z M488.35 56.35h14v14h-14Z M507.13 56.35h14v14h-14Z M525.91 56.35h14v14h-14Z M544.70 56.35h14v14h-14Z M563.48 56.35h14v14h-14Z M582.26 56.35h14v14h-14Z M601.04 56.35h14v14h-14Z M619.83 56.35h14v14h-14Z M638.61 56.35h14v14h-14Z M657.39 56.35h14v14h-14Z M676.17 56.35h14v14h-14Z M694.96 56.35h14v14h-14Z M713.74 56.35h14v14h-14Z M732.52 56.35h14v14h-14Z M751.30 56.35h14v14h-14Z M770.09 56.35h14v14h-14Z M788.87 56.35h14v14h-14Z M807.65 56.35h14v14h-14Z M826.43 56.35h14v14h-14Z M845.22 56.35h14v14h-14Z M0.00 75.13h14v14h-14Z M18.78 75.13h14v14h-14Z M37.57 75.13h14v14h-14Z M56.35 75.13h14v14h-14Z M75.13 75.13h14v14h-14Z M93.91 75.13h14v14h-14Z M112.70 75.13h14v14h-14Z M131.48 75.13h14v14h-14Z M150.26 75.13h14v14h-14Z M169.04 75.13h14v14h-14Z M187.83 75.13h14v14h-14Z M206.61 75.13h14v14h-14Z M225.39 75.13h14v14h-14Z M244.17 75.13h14v14h-14Z M262.96 75.13h14v14h-14Z M281.74 75.13h14v14h-14Z M300.52 75.13h14v14h-14Z M319.30 75.13h14v14h-14Z M338.09 75.13h14v14h-14Z M356.87 75.13h14v14h-14Z M375.65 75.13h14v14h-14Z M394.43 75.13h14v14h-14Z M413.22 75.13h14v14h-14Z M432.00 75.13h14v14h-14Z M450.78 75.13h14v14h-14Z M469.57 75.13h14v14h-14Z M488.35 75.13h14v14h-14Z M507.13 75.13h14v14h-14Z M525.91 75.13h14v14h-14Z M544.70 75.13h14v14h-14Z M563.48 75.13h14v14h-14Z M582.26 75.13h14v14h-14Z M601.04 75.13h14v14h-14Z M619.83 75.13h14v14h-14Z M638.61 75.13h14v14h-14Z M657.39 75.13h14v14h-14Z M676.17 75.13h14v14h-14Z M694.96 75.13h14v14h-14Z M713.74 75.13h14v14h-14Z M732.52 75.13h14v14h-14Z M751.30 75.13h14v14h-14Z M770.09 75.13h14v14h-14Z M788.87 75.13h14v14h-14Z M807.65 75.13h14v14h-14Z M826.43 75.13h14v14h-14Z M845.22 75.13h14v14h-14Z M0.00 93.91h14v14h-14Z M18.78 93.91h14v14h-14Z M37.57 93.91h14v14h-14Z M56.35 93.91h14v14h-14Z M75.13 93.91h14v14h-14Z M93.91 93.91h14v14h-14Z M112.70 93.91h14v14h-14Z M131.48 93.91h14v14h-14Z M150.26 93.91h14v14h-14Z M169.04 93.91h14v14h-14Z M187.83 93.91h14v14h-14Z M206.61 93.91h14v14h-14Z M225.39 93.91h14v14h-14Z M244.17 93.91h14v14h-14Z M262.96 93.91h14v14h-14Z M281.74 93.91h14v14h-14Z M300.52 93.91h14v14h-14Z M319.30 93.91h14v14h-14Z M338.09 93.91h14v14h-14Z M356.87 93.91h14v14h-14Z M375.65 93.91h14v14h-14Z M394.43 93.91h14v14h-14Z M413.22 93.91h14v14h-14Z M432.00 93.91h14v14h-14Z M450.78 93.91h14v14h-14Z M469.57 93.91h14v14h-14Z M488.35 93.91h14v14h-14Z M507.13 93.91h14v14h-14Z M525.91 93.91h14v14h-14Z M544.70 93.91h14v14h-14Z M563.48 93.91h14v14h-14Z M582.26 93.91h14v14h-14Z M601.04 93.91h14v14h-14Z M619.83 93.91h14v14h-14Z M638.61 93.91h14v14h-14Z M657.39 93.91h14v14h-14Z M676.17 93.91h14v14h-14Z M694.96 93.91h14v14h-14Z M713.74 93.91h14v14h-14Z M732.52 93.91h14v14h-14Z M751.30 93.91h14v14h-14Z M770.09 93.91h14v14h-14Z M788.87 93.91h14v14h-14Z M807.65 93.91h14v14h-14Z M826.43 93.91h14v14h-14Z M845.22 93.91h14v14h-14Z M0.00 112.70h14v14h-14Z M18.78 112.70h14v14h-14Z M37.57 112.70h14v14h-14Z M56.35 112.70h14v14h-14Z M75.13 112.70h14v14h-14Z M93.91 112.70h14v14h-14Z M112.70 112.70h14v14h-14Z M131.48 112.70h14v14h-14Z M150.26 112.70h14v14h-14Z M169.04 112.70h14v14h-14Z M187.83 112.70h14v14h-14Z M206.61 112.70h14v14h-14Z M225.39 112.70h14v14h-14Z M244.17 112.70h14v14h-14Z M262.96 112.70h14v14h-14Z M281.74 112.70h14v14h-14Z M300.52 112.70h14v14h-14Z M319.30 112.70h14v14h-14Z M338.09 112.70h14v14h-14Z M356.87 112.70h14v14h-14Z M375.65 112.70h14v14h-14Z M394.43 112.70h14v14h-14Z M413.22 112.70h14v14h-14Z M432.00 112.70h14v14h-14Z M450.78 112.70h14v14h-14Z M469.57 112.70h14v14h-14Z M488.35 112.70h14v14h-14Z M507.13 112.70h14v14h-14Z M525.91 112.70h14v14h-14Z M544.70 112.70h14v14h-14Z M563.48 112.70h14v14h-14Z M582.26 112.70h14v14h-14Z M601.04 112.70h14v14h-14Z M619.83 112.70h14v14h-14Z M638.61 112.70h14v14h-14Z M657.39 112.70h14v14h-14Z M676.17 112.70h14v14h-14Z M694.96 112.70h14v14h-14Z M713.74 112.70h14v14h-14Z M732.52 112.70h14v14h-14Z M751.30 112.70h14v14h-14Z M770.09 112.70h14v14h-14Z M788.87 112.70h14v14h-14Z M807.65 112.70h14v14h-14Z M826.43 112.70h14v14h-14Z M845.22 112.70h14v14h-14Z M0.00 131.48h14v14h-14Z M18.78 131.48h14v14h-14Z M37.57 131.48h14v14h-14Z M56.35 131.48h14v14h-14Z M75.13 131.48h14v14h-14Z M93.91 131.48h14v14h-14Z M112.70 131.48h14v14h-14Z M131.48 131.48h14v14h-14Z M150.26 131.48h14v14h-14Z M169.04 131.48h14v14h-14Z M187.83 131.48h14v14h-14Z M206.61 131.48h14v14h-14Z M225.39 131.48h14v14h-14Z M244.17 131.48h14v14h-14Z M262.96 131.48h14v14h-14Z M281.74 131.48h14v14h-14Z M300.52 131.48h14v14h-14Z M319.30 131.48h14v14h-14Z M338.09 131.48h14v14h-14Z M356.87 131.48h14v14h-14Z M375.65 131.48h14v14h-14Z M394.43 131.48h14v14h-14Z M413.22 131.48h14v14h-14Z M432.00 131.48h14v14h-14Z M450.78 131.48h14v14h-14Z M469.57 131.48h14v14h-14Z M488.35 131.48h14v14h-14Z M507.13 131.48h14v14h-14Z M525.91 131.48h14v14h-14Z M544.70 131.48h14v14h-14Z M563.48 131.48h14v14h-14Z M582.26 131.48h14v14h-14Z M601.04 131.48h14v14h-14Z M619.83 131.48h14v14h-14Z M638.61 131.48h14v14h-14Z M657.39 131.48h14v14h-14Z M676.17 131.48h14v14h-14Z M694.96 131.48h14v14h-14Z M713.74 131.48h14v14h-14Z M732.52 131.48h14v14h-14Z M751.30 131.48h14v14h-14Z M770.09 131.48h14v14h-14Z M788.87 131.48h14v14h-14Z M807.65 131.48h14v14h-14Z M826.43 131.48h14v14h-14Z"/>
+    <shape id="signal" geom="rect" x="198.26" y="325.57" w="14" h="14" fill="accent1" line="none"/>
+    <shape id="s5-miss2" geom="rect" x="555.13" y="325.57" w="14" h="14" fill="accent1" line="none"/>
+
+    <group id="s5-legend">
+      <shape geom="rect" x="48" y="456" w="12" h="12" fill="lt2" line="none"/>
+      <text x="68" y="454" w="200" h="auto" class="body-s">365 блоков совпали</text>
+      <shape geom="rect" x="240" y="456" w="12" h="12" fill="accent1" line="none"/>
+      <text x="260" y="454" w="652" h="auto" class="body-s">2 разошлись в&#160;безопасную сторону: компилятор насчитал на&#160;строку больше</text>
+    </group>
+    <anim target="s5-grid" effect="wipe-left" start="after" dur="900"/>
+    <anim target="s5-legend" effect="fade" start="after" dur="400"/>
+  </slide>
+
+  <!-- S6 PROOF: VALIDATOR. The signal grows into the orange half; the zero stands on it. -->
+  <slide id="s6" bg="lt1" transition="morph" transition-dur="900">
+    <shape id="signal" geom="rect" x="0" y="0" w="468" h="540" fill="accent1" line="none"/>
+    <use template="chrome" section="Доказательство" page="06" ink="dk1" rule="#111111/15"/>
+    <text id="s6-zero" x="30" y="200" w="300" h="320" class="hero-xl" line-height="0.62">0</text>
+    <text id="s6-cap" x="48" y="80" w="396" h="auto" class="body" color="dk1">Ошибок валидатора в&#160;каждом файле:</text>
+    <group id="s6-text">
+      <text id="s6-kick" x="492" y="80" w="420" h="auto" class="label">Open XML SDK</text>
+      <text id="s6-head" x="492" y="104" w="420" h="auto" class="h1">Открывается без<br/>«восстановления».</text>
+      <text id="s6-body" x="492" y="208" w="420" h="auto" class="body">Каждый сгенерированный .pptx проходит официальный валидатор Open XML SDK.</text>
+    </group>
+    <table id="s6-tab" x="492" y="296" w="420" h="160" cols="1fr 120" lines="h" line="#111111/15 0.75"
+           font="Cascadia Mono" size="14" color="dk1" anchor="middle" pad="0 0 0 0">
+      <tr h="32"><th font="Cascadia Mono" size="12" color="dk2" bold="0" caps="1" spacing="1">Колода</th><th font="Cascadia Mono" size="12" color="dk2" bold="0" caps="1" spacing="1" align="right">Ошибок</th></tr>
+      <tr h="32"><td>aurora.pptx</td><td align="right">0</td></tr>
+      <tr h="32"><td>retro.pptx</td><td align="right">0</td></tr>
+      <tr h="32"><td>dashboard.pptx</td><td align="right">0</td></tr>
+      <tr h="32"><td>hero.pptx · эта</td><td align="right">0</td></tr>
+    </table>
+    <anim target="s6-text" effect="fade" start="after"/>
+    <anim target="s6-tab" effect="wipe-top" start="click" dur="600"/>
+  </slide>
+
+  <!-- S7 AGENT LOOP: four steps with arrows and a solid return path from 04 back to 01.
+       The signal is the orange "fix and repeat" pill on the return path. -->
+  <slide id="s7" bg="lt1" transition="morph" transition-dur="900">
+    <use template="chrome" section="Цикл агента" page="07" ink="dk2" rule="#111111/15"/>
+    <text id="s7-title" x="48" y="80" w="642" h="auto" class="h1">Агент не угадывает.<br/>Он смотрит на результат.</text>
+    <line id="s7-a1" x1="66" y1="200" x2="262" y2="200" stroke="dk1 1.25" tail="triangle"/>
+    <line id="s7-a2" x1="288" y1="200" x2="484" y2="200" stroke="dk1 1.25" tail="triangle"/>
+    <line id="s7-a3" x1="510" y1="200" x2="706" y2="200" stroke="dk1 1.25" tail="triangle"/>
+    <shape id="s7-m01" geom="rect" x="48" y="195" w="10" h="10" fill="dk1" line="none"/>
+    <text id="s7-n01" x="72" y="224" w="174" h="auto" class="label">01</text>
+    <text id="s7-h01" x="72" y="244" w="174" h="auto" class="h2">Написать XML</text>
+    <text id="s7-b01" x="72" y="276" w="174" h="auto" class="body-s">Фигуры, текст, графики, анимации.</text>
+    <shape id="s7-m02" geom="rect" x="270" y="195" w="10" h="10" fill="dk1" line="none"/>
+    <text id="s7-n02" x="294" y="224" w="174" h="auto" class="label">02</text>
+    <text id="s7-h02" x="294" y="244" w="174" h="auto" class="h2">Собрать</text>
+    <text id="s7-b02" x="294" y="276" w="174" h="auto" class="body-s">Компилятор ловит переполнение, мелкий текст, наложения.</text>
+    <shape id="s7-m03" geom="rect" x="492" y="195" w="10" h="10" fill="dk1" line="none"/>
+    <text id="s7-n03" x="516" y="224" w="174" h="auto" class="label">03</text>
+    <text id="s7-h03" x="516" y="244" w="174" h="auto" class="h2">Отрисовать</text>
+    <text id="s7-b03" x="516" y="276" w="174" h="auto" class="body-s">PowerPoint рисует слайды в&#160;PNG. Нужен Windows с&#160;PowerPoint.</text>
+    <shape id="s7-m04" geom="rect" x="714" y="195" w="10" h="10" fill="dk1" line="none"/>
+    <text id="s7-n04" x="738" y="224" w="174" h="auto" class="label">04</text>
+    <text id="s7-h04" x="738" y="244" w="174" h="auto" class="h2">Посмотреть</text>
+    <text id="s7-b04" x="738" y="276" w="174" h="auto" class="body-s">Агент видит слайд и&#160;каждый объект на&#160;нём.</text>
+    <group id="s7-ret">
+      <line id="s7-r1" x1="719" y1="344" x2="719" y2="376" stroke="dk1 1.25"/>
+      <line id="s7-r2" x1="719" y1="376" x2="53" y2="376" stroke="dk1 1.25"/>
+      <line id="s7-r3" x1="53" y1="376" x2="53" y2="213" stroke="dk1 1.25" tail="triangle"/>
+    </group>
+    <shape id="signal" geom="rect" x="270" y="364" w="244" h="24" fill="accent1" line="none"/>
+    <text id="s7-ret-label" x="270" y="364" w="244" h="24" anchor="middle" align="center"
+          font="Cascadia Mono" size="12" spacing="1" caps="1" color="dk1">Исправить и&#160;снова</text>
+    <text id="s7-self" x="48" y="420" w="864" h="auto" class="h2">Так мы проверили сам SlideML: агенты сделали 4 тестовые презентации, а&#160;их ошибки стали новыми проверками компилятора.</text>
+    <anim target="s7-ret" effect="wipe-left" start="after" dur="700"/>
+    <anim target="s7-ret-label" effect="fade" start="with" delay="300" dur="300"/>
+    <anim target="s7-self" effect="fade" start="click"/>
+  </slide>
+
+  <!-- S8 NEXT + ASK: the frame morphs from s7 onto the headline; the ask lands in the orange band. -->
+  <slide id="s8" bg="lt1" transition="morph" transition-dur="900">
+    <use template="chrome" section="Дальше" page="08" ink="dk2" rule="#111111/15"/>
+    <text id="s8-meta-t" x="36" y="102" w="384" h="auto" pad="8 12 8 12" class="h1" size="30">Кликните любой объект.<br/>Он редактируется.</text>
+    <use template="sel" dx="36" dy="102" w="384" h="81" r="381" b="78" mx="189" my="37.5"
+         tx="0" ty="-22" tw="64" tag="s8-meta-t"/>
+    <icon id="s8-cursor" name="mouse-pointer-2" x="404" y="168" w="28" h="28" color="dk1" fill="lt1" weight="1.5"/>
+    <text id="s8-meta-s" x="48" y="208" w="560" h="auto" class="h2">Эту презентацию собрал агент в&#160;SlideML.<br/>Каждый объект на&#160;ней — нативный.</text>
+
+    <group id="s8-road">
+      <text id="s8-lab" x="640" y="80" w="272" h="auto" class="label">Дорожная карта</text>
+      <line id="s8-r1" x1="640" y1="104" x2="912" y2="104" stroke="#111111/15 0.75"/>
+      <text id="s8-h1" x="640" y="112" w="272" h="auto" class="fact" color="dk1">Встраивание шрифтов</text>
+      <line id="s8-r2" x1="640" y1="136" x2="912" y2="136" stroke="#111111/15 0.75"/>
+      <text id="s8-h2" x="640" y="144" w="272" h="auto" class="fact" color="dk1">MCP-сервер для агентов</text>
+      <line id="s8-r3" x1="640" y1="168" x2="912" y2="168" stroke="#111111/15 0.75"/>
+      <text id="s8-h3" x="640" y="176" w="272" h="auto" class="fact" color="dk1">Импорт готовых .pptx</text>
+      <line id="s8-r4" x1="640" y1="200" x2="912" y2="200" stroke="#111111/15 0.75"/>
+      <text id="s8-h4" x="640" y="208" w="272" h="auto" class="fact" color="dk1">Больше типов графиков</text>
+      <line id="s8-r5" x1="640" y1="232" x2="912" y2="232" stroke="#111111/15 0.75"/>
+    </group>
+
+    <shape id="signal" geom="rect" x="48" y="296" w="864" h="176" fill="accent1" line="none"/>
+    <text id="s8-step" x="72" y="320" w="400" h="auto" class="label" color="dk1">Следующий шаг · пилот</text>
+    <text id="s8-ask" x="72" y="360" w="816" h="auto" class="h1">Дайте один регулярный отчёт.<br/>Агент соберёт его в&#160;нативный .pptx.</text>
+    <anim target="s8-cursor" effect="float-up" start="after" dur="300"/>
+    <anim target="s8-ask" effect="fade" start="after" delay="300" dur="500"/>
+  </slide>
+</deck>

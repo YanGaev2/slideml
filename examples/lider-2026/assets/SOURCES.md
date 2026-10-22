@@ -1,0 +1,3 @@
+- business-team-meeting-office-1.jpg — Team Meeting — Фото: Startup Stock Photos, CC0 1.0 — https://stocksnap.io/photo/team-meeting-VQXYE2ZEHC
+- business-team-meeting-office-2.jpg — Team Meeting — Фото: Startup Stock Photos, CC0 1.0 — https://stocksnap.io/photo/team-meeting-JBW2PXDOL6
+- business-team-meeting-office-3.jpg — Team Meeting — Фото: Startup Stock Photos, CC0 1.0 — https://stocksnap.io/photo/team-meeting-69TMH4ITIE

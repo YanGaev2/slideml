@@ -1,0 +1,28 @@
+<deck lang="ru-RU">
+  <theme font="Manrope" heading="Unbounded" dk1="#111827" lt1="#FFFFFF" accent1="#5B5BF7" accent2="#FF8A3D"/>
+  <slide id="c" bg="white">
+    <chart id="col" type="column" x="40" y="40" w="440" h="240" labels="1" size="11" label-bold="1" axis="cat" gap="45">
+      <cat>H1, H2, H3, H4, H5, H6, H7, H8</cat>
+      <series name="Заказы" values="88, 91, 86, 94, 90, 112, 121, 104" colors="tx1/15,tx1/15,tx1/15,tx1/15,tx1/15,accent1,linear(90, accent2 0%, accent1 100%),tx1/15" label-points="5,6"/>
+      <band from="H6" to="H7" fill="accent1/8"/>
+      <ref value="96" label="среднее 96" size="10" color="tx1/60"/>
+      <note at="H7" w="150" size="10">121 тыс. — пик квартала</note>
+    </chart>
+    <chart id="bar" type="bar" x="520" y="40" w="400" h="240" labels="1" size="11" gap="40" axis-color="none">
+      <cat>Москва, Санкт-Петербург, Урал, Поволжье, Сибирь</cat>
+      <series name="Выручка" values="1690, 742, 586, 534, 468" fill="linear(0, accent1/40 0%, accent1 100%)"/>
+      <ref value="800" label="план" size="10"/>
+    </chart>
+    <chart id="ln" type="line" x="40" y="300" w="440" h="210" axis="both" grid="1" size="10" smooth="1" legend="t">
+      <cat>янв, фев, мар, апр, май, июн, июл, авг, сен</cat>
+      <series name="2026" values="1.1, 1.2, 1.15, 1.3, 1.42, 1.38, 1.55, 1.7, 1.82" color="accent1" width="3"/>
+      <series name="2025" values="1.0, 1.05, 1.02, 1.1, 1.12, 1.18, 1.2, 1.25, 1.31" color="tx1/30" width="2"/>
+      <note at="авг" series="0" size="10" fill="accent1">рекорд</note>
+    </chart>
+    <chart id="dn" type="doughnut" x="560" y="300" w="320" h="210" hole="74" outline="none">
+      <cat>Солнце, Ветер, Гидро, Прочее</cat>
+      <series name="Доля" values="31, 24, 21, 24" colors="accent1, accent2, #10B981, tx1/12"/>
+      <center size="30" sub="доля солнца" font="Unbounded">31%</center>
+    </chart>
+  </slide>
+</deck>

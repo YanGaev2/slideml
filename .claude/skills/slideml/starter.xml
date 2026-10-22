@@ -1,0 +1,41 @@
+<!-- SlideML starter: theme, type scale, chrome. NO SLIDES on purpose.
+     Build every slide from an archetype in archetypes.md, chosen in plan.md.
+     Canvas 960x540 pt. Grid: margins 48, content x 48..912 (w 864), 12 columns of 50 + gutter 24.
+     Zones: chrome y 24..48, title y 72..150, body y 168..480, footer y 500..520.
+     Change the palette and fonts to the art direction in plan.md (presets: style.md). -->
+<deck lang="ru-RU">
+  <theme font="Manrope" heading="Unbounded SemiBold"
+         dk1="#1E1A17" lt1="#F7F3EC" dk2="#6E655C" lt2="#E4DDD2"
+         accent1="#C2410C" accent2="#1E1A17" accent3="#6E655C" accent4="#E4DDD2" accent5="#6E655C" accent6="#E4DDD2"/>
+
+  <styles>
+    <style name="kpi"       font="heading" size="120" spacing="-3" line-height="0.85" color="dk1"/>
+    <style name="kpi-muted" font="heading" size="60" spacing="-1.5" line-height="0.9" color="dk2"/>
+    <style name="display"   font="heading" size="54" spacing="-1.5" line-height="0.92" color="dk1"/>
+    <style name="h1"        font="heading" size="32" spacing="-0.6" line-height="1" color="dk1"/>
+    <style name="h2"        font="heading" size="20" line-height="1.05" color="dk1"/>
+    <style name="body"      size="16" line-height="1.2" color="dk2"/>
+    <style name="quote"     font="heading" size="36" spacing="-0.5" line-height="1.05" color="lt1"/>
+    <style name="label"     font="Cascadia Mono" size="11" caps="1" spacing="1" color="dk2"/>
+    <style name="chrome"    font="Cascadia Mono" size="10" caps="1" spacing="1" color="dk2"/>
+    <style name="credit"    size="10" color="lt1/70"/>
+  </styles>
+
+  <templates>
+    <!-- Light slides. Same ids on every slide, so Morph keeps them still. -->
+    <template id="chrome">
+      <text id="chrome-brand" x="48" y="24" w="420" h="auto" class="chrome">{{section}}</text>
+      <line id="chrome-top" x1="48" y1="48" x2="912" y2="48" stroke="dk1/15 0.75"/>
+      <line id="chrome-bot" x1="48" y1="500" x2="912" y2="500" stroke="dk1/15 0.75"/>
+      <text id="chrome-page" x="714" y="512" w="198" h="auto" class="chrome" align="right">{{page}}</text>
+    </template>
+    <!-- Dark or photo slides: no rules across the picture, light ink. -->
+    <template id="chrome-plain">
+      <text id="chrome-brand" x="48" y="24" w="420" h="auto" class="chrome" color="lt1/70">{{section}}</text>
+      <text id="chrome-page" x="714" y="512" w="198" h="auto" class="chrome" color="lt1/70" align="right">{{page}}</text>
+    </template>
+  </templates>
+
+  <!-- Slides go here. Before each slide write the archetype comment, for example
+       "A5 · Выручка выросла на 58 % за квартал" inside an XML comment. -->
+</deck>

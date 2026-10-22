@@ -1,0 +1,113 @@
+<deck lang="ru-RU">
+  <theme font="Inter" heading="Inter SemiBold"
+         dk1="#111111" lt1="#F4F3EF" dk2="#6B6A66" lt2="#D9D7D1"
+         accent1="#FF4F12" accent2="#111111" accent3="#6B6A66" accent4="#D9D7D1" accent5="#6B6A66" accent6="#D9D7D1"/>
+
+  <styles>
+    <style name="kpi"       font="heading" size="120" spacing="-3" line-height="0.85" color="dk1"/>
+    <style name="kpi-muted" font="heading" size="60" spacing="-1.5" line-height="0.9" color="dk2"/>
+    <style name="display"   font="heading" size="54" spacing="-1.5" line-height="0.92" color="dk1"/>
+    <style name="h1"        font="heading" size="32" spacing="-0.6" line-height="1" color="dk1"/>
+    <style name="h2"        font="heading" size="20" line-height="1.05" color="dk1"/>
+    <style name="body"      size="16" line-height="1.2" color="dk2"/>
+    <style name="quote"     font="heading" size="36" spacing="-0.5" line-height="1.05" color="lt1"/>
+    <style name="label"     font="Cascadia Mono" size="11" caps="1" spacing="1" color="dk2"/>
+    <style name="chrome"    font="Cascadia Mono" size="10" caps="1" spacing="1" color="dk2"/>
+    <style name="credit"    size="10" color="lt1/70"/>
+  </styles>
+
+  <templates>
+    <template id="chrome">
+      <text id="chrome-brand" x="48" y="24" w="420" h="auto" class="chrome">{{section}}</text>
+      <line id="chrome-top" x1="48" y1="48" x2="912" y2="48" stroke="dk1/15 0.75"/>
+      <line id="chrome-bot" x1="48" y1="500" x2="912" y2="500" stroke="dk1/15 0.75"/>
+      <text id="chrome-page" x="714" y="512" w="198" h="auto" class="chrome" align="right">{{page}}</text>
+    </template>
+    <template id="chrome-plain">
+      <text id="chrome-brand" x="48" y="24" w="420" h="auto" class="chrome" color="lt1/70">{{section}}</text>
+      <text id="chrome-page" x="714" y="512" w="198" h="auto" class="chrome" color="lt1/70" align="right">{{page}}</text>
+    </template>
+  </templates>
+
+  <!-- A1 · обложка с фото · «Лидер» за год: текучесть −7 п.п. при бюджете 3,6 млн ₽ -->
+  <slide id="cover" bg="dk1" transition="fade" transition-dur="700">
+    <image id="cover-photo" src="assets/business-team-meeting-office-2.jpg" x="0" y="0" w="960" h="540" fit="cover" tint="duotone(#111111, #E9E2D8)"/>
+    <shape id="cover-shade" x="0" y="0" w="960" h="540" fill="linear(0, dk1/92 0%, dk1/60 55%, dk1/10 100%)" line="none"/>
+    <use template="chrome-plain" section="HR · Программа «Лидер»" page="01"/>
+    <text id="cover-label" x="48" y="196" w="560" h="auto" class="label" color="lt1/70">Итоги года · отчёт для HR-директора</text>
+    <text id="cover-title" x="48" y="224" w="640" h="auto" class="display" size="44" color="lt1">«Лидер» снизил текучесть на&#160;7&#160;п.п. при&#160;бюджете 3,6&#160;млн&#160;₽</text>
+    <text id="cover-f1v" x="48" y="420" w="240" h="auto" class="h2" color="lt1">48 из&#160;60</text>
+    <text id="cover-f1l" x="48" y="448" w="240" h="auto" class="label" color="lt1/70">руководителей прошли</text>
+    <text id="cover-f2v" x="362" y="420" w="240" h="auto" class="h2" color="lt1">18&#160;% → 11&#160;%</text>
+    <text id="cover-f2l" x="362" y="448" w="240" h="auto" class="label" color="lt1/70">текучесть за год</text>
+    <text id="cover-f3v" x="676" y="420" w="236" h="auto" class="h2" color="lt1">62 → 74</text>
+    <text id="cover-f3l" x="676" y="448" w="236" h="auto" class="label" color="lt1/70">вовлечённость из&#160;100</text>
+    <text id="cover-credit" x="48" y="512" w="420" h="auto" class="credit">Фото: Startup Stock Photos, CC0 1.0</text>
+  </slide>
+
+  <!-- A4 · V2 · текучесть в командах выпускников упала с 18 % до 11 % -->
+  <slide id="turnover" bg="lt1" transition="fade" transition-dur="600">
+    <use template="chrome" section="HR · Программа «Лидер»" page="02"/>
+    <text id="tr-title" x="48" y="72" w="864" h="auto" class="h1">Текучесть команд выпускников упала с&#160;18 до&#160;11&#160;%</text>
+    <!-- Bar length = 720 × value / max, max = 18 %. 18 → 720, 11 → 440. -->
+    <text id="tr-a-l" x="48" y="184" w="500" h="auto" class="label">До программы · текучесть за год</text>
+    <shape id="tr-a" x="48" y="208" w="720" h="56" fill="lt2" line="none"/>
+    <text id="tr-a-v" x="784" y="218" w="128" h="auto" class="h1" color="dk2">18&#160;%</text>
+    <text id="tr-b-l" x="48" y="292" w="500" h="auto" class="label" color="accent1">После года программы · текучесть за год</text>
+    <shape id="tr-b" x="48" y="316" w="440" h="56" fill="accent1" line="none"/>
+    <text id="tr-b-v" x="504" y="326" w="128" h="auto" class="h1" color="accent1">11&#160;%</text>
+    <text id="tr-delta" x="48" y="412" w="864" h="auto" class="h2" color="accent1">−7&#160;п.п. за год · −39&#160;% к&#160;уровню на&#160;старте</text>
+    <text id="tr-base" x="48" y="448" w="864" h="auto" class="body">Замер: команды 48 обученных руководителей, начало 2026 → конец 2026.</text>
+    <anim target="tr-b" effect="wipe-left" start="after" dur="600"/>
+  </slide>
+
+  <!-- A3 · V6 · вовлечённость по опросу выросла с 62 до 74 из 100 -->
+  <slide id="engage" bg="lt1" transition="fade" transition-dur="600">
+    <use template="chrome" section="HR · Программа «Лидер»" page="03"/>
+    <text id="en-title" x="48" y="72" w="864" h="auto" class="h1">Вовлечённость по&#160;опросу выросла с&#160;62 до&#160;74 из&#160;100</text>
+    <!-- Scale 0–100 on x 48..912: x = 48 + 8,64 × value. 62 → 584, 74 → 687. -->
+    <text id="en-now-l" x="607" y="156" w="160" h="auto" class="h2" color="accent1" align="center">74 · стало</text>
+    <line id="en-arrow" x1="604" y1="200" x2="666" y2="200" stroke="accent1 2.5" tail="triangle"/>
+    <line id="en-axis" x1="48" y1="236" x2="912" y2="236" stroke="dk1/30 2"/>
+    <shape id="en-before" geom="ellipse" x="570" y="222" w="28" h="28" fill="lt1" line="dk1 2.5"/>
+    <shape id="en-now" geom="ellipse" x="673" y="222" w="28" h="28" fill="accent1" line="none"/>
+    <text id="en-before-l" x="504" y="268" w="160" h="auto" class="h2" align="center" color="dk2">62 · было</text>
+    <text id="en-t0" x="48" y="268" w="80" h="auto" class="label">0</text>
+    <text id="en-t100" x="832" y="268" w="80" h="auto" class="label" align="right">100</text>
+    <line id="en-rule" x1="48" y1="320" x2="912" y2="320" stroke="dk1/15 0.75"/>
+    <text id="en-kpi" x="48" y="336" w="180" h="auto" class="kpi" size="96" color="accent1">+12</text>
+    <text id="en-kpi-l" x="256" y="360" w="400" h="auto" class="label" color="accent1">баллов вовлечённости за год</text>
+    <text id="en-note" x="256" y="388" w="656" h="auto" class="body">Опрос вовлечённости, шкала 0–100 · сравнение с&#160;прошлым замером.</text>
+    <anim target="en-arrow" effect="wipe-right" start="after" dur="600"/>
+  </slide>
+
+  <!-- A7 · V1 · обучили 48 из 60 руководителей, 9 из них — с повышением -->
+  <slide id="coverage" bg="lt1" transition="fade" transition-dur="600">
+    <use template="chrome" section="HR · Программа «Лидер»" page="04"/>
+    <text id="cv-title" x="48" y="72" w="864" h="auto" class="h1">Обучили 48 из&#160;60 руководителей, охват — 80&#160;%</text>
+    <!-- 60 cells, 10 per row: cell = 390/10 = 39 pt, 6 rows → h = 234. -->
+    <waffle id="cv-grid" x="48" y="168" w="390" h="234" total="60" value="48" cols="10" gap="6" fill="lt2" accent="accent1"/>
+    <text id="cv-key" x="48" y="418" w="390" h="auto" class="label">1 квадрат = 1 руководитель · серый — не&#160;прошли</text>
+    <text id="cv-kpi" x="486" y="160" w="426" h="auto" class="kpi" size="96" color="accent1">80&#160;%</text>
+    <text id="cv-what" x="486" y="272" w="426" h="auto" class="h2">48 из&#160;60 руководителей прошли «Лидер» за&#160;год</text>
+    <text id="cv-promo" x="486" y="336" w="426" h="auto" class="h2" color="accent1">+9 повышений за&#160;год</text>
+    <text id="cv-promo-b" x="486" y="372" w="426" h="auto" class="body">19&#160;% выпускников (9 из&#160;48) выросли в&#160;должности.</text>
+    <text id="cv-left" x="486" y="428" w="426" h="auto" class="body" color="dk2">12 руководителей ещё не&#160;прошли программу — дообучим в&#160;2027.</text>
+    <anim target="cv-grid-hi" effect="fade" start="after" dur="500"/>
+  </slide>
+
+  <!-- A12 · просьба · на 2027 просим: 12 руководителей и 40 тимлидов -->
+  <slide id="ask" bg="dk1" transition="fade" transition-dur="700">
+    <use template="chrome-plain" section="HR · Программа «Лидер»" page="05"/>
+    <text id="ask-title" x="48" y="80" w="864" h="auto" class="display" color="lt1">На 2027 просим:<br/>12&#160;руководителей и&#160;40&#160;тимлидов</text>
+    <text id="ask-n1" x="48" y="232" w="60" h="auto" class="h1" color="accent1">1</text>
+    <text id="ask-a1" x="112" y="236" w="760" h="auto" class="h2" color="lt1">Дообучить оставшихся 12&#160;руководителей</text>
+    <text id="ask-a1b" x="112" y="268" w="760" h="auto" class="body" color="lt1/70">Охват первого контура станет 60&#160;из&#160;60.</text>
+    <text id="ask-n2" x="48" y="312" w="60" h="auto" class="h1" color="accent1">2</text>
+    <text id="ask-a2" x="112" y="316" w="760" h="auto" class="h2" color="lt1">Открыть поток «Лидера» для 40&#160;тимлидов</text>
+    <text id="ask-a2b" x="112" y="348" w="760" h="auto" class="body" color="lt1/70">Всего 52 участника в&#160;2027 году.</text>
+    <text id="ask-n3" x="48" y="392" w="60" h="auto" class="h1" color="accent1">3</text>
+    <text id="ask-a3" x="112" y="396" w="760" h="auto" class="h2" color="lt1">Заложить в&#160;бюджет 2027 ≈ 3,9&#160;млн&#160;₽</text>
+    <text id="ask-a3b" x="112" y="428" w="760" h="auto" class="body" color="lt1/70">Оценка: 52&#160;×&#160;75&#160;тыс.&#160;₽ — по&#160;цене участника 2026 года.</text>
+  </slide>
+</deck>

@@ -1,0 +1,28 @@
+<deck lang="ru-RU">
+  <styles>
+    <style name="h1" font="heading" size="36" color="tx1"/>
+    <style name="muted" size="12" color="tx1/55"/>
+  </styles>
+  <templates>
+    <template id="chrome">
+      <shape id="frame" x="20" y="20" w="920" h="500" fill="lt2" line="black 2" shadow="hard"/>
+      <text id="tab" x="36" y="28" w="400" h="16" class="muted">{{file}}</text>
+    </template>
+    <template id="kpi">
+      <shape x="0" y="0" w="200" h="90" radius="12" fill="white" line="black 1.5"/>
+      <text id="value" x="16" y="12" w="170" h="auto" font="heading" size="28">{{value}}</text>
+      <text x="16" y="56" w="170" h="auto" class="muted">{{label}}</text>
+    </template>
+  </templates>
+  <slide id="a">
+    <use template="chrome" file="о_нас.txt"/>
+    <text id="t" x="60" y="70" w="600" h="auto" class="h1">Шаблоны и стили</text>
+    <use template="kpi" dx="60" dy="160" prefix="k1-" value="140+" label="запущенных продуктов"/>
+    <use template="kpi" dx="280" dy="160" prefix="k2-" value="4,9 ₽" label="оценка на Clutch"/>
+    <anim target="k1-value" effect="fade" start="after"/>
+  </slide>
+  <slide id="b" transition="morph">
+    <use template="chrome" file="услуги/"/>
+    <text id="t" x="60" y="70" w="600" h="auto" class="h1" color="accent1">Morph держит рамку на месте</text>
+  </slide>
+</deck>

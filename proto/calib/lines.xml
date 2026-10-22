@@ -1,0 +1,63 @@
+<deck lang="ru-RU">
+<slide id="s">
+<text id="t0" x="0" y="0" w="150" h="30" size="12" font="Inter" line-height="1.0">Аб<br/>Вг<br/>Дж</text>
+<text id="t1" x="160" y="0" w="150" h="30" size="12" font="Inter" line-height="1.3">Аб<br/>Вг<br/>Дж</text>
+<text id="t2" x="320" y="0" w="150" h="30" size="24" font="Inter" line-height="1.0">Аб<br/>Вг<br/>Дж</text>
+<text id="t3" x="480" y="0" w="150" h="30" size="24" font="Inter" line-height="1.3">Аб<br/>Вг<br/>Дж</text>
+<text id="t4" x="640" y="0" w="150" h="30" size="48" font="Inter" line-height="1.0">Аб<br/>Вг<br/>Дж</text>
+<text id="t5" x="800" y="0" w="150" h="30" size="48" font="Inter" line-height="1.3">Аб<br/>Вг<br/>Дж</text>
+<text id="t6" x="0" y="40" w="150" h="30" size="12" font="Inter SemiBold" line-height="1.0">Аб<br/>Вг<br/>Дж</text>
+<text id="t7" x="160" y="40" w="150" h="30" size="12" font="Inter SemiBold" line-height="1.3">Аб<br/>Вг<br/>Дж</text>
+<text id="t8" x="320" y="40" w="150" h="30" size="24" font="Inter SemiBold" line-height="1.0">Аб<br/>Вг<br/>Дж</text>
+<text id="t9" x="480" y="40" w="150" h="30" size="24" font="Inter SemiBold" line-height="1.3">Аб<br/>Вг<br/>Дж</text>
+<text id="t10" x="640" y="40" w="150" h="30" size="48" font="Inter SemiBold" line-height="1.0">Аб<br/>Вг<br/>Дж</text>
+<text id="t11" x="800" y="40" w="150" h="30" size="48" font="Inter SemiBold" line-height="1.3">Аб<br/>Вг<br/>Дж</text>
+<text id="t12" x="0" y="80" w="150" h="30" size="12" font="Manrope" line-height="1.0">Аб<br/>Вг<br/>Дж</text>
+<text id="t13" x="160" y="80" w="150" h="30" size="12" font="Manrope" line-height="1.3">Аб<br/>Вг<br/>Дж</text>
+<text id="t14" x="320" y="80" w="150" h="30" size="24" font="Manrope" line-height="1.0">Аб<br/>Вг<br/>Дж</text>
+<text id="t15" x="480" y="80" w="150" h="30" size="24" font="Manrope" line-height="1.3">Аб<br/>Вг<br/>Дж</text>
+<text id="t16" x="640" y="80" w="150" h="30" size="48" font="Manrope" line-height="1.0">Аб<br/>Вг<br/>Дж</text>
+<text id="t17" x="800" y="80" w="150" h="30" size="48" font="Manrope" line-height="1.3">Аб<br/>Вг<br/>Дж</text>
+<text id="t18" x="0" y="120" w="150" h="30" size="12" font="Manrope ExtraBold" line-height="1.0">Аб<br/>Вг<br/>Дж</text>
+<text id="t19" x="160" y="120" w="150" h="30" size="12" font="Manrope ExtraBold" line-height="1.3">Аб<br/>Вг<br/>Дж</text>
+<text id="t20" x="320" y="120" w="150" h="30" size="24" font="Manrope ExtraBold" line-height="1.0">Аб<br/>Вг<br/>Дж</text>
+<text id="t21" x="480" y="120" w="150" h="30" size="24" font="Manrope ExtraBold" line-height="1.3">Аб<br/>Вг<br/>Дж</text>
+<text id="t22" x="640" y="120" w="150" h="30" size="48" font="Manrope ExtraBold" line-height="1.0">Аб<br/>Вг<br/>Дж</text>
+<text id="t23" x="800" y="120" w="150" h="30" size="48" font="Manrope ExtraBold" line-height="1.3">Аб<br/>Вг<br/>Дж</text>
+<text id="t24" x="0" y="160" w="150" h="30" size="12" font="Unbounded" line-height="1.0">Аб<br/>Вг<br/>Дж</text>
+<text id="t25" x="160" y="160" w="150" h="30" size="12" font="Unbounded" line-height="1.3">Аб<br/>Вг<br/>Дж</text>
+<text id="t26" x="320" y="160" w="150" h="30" size="24" font="Unbounded" line-height="1.0">Аб<br/>Вг<br/>Дж</text>
+<text id="t27" x="480" y="160" w="150" h="30" size="24" font="Unbounded" line-height="1.3">Аб<br/>Вг<br/>Дж</text>
+<text id="t28" x="640" y="160" w="150" h="30" size="48" font="Unbounded" line-height="1.0">Аб<br/>Вг<br/>Дж</text>
+<text id="t29" x="800" y="160" w="150" h="30" size="48" font="Unbounded" line-height="1.3">Аб<br/>Вг<br/>Дж</text>
+<text id="t30" x="0" y="200" w="150" h="30" size="12" font="Unbounded ExtraBold" line-height="1.0">Аб<br/>Вг<br/>Дж</text>
+<text id="t31" x="160" y="200" w="150" h="30" size="12" font="Unbounded ExtraBold" line-height="1.3">Аб<br/>Вг<br/>Дж</text>
+<text id="t32" x="320" y="200" w="150" h="30" size="24" font="Unbounded ExtraBold" line-height="1.0">Аб<br/>Вг<br/>Дж</text>
+<text id="t33" x="480" y="200" w="150" h="30" size="24" font="Unbounded ExtraBold" line-height="1.3">Аб<br/>Вг<br/>Дж</text>
+<text id="t34" x="640" y="200" w="150" h="30" size="48" font="Unbounded ExtraBold" line-height="1.0">Аб<br/>Вг<br/>Дж</text>
+<text id="t35" x="800" y="200" w="150" h="30" size="48" font="Unbounded ExtraBold" line-height="1.3">Аб<br/>Вг<br/>Дж</text>
+<text id="t36" x="0" y="240" w="150" h="30" size="12" font="Montserrat" line-height="1.0">Аб<br/>Вг<br/>Дж</text>
+<text id="t37" x="160" y="240" w="150" h="30" size="12" font="Montserrat" line-height="1.3">Аб<br/>Вг<br/>Дж</text>
+<text id="t38" x="320" y="240" w="150" h="30" size="24" font="Montserrat" line-height="1.0">Аб<br/>Вг<br/>Дж</text>
+<text id="t39" x="480" y="240" w="150" h="30" size="24" font="Montserrat" line-height="1.3">Аб<br/>Вг<br/>Дж</text>
+<text id="t40" x="640" y="240" w="150" h="30" size="48" font="Montserrat" line-height="1.0">Аб<br/>Вг<br/>Дж</text>
+<text id="t41" x="800" y="240" w="150" h="30" size="48" font="Montserrat" line-height="1.3">Аб<br/>Вг<br/>Дж</text>
+<text id="t42" x="0" y="280" w="150" h="30" size="12" font="Arial Black" line-height="1.0">Аб<br/>Вг<br/>Дж</text>
+<text id="t43" x="160" y="280" w="150" h="30" size="12" font="Arial Black" line-height="1.3">Аб<br/>Вг<br/>Дж</text>
+<text id="t44" x="320" y="280" w="150" h="30" size="24" font="Arial Black" line-height="1.0">Аб<br/>Вг<br/>Дж</text>
+<text id="t45" x="480" y="280" w="150" h="30" size="24" font="Arial Black" line-height="1.3">Аб<br/>Вг<br/>Дж</text>
+<text id="t46" x="640" y="280" w="150" h="30" size="48" font="Arial Black" line-height="1.0">Аб<br/>Вг<br/>Дж</text>
+<text id="t47" x="800" y="280" w="150" h="30" size="48" font="Arial Black" line-height="1.3">Аб<br/>Вг<br/>Дж</text>
+<text id="t48" x="0" y="320" w="150" h="30" size="12" font="Segoe UI" line-height="1.0">Аб<br/>Вг<br/>Дж</text>
+<text id="t49" x="160" y="320" w="150" h="30" size="12" font="Segoe UI" line-height="1.3">Аб<br/>Вг<br/>Дж</text>
+<text id="t50" x="320" y="320" w="150" h="30" size="24" font="Segoe UI" line-height="1.0">Аб<br/>Вг<br/>Дж</text>
+<text id="t51" x="480" y="320" w="150" h="30" size="24" font="Segoe UI" line-height="1.3">Аб<br/>Вг<br/>Дж</text>
+<text id="t52" x="640" y="320" w="150" h="30" size="48" font="Segoe UI" line-height="1.0">Аб<br/>Вг<br/>Дж</text>
+<text id="t53" x="800" y="320" w="150" h="30" size="48" font="Segoe UI" line-height="1.3">Аб<br/>Вг<br/>Дж</text>
+<text id="t54" x="0" y="360" w="150" h="30" size="12" font="Cascadia Mono" line-height="1.0">Аб<br/>Вг<br/>Дж</text>
+<text id="t55" x="160" y="360" w="150" h="30" size="12" font="Cascadia Mono" line-height="1.3">Аб<br/>Вг<br/>Дж</text>
+<text id="t56" x="320" y="360" w="150" h="30" size="24" font="Cascadia Mono" line-height="1.0">Аб<br/>Вг<br/>Дж</text>
+<text id="t57" x="480" y="360" w="150" h="30" size="24" font="Cascadia Mono" line-height="1.3">Аб<br/>Вг<br/>Дж</text>
+<text id="t58" x="640" y="360" w="150" h="30" size="48" font="Cascadia Mono" line-height="1.0">Аб<br/>Вг<br/>Дж</text>
+<text id="t59" x="800" y="360" w="150" h="30" size="48" font="Cascadia Mono" line-height="1.3">Аб<br/>Вг<br/>Дж</text>
+</slide></deck>

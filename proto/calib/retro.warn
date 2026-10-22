@@ -1,0 +1,7 @@
+warning: slide `about` 108:5 <text>: text overflows: needs 103.1pt height (5 lines), box has 96.0pt. Fix: h="104", h="auto" or fit="shrink"
+warning: slide `about` 161:7 <text>: font size 8pt is unreadable on a projector; use 10pt or more
+warning: slide `services` 251:7 <text>: font size 8pt is unreadable on a projector; use 10pt or more
+warning: slide `services` 254:7 <text>: font size 8.5pt is unreadable on a projector; use 10pt or more
+lint: slide `history`: text `text 10` and `h` overlap (4x19pt)
+lint: slide `history`: left edges of `text 10` (x=84) and `text 25` (x=85) almost align: use one value
+warning: slide `pricing` 379:7 <text>: font size 8pt is unreadable on a projector; use 10pt or more
